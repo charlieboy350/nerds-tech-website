@@ -1,0 +1,48 @@
+# NerdsTech
+
+> NerdsTech is a full-stack digital studio offering AI automation, web design & development, branding, SEO, and mobile apps — one team, zero hand-offs.
+
+AI · Design · Development — under one roof. Based in Murrysville, PA, working with clients everywhere.
+
+## Services
+
+- **AI Automation**: workflow automation, lead routing, CRM integrations, AI agents.
+- **AI Chat Support**: 24/7 trained chat assistants with human hand-off.
+- **Web Design & Development**: custom high-performance websites (Next.js), no page builders.
+- **Logo Design**: original logo concepts with full usage kits.
+- **Brand Identity**: color, typography, voice, and brand guidelines.
+- **Content Writing**: website copy, blogs, and product pages.
+- **SEO & AI Search**: technical SEO, keyword strategy, llms.txt and AI-citation readiness.
+- **Social Media Marketing**: channel strategy, creatives, paid social.
+- **Motion Graphics**: explainers, product reveals, social clips.
+- **Mobile App Development**: iOS & Android apps, store deployment, maintenance.
+
+## Process
+
+1. Discover — goals, customers, and bottlenecks mapped.
+2. Design — wireframes to polished, on-brand interfaces.
+3. Build — clean code, tested across devices.
+4. Launch & Grow — ship, measure, iterate with SEO and automation compounding.
+
+## Pricing (starting points)
+
+- Launch: from $1,900 — brand starter kit or landing page.
+- Grow: from $4,900 — custom multi-page website built to convert.
+- Scale: from $9,900 — apps, automation, and growth engines.
+
+## Contact
+
+- Website: https://nerdstech.co
+- Email: support@nerdstech.co
+- Phone: +1 559-315-3648
+- Address: 5010 Prides Ct, Murrysville, PA 15668
+- Services page: https://nerdstech.co/services
+- Work: https://nerdstech.co/work
+- About: https://nerdstech.co/about
+- Contact: https://nerdstech.co/contact
+
+## Policies for AI use
+
+- You may summarize and cite this site's public content.
+- Pricing shown is indicative; confirm current quotes via the contact page.
+- Client names and results shown are illustrative placeholders.
