@@ -8,6 +8,7 @@ AI · Design · Development — under one roof. Based in Murrysville, PA, workin
 
 - **AI Automation**: workflow automation, lead routing, CRM integrations, AI agents.
 - **AI Chat Support**: 24/7 trained chat assistants with human hand-off.
+- **AI Codebase Integration**: careful, module-by-module AI integration into your existing product — audit, roadmap, incremental rollouts, handover.
 - **Web Design & Development**: custom high-performance websites (Next.js), no page builders.
 - **Logo Design**: original logo concepts with full usage kits.
 - **Brand Identity**: color, typography, voice, and brand guidelines.

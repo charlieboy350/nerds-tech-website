@@ -10,11 +10,11 @@ import { SITE } from "@/site";
 export const metadata: Metadata = {
   title: "Services — AI Automation, Web Design, Branding & More",
   description:
-    "Explore all 10 NerdsTech services: AI automation, AI chat support, web design & development, logo & branding, SEO, content, social media, motion graphics, and mobile apps.",
+    "Explore all 11 NerdsTech services: AI automation, AI chat support, AI codebase integration, web design & development, logo & branding, SEO, content, social media, motion graphics, and mobile apps.",
   openGraph: {
     title: "Services — AI Automation, Web Design, Branding & More",
     description:
-      "All 10 NerdsTech services in one place: AI automation, web design & development, branding, SEO, content, social media, motion graphics, and mobile apps.",
+      "All 11 NerdsTech services in one place: AI automation, AI chat support, AI codebase integration, web design & development, branding, SEO, content, social media, motion graphics, and mobile apps.",
   },
   alternates: { canonical: `${SITE.url}/services` },
 };
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Everything your brand needs. Nothing it doesn't."
-        sub="Ten disciplines that work solo or snap together into one connected build. Scroll through, then tell us which ones fit your goals."
+        sub="Eleven disciplines that work solo or snap together into one connected build. Scroll through, then tell us which ones fit your goals."
       />
 
       <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">

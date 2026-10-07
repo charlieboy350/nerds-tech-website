@@ -15,7 +15,7 @@ export default function Services({ limit }: { limit?: number }) {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="What we build"
-          title="Ten disciplines. One connected team."
+          title="Eleven disciplines. One connected team."
           sub="Every service works on its own — or together as one connected build. Pick what you need today; add the rest when you're ready."
         />
 

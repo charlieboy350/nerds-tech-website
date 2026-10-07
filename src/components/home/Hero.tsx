@@ -79,7 +79,7 @@ export default function Hero() {
           className="mx-auto mt-14 flex max-w-lg items-center justify-center gap-8 text-center sm:gap-12"
         >
           {[
-            ["10", "services"],
+            ["11", "services"],
             ["1", "team"],
             ["0", "hand-offs"],
           ].map(([value, label]) => (

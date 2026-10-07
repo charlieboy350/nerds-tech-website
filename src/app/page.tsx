@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/Marquee";
 import Services from "@/components/home/Services";
+import AiIntegration from "@/components/home/AiIntegration";
 import Stats from "@/components/home/Stats";
 import Work from "@/components/home/Work";
 import Process from "@/components/home/Process";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     absolute: `${SITE.name} | AI Automation, Web Design & Branding Studio`,
   },
   description:
-    "One studio for AI automation, web design & development, branding, SEO, and mobile apps. 10 services, 1 team, zero hand-offs. Get a free consultation today.",
+    "One studio for AI automation, web design & development, branding, SEO, and mobile apps. 11 services, 1 team, zero hand-offs. Get a free consultation today.",
   alternates: { canonical: SITE.url },
 };
 
@@ -42,6 +43,7 @@ export default function HomePage() {
       <Hero />
       <Marquee />
       <Services limit={6} />
+      <AiIntegration />
       <Stats />
       <Work limit={6} />
       <Process />

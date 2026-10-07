@@ -9,6 +9,7 @@ import {
   Share2,
   Clapperboard,
   Smartphone,
+  Puzzle,
   type LucideIcon,
 } from "lucide-react";
 
@@ -51,6 +52,14 @@ export const SERVICES: Service[] = [
     short: "A trained assistant that answers customers instantly, day or night.",
     long: "A chat assistant trained on your business that resolves questions in seconds and hands off to a human exactly when it matters. Fewer missed messages, happier customers, calmer team.",
     deliverables: ["Knowledge-base training", "Brand-tuned tone of voice", "Human hand-off rules", "Analytics dashboard"],
+  },
+  {
+    slug: "ai-codebase-integration",
+    icon: Puzzle,
+    title: "AI Codebase Integration",
+    short: "We integrate AI into your existing product — carefully, one module at a time.",
+    long: "Already have a working product? You don't need a risky rewrite to benefit from AI. We audit your codebase, pinpoint the modules where AI creates the most value, and integrate them one by one — each module shipped, tested, and stable before we move to the next.",
+    deliverables: ["AI-readiness codebase audit", "Module-by-module integration roadmap", "Incremental, tested AI rollouts", "Docs & team handover"],
   },
   {
     slug: "web-design-development",
@@ -310,7 +319,7 @@ export const FAQS = [
 /* ---------------------------------- Stats --------------------------------- */
 
 export const STATS = [
-  { value: 10, suffix: "", label: "Services under one roof" },
+  { value: 11, suffix: "", label: "Services under one roof" },
   { value: 120, suffix: "+", label: "Projects shipped" },
   { value: 98, suffix: "%", label: "Client satisfaction" },
   { value: 24, suffix: "h", label: "Max. response time", prefix: "<" },
