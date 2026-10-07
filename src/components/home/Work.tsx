@@ -1,0 +1,75 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowUpRight, TrendingUp } from "lucide-react";
+import { PROJECTS } from "@/data/content";
+import SectionHeading from "@/components/SectionHeading";
+import Reveal from "@/components/Reveal";
+
+export default function Work({ limit = 6 }: { limit?: number }) {
+  const projects = PROJECTS.slice(0, limit);
+
+  return (
+    <section className="relative py-20 sm:py-28" aria-label="Selected work">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <SectionHeading
+          eyebrow="Recent work"
+          title="A few things we've shipped."
+          sub="Real projects, real outcomes. Every engagement below combined at least two of our disciplines — that's where the magic happens."
+        />
+
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
+          className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+        >
+          {projects.map((project) => (
+            <motion.article
+              key={project.slug}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+              }}
+              className="card-glow group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60"
+            >
+              {/* Visual header */}
+              <div className={`relative h-44 bg-gradient-to-br ${project.accent} overflow-hidden`}>
+                <div className="absolute inset-0 bg-ink-950/55 transition-opacity duration-300 group-hover:opacity-40" />
+                <div className="bg-grid absolute inset-0 opacity-60" aria-hidden="true" />
+                <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                  {project.category}
+                </span>
+                <span className="absolute bottom-4 left-5 font-display text-2xl font-bold text-white/95">
+                  {project.client}
+                </span>
+              </div>
+
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-display text-lg font-semibold text-white">{project.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{project.description}</p>
+                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-mint-300">
+                  <TrendingUp className="size-4" />
+                  {project.result}
+                </p>
+              </div>
+            </motion.article>
+          ))}
+        </motion.div>
+
+        {limit < PROJECTS.length && (
+          <Reveal className="mt-10 text-center">
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-volt-500/60 hover:bg-volt-500/10"
+            >
+              View all case studies <ArrowUpRight className="size-4" />
+            </Link>
+          </Reveal>
+        )}
+      </div>
+    </section>
+  );
+}
