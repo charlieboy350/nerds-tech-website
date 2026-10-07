@@ -31,7 +31,7 @@ export interface Project {
   category: string;
   description: string;
   result: string;
-  accent: string;
+  image: string;
 }
 
 /* -------------------------------- Services -------------------------------- */
@@ -131,34 +131,34 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
-    slug: "ironpulse-fitness",
-    client: "IronPulse Fitness",
-    title: "Gym management platform",
-    category: "Web App",
+    slug: "harbor-realty",
+    client: "Harbor Realty",
+    title: "Workflow & chatbot rollout",
+    category: "AI Automation",
     description:
-      "Bookings, memberships, trainer schedules, and payments — previously spread across four tools — rebuilt as one dashboard the whole team actually enjoys using.",
-    result: "4 tools → 1 platform · 38% fewer no-shows",
-    accent: "from-violet-500 to-fuchsia-500",
+      "New listings now route to the right agent in seconds, an AI assistant answers buyer questions 24/7, and follow-ups happen without anyone remembering to.",
+    result: "3.1x faster lead response",
+    image: "/projects/harbor-realty.jpg",
   },
   {
-    slug: "atelier-north",
-    client: "Atelier North",
-    title: "Studio identity system",
-    category: "Branding",
+    slug: "vertex-support",
+    client: "Vertex SaaS",
+    title: "AI support ticket triage",
+    category: "AI Automation",
     description:
-      "A full identity for an architecture studio: wordmark, type system, and a guidelines book their whole team can follow without a designer on call.",
-    result: "Full rebrand shipped in 5 weeks",
-    accent: "from-amber-400 to-orange-500",
+      "Incoming tickets get classified, prioritized, and answered by AI in seconds — only the tricky ones reach a human agent, with full context attached.",
+    result: "68% tickets auto-resolved",
+    image: "/projects/vertex-support.jpg",
   },
   {
-    slug: "pulseboard",
-    client: "Pulseboard",
-    title: "Analytics dashboard",
-    category: "Web App",
+    slug: "bloom-retail",
+    client: "Bloom Retail",
+    title: "Inventory forecasting automation",
+    category: "AI Automation",
     description:
-      "A real-time analytics product for e-commerce teams — custom charts, alerts, and exports, wrapped in an interface non-technical founders understand.",
-    result: "0.9s avg. load · 12k daily users",
-    accent: "from-cyan-400 to-sky-500",
+      "AI predicts demand per store and triggers reorders automatically — shelves stay stocked without the spreadsheet gymnastics.",
+    result: "31% less overstock",
+    image: "/projects/bloom-retail.jpg",
   },
   {
     slug: "tabletap",
@@ -168,7 +168,57 @@ export const PROJECTS: Project[] = [
     description:
       "A restaurant group’s reservation and table-side check-in app for iOS and Android, with push reminders that quietly cut empty tables.",
     result: "4.8★ store rating · 60k downloads",
-    accent: "from-emerald-400 to-teal-500",
+    image: "/projects/table-tap.jpg",
+  },
+  {
+    slug: "pulsefit",
+    client: "PulseFit",
+    title: "Workout tracking app",
+    category: "Mobile App",
+    description:
+      "A social fitness app with training plans, live challenges, and streaks — designed to bring users back every single morning.",
+    result: "4.9★ · 120k downloads",
+    image: "/projects/pulse-fit.jpg",
+  },
+  {
+    slug: "swiftbite",
+    client: "SwiftBite",
+    title: "Food delivery app",
+    category: "Mobile App",
+    description:
+      "Ordering, live order tracking, and rider dispatch in one snappy app — from craving to doorstep in under 30 minutes.",
+    result: "45k orders in month one",
+    image: "/projects/swift-bite.jpg",
+  },
+  {
+    slug: "ironpulse-fitness",
+    client: "IronPulse Fitness",
+    title: "Gym management platform",
+    category: "Web App",
+    description:
+      "Bookings, memberships, trainer schedules, and payments — previously spread across four tools — rebuilt as one dashboard the whole team actually enjoys using.",
+    result: "4 tools → 1 platform · 38% fewer no-shows",
+    image: "/projects/ironpulse.jpg",
+  },
+  {
+    slug: "pulseboard",
+    client: "Pulseboard",
+    title: "Analytics dashboard",
+    category: "Web App",
+    description:
+      "A real-time analytics product for e-commerce teams — custom charts, alerts, and exports, wrapped in an interface non-technical founders understand.",
+    result: "0.9s avg. load · 12k daily users",
+    image: "/projects/pulseboard.jpg",
+  },
+  {
+    slug: "atelier-north",
+    client: "Atelier North",
+    title: "Studio identity system",
+    category: "Branding",
+    description:
+      "A full identity for an architecture studio: wordmark, type system, and a guidelines book their whole team can follow without a designer on call.",
+    result: "Full rebrand shipped in 5 weeks",
+    image: "/projects/atelier-north.jpg",
   },
   {
     slug: "cornerstone-dental",
@@ -178,17 +228,7 @@ export const PROJECTS: Project[] = [
     description:
       "Technical cleanup, service-page rewrites, and a review engine for a three-location dental practice competing in a crowded local map pack.",
     result: "+212% organic calls in 6 months",
-    accent: "from-rose-400 to-pink-500",
-  },
-  {
-    slug: "harbor-realty",
-    client: "Harbor Realty",
-    title: "Workflow & chatbot rollout",
-    category: "AI Automation",
-    description:
-      "New listings now route to the right agent in seconds, an AI assistant answers buyer questions 24/7, and follow-ups happen without anyone remembering to.",
-    result: "3.1x faster lead response",
-    accent: "from-indigo-400 to-violet-500",
+    image: "/projects/cornerstone.jpg",
   },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS } from "@/data/content";
@@ -35,14 +36,20 @@ export default function Work({ limit = 6 }: { limit?: number }) {
               }}
               className="card-glow group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60"
             >
-              {/* Visual header */}
-              <div className={`relative h-44 bg-gradient-to-br ${project.accent} overflow-hidden`}>
-                <div className="absolute inset-0 bg-ink-950/55 transition-opacity duration-300 group-hover:opacity-40" />
-                <div className="bg-grid absolute inset-0 opacity-60" aria-hidden="true" />
-                <span className="absolute left-5 top-5 rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+              {/* Project photo */}
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={`${project.client} — ${project.title}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" aria-hidden="true" />
+                <span className="absolute left-5 top-5 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
                   {project.category}
                 </span>
-                <span className="absolute bottom-4 left-5 font-display text-2xl font-bold text-white/95">
+                <span className="absolute bottom-4 left-5 font-display text-2xl font-bold text-white drop-shadow-lg">
                   {project.client}
                 </span>
               </div>
