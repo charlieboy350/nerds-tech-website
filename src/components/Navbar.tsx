@@ -44,18 +44,27 @@ export default function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  pathname === link.href ? "text-white" : "text-slate-400"
-                }`}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`group relative py-1.5 text-sm font-medium transition-colors duration-300 hover:text-white ${
+                    isActive ? "text-white" : "text-slate-400"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-x-0 -bottom-0.5 h-[2px] origin-left rounded-full bg-gradient-to-r from-brand-400 to-steel-500 transition-transform duration-300 ${
+                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="hidden md:block">
@@ -92,8 +101,10 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`block rounded-lg px-3 py-3 text-base font-medium ${
-                      pathname === link.href ? "bg-white/5 text-white" : "text-slate-300"
+                    className={`block rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
+                      pathname === link.href
+                        ? "bg-brand-500/10 text-white ring-1 ring-brand-400/30"
+                        : "text-slate-300 hover:bg-white/5 hover:pl-5 hover:text-white"
                     }`}
                   >
                     {link.label}
