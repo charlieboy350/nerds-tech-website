@@ -202,9 +202,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <ul className="max-w-3xl space-y-4">
               {project.challenge.map((item, i) => (
                 <Reveal key={i} delay={i * 0.06}>
-                  <li className="flex gap-4 rounded-2xl border border-white/10 bg-ink-800/60 p-5">
-                    <span className="font-display text-lg font-bold text-brand-400">{String(i + 1).padStart(2, "0")}</span>
-                    <p className="text-sm leading-relaxed text-slate-300 sm:text-base">{item}</p>
+                  <li className="group relative flex gap-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_14px_40px_-16px_rgba(69,179,212,0.45)]">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gradient-to-b from-brand-400 to-steel-500 transition-transform duration-300 group-hover:scale-y-100"
+                    />
+                    <span className="pl-2 font-display text-lg font-bold text-brand-400 transition-all duration-300 group-hover:scale-110 group-hover:text-brand-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="text-sm leading-relaxed text-slate-300 transition-colors duration-300 group-hover:text-white sm:text-base">
+                      {item}
+                    </p>
                   </li>
                 </Reveal>
               ))}
