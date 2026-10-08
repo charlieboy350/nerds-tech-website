@@ -140,18 +140,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </div>
       </header>
 
-      {/* Hero image — full image always visible, blurred backdrop fills the banner */}
+      {/* Hero image — full image, never cropped */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="relative h-64 overflow-hidden rounded-3xl border border-white/10 bg-ink-900 sm:h-96 lg:h-[28rem]">
-            <Image
-              src={project.image}
-              alt=""
-              aria-hidden="true"
-              fill
-              sizes="(max-width: 1280px) 100vw, 1280px"
-              className="scale-110 object-cover opacity-40 blur-2xl"
-            />
             <Image
               src={project.image}
               alt={`${project.client} — ${project.title}`}
