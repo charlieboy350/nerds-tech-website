@@ -34,7 +34,7 @@ export default function Work({ limit = 6 }: { limit?: number }) {
                 hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
               }}
-              className="card-glow group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60"
+              className="card-glow group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60"
             >
               {/* Project photo */}
               <div className="relative h-44 overflow-hidden">
@@ -52,14 +52,24 @@ export default function Work({ limit = 6 }: { limit?: number }) {
                 <span className="absolute bottom-4 left-5 font-display text-2xl font-bold text-white drop-shadow-lg">
                   {project.client}
                 </span>
+                <span className="absolute bottom-4 right-5 inline-flex size-9 items-center justify-center rounded-full bg-brand-500/90 text-white opacity-0 transition-all duration-300 group-hover:opacity-100" aria-hidden="true">
+                  <ArrowUpRight className="size-4" />
+                </span>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-lg font-semibold text-white">{project.title}</h3>
+                <h3 className="font-display text-lg font-semibold text-white">
+                  <Link href={`/work/${project.slug}`} className="transition-colors group-hover:text-brand-300 before:absolute before:inset-0">
+                    {project.title}
+                  </Link>
+                </h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{project.description}</p>
-                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-mint-300">
+                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
                   <TrendingUp className="size-4" />
                   {project.result}
+                </p>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-slate-500 transition-colors group-hover:text-brand-300">
+                  Read the case study
                 </p>
               </div>
             </motion.article>
@@ -70,7 +80,7 @@ export default function Work({ limit = 6 }: { limit?: number }) {
           <Reveal className="mt-10 text-center">
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-volt-500/60 hover:bg-volt-500/10"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-steel-500/60 hover:bg-steel-500/10"
             >
               View all case studies <ArrowUpRight className="size-4" />
             </Link>

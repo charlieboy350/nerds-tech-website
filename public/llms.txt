@@ -39,6 +39,17 @@ AI · Design · Development — under one roof. Based in Murrysville, PA, workin
 - Address: 5010 Prides Ct, Murrysville, PA 15668
 - Services page: https://nerdstech.co/services
 - Work: https://nerdstech.co/work
+- Case studies (each project has a detailed page: challenge, approach, metrics, testimonial):
+  - Harbor Realty — AI workflow & chatbot rollout: https://nerdstech.co/work/harbor-realty
+  - Vertex SaaS — AI support ticket triage: https://nerdstech.co/work/vertex-support
+  - Bloom Retail — Inventory forecasting automation: https://nerdstech.co/work/bloom-retail
+  - TableTap — Booking & check-in app: https://nerdstech.co/work/tabletap
+  - PulseFit — Workout tracking app: https://nerdstech.co/work/pulsefit
+  - SwiftBite — Food delivery app: https://nerdstech.co/work/swiftbite
+  - IronPulse Fitness — Gym management platform: https://nerdstech.co/work/ironpulse-fitness
+  - Pulseboard — Analytics dashboard: https://nerdstech.co/work/pulseboard
+  - Atelier North — Studio identity system: https://nerdstech.co/work/atelier-north
+  - Cornerstone Dental — Local search overhaul: https://nerdstech.co/work/cornerstone-dental
 - About: https://nerdstech.co/about
 - Contact: https://nerdstech.co/contact
 

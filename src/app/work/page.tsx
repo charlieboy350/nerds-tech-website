@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import Work from "@/components/home/Work";
 import Testimonials from "@/components/home/Testimonials";
 import CtaBanner from "@/components/CtaBanner";
+import { PROJECTS } from "@/data/content";
 import { SITE } from "@/site";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function WorkPage() {
         title="Work we're proud to sign."
         sub="A selection of recent launches across web, brand, mobile, and AI. Every project below shipped on time — and kept performing after."
       />
-      <Work />
+      <Work limit={PROJECTS.length} />
       <Testimonials />
       <CtaBanner />
     </>
