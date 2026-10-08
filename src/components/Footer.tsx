@@ -19,13 +19,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="flex items-center" aria-label={`${SITE.name} home`}>
+            <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
               <Image
                 src="/logo.png"
                 alt={`${SITE.name} logo`}
                 width={200}
                 height={52}
-                className="h-11 w-auto"
+                className="h-11 w-auto transition-all duration-300 group-hover:scale-[1.04] group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

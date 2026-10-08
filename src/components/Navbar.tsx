@@ -32,13 +32,13 @@ export default function Navbar() {
       }`}
     >
       <nav aria-label="Main navigation" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center" aria-label={`${SITE.name} home`}>
+        <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
           <Image
             src="/logo.png"
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-9 w-auto"
+            className="h-9 w-auto transition-all duration-300 group-hover:scale-[1.04] group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
             priority
           />
         </Link>
