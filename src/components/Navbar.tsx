@@ -43,24 +43,21 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-md md:flex">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`group relative py-1.5 text-sm font-medium transition-colors duration-300 hover:text-white ${
-                    isActive ? "text-white" : "text-slate-400"
+                  aria-current={isActive ? "page" : undefined}
+                  className={`block rounded-full px-5 py-2 text-sm font-semibold transition-all duration-300 ${
+                    isActive
+                      ? "bg-gradient-to-r from-brand-400 to-steel-500 text-white shadow-[0_6px_20px_-6px_rgba(69,179,212,0.7)]"
+                      : "text-slate-400 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   {link.label}
-                  <span
-                    aria-hidden="true"
-                    className={`absolute inset-x-0 -bottom-0.5 h-[2px] origin-left rounded-full bg-gradient-to-r from-brand-400 to-steel-500 transition-transform duration-300 ${
-                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  />
                 </Link>
               </li>
             );
