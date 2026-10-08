@@ -22,8 +22,8 @@ export default function Hero() {
     <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28" aria-label="Introduction">
       {/* Backdrop */}
       <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" aria-hidden="true" />
-      <div className="absolute -top-32 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-volt-500/20 blur-[140px] animate-pulse-glow" aria-hidden="true" />
-      <div className="absolute top-40 -left-32 h-96 w-96 rounded-full bg-mint-500/10 blur-[120px] animate-float" aria-hidden="true" />
+      <div className="absolute -top-32 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-steel-500/20 blur-[140px] animate-pulse-glow" aria-hidden="true" />
+      <div className="absolute top-40 -left-32 h-96 w-96 rounded-full bg-brand-500/10 blur-[120px] animate-float" aria-hidden="true" />
       <div className="absolute top-64 -right-24 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-[120px] animate-float-slow" aria-hidden="true" />
 
       <motion.div
@@ -33,7 +33,7 @@ export default function Hero() {
         className="relative mx-auto max-w-7xl px-5 sm:px-8"
       >
         <motion.div variants={item} className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-volt-500/30 bg-volt-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-volt-300">
+          <span className="inline-flex items-center gap-2 rounded-full border border-steel-500/30 bg-steel-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-steel-300">
             <Sparkles className="size-3.5" />
             {SITE.tagline}
           </span>
@@ -60,7 +60,7 @@ export default function Hero() {
         <motion.div variants={item} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/contact"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-volt-500 to-mint-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-volt-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
           >
             Start your project
             <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
@@ -69,7 +69,7 @@ export default function Hero() {
             href="/work"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5 sm:w-auto"
           >
-            <PlayCircle className="size-5 text-volt-300" />
+            <PlayCircle className="size-5 text-steel-300" />
             See our work
           </Link>
         </motion.div>

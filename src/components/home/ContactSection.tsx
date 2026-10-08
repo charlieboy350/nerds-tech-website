@@ -9,7 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 
 const inputCls =
-  "w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-volt-500/70 focus:ring-2 focus:ring-volt-500/20";
+  "w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-steel-500/70 focus:ring-2 focus:ring-steel-500/20";
 
 export default function ContactSection() {
   const [sent, setSent] = useState(false);
@@ -27,7 +27,7 @@ export default function ContactSection() {
 
   return (
     <section className="relative py-20 sm:py-28" aria-label="Contact">
-      <div className="absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-volt-500/10 blur-[140px]" aria-hidden="true" />
+      <div className="absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-steel-500/10 blur-[140px]" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -45,25 +45,25 @@ export default function ContactSection() {
               </p>
               <ul className="mt-8 space-y-5">
                 <li className="flex items-start gap-4">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-volt-500/15 text-volt-300 ring-1 ring-volt-500/30">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-steel-500/15 text-steel-300 ring-1 ring-steel-500/30">
                     <Mail className="size-5" />
                   </span>
                   <span>
                     <span className="block text-xs uppercase tracking-wider text-slate-500">Email</span>
-                    <a href={`mailto:${SITE.email}`} className="mt-1 block font-medium text-white hover:text-volt-300">{SITE.email}</a>
+                    <a href={`mailto:${SITE.email}`} className="mt-1 block font-medium text-white hover:text-steel-300">{SITE.email}</a>
                   </span>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-volt-500/15 text-volt-300 ring-1 ring-volt-500/30">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-steel-500/15 text-steel-300 ring-1 ring-steel-500/30">
                     <Phone className="size-5" />
                   </span>
                   <span>
                     <span className="block text-xs uppercase tracking-wider text-slate-500">Phone</span>
-                    <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-medium text-white hover:text-volt-300">{SITE.phone}</a>
+                    <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-medium text-white hover:text-steel-300">{SITE.phone}</a>
                   </span>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-volt-500/15 text-volt-300 ring-1 ring-volt-500/30">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-steel-500/15 text-steel-300 ring-1 ring-steel-500/30">
                     <MapPin className="size-5" />
                   </span>
                   <span>
@@ -73,8 +73,8 @@ export default function ContactSection() {
                 </li>
               </ul>
               <div className="mt-auto pt-8">
-                <div className="rounded-2xl border border-mint-400/20 bg-mint-400/5 p-5">
-                  <p className="text-sm font-semibold text-mint-300">Average reply time: under 24 hours</p>
+                <div className="rounded-2xl border border-brand-400/20 bg-brand-400/5 p-5">
+                  <p className="text-sm font-semibold text-brand-300">Average reply time: under 24 hours</p>
                   <p className="mt-1 text-xs text-slate-400">No spam, no pushy sales calls. Just a clear plan and a fixed quote.</p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 14, delay: 0.1 }}
-                    className="grid size-20 place-items-center rounded-full bg-mint-400/15 text-mint-300 ring-1 ring-mint-400/40"
+                    className="grid size-20 place-items-center rounded-full bg-brand-400/15 text-brand-300 ring-1 ring-brand-400/40"
                   >
                     <CheckCircle2 className="size-10" />
                   </motion.span>
@@ -104,7 +104,7 @@ export default function ContactSection() {
                   </p>
                   <button
                     onClick={() => setSent(false)}
-                    className="mt-6 text-sm font-medium text-volt-300 hover:text-volt-400"
+                    className="mt-6 text-sm font-medium text-steel-300 hover:text-steel-400"
                   >
                     Send another message
                   </button>
@@ -147,7 +147,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={sending}
-                      className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-volt-500 to-mint-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-volt-500/25 transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 sm:w-auto"
+                      className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 sm:w-auto"
                     >
                       {sending ? "Sending…" : "Send message"}
                       <Send className="size-4 transition-transform group-hover:translate-x-0.5" />

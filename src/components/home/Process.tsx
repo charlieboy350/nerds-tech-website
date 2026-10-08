@@ -16,7 +16,7 @@ export default function Process() {
 
         <div className="relative mt-14">
           {/* Connector line */}
-          <div className="absolute left-[27px] top-8 bottom-8 hidden w-px bg-gradient-to-b from-volt-500/60 via-volt-500/20 to-transparent md:block" aria-hidden="true" />
+          <div className="absolute left-[27px] top-8 bottom-8 hidden w-px bg-gradient-to-b from-steel-500/60 via-steel-500/20 to-transparent md:block" aria-hidden="true" />
 
           <motion.ol
             initial="hidden"
@@ -32,9 +32,9 @@ export default function Process() {
                   hidden: { opacity: 0, x: -30 },
                   show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
                 }}
-                className="relative flex gap-6 rounded-2xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur-sm transition-colors hover:border-volt-500/40 sm:p-8 md:ml-0"
+                className="relative flex gap-6 rounded-2xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur-sm transition-colors hover:border-steel-500/40 sm:p-8 md:ml-0"
               >
-                <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-volt-500 to-mint-400 font-display text-lg font-bold text-white shadow-lg shadow-volt-500/25">
+                <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-steel-500 to-brand-400 font-display text-lg font-bold text-white shadow-lg shadow-steel-500/25">
                   {phase.step}
                 </span>
                 <div>

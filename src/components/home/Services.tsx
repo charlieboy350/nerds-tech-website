@@ -37,13 +37,13 @@ export default function Services({ limit }: { limit?: number }) {
               className="card-glow group rounded-2xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm"
             >
               <div className="flex items-start justify-between">
-                <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-volt-500/20 to-mint-400/10 text-volt-300 ring-1 ring-volt-500/30 transition-transform duration-300 group-hover:scale-110">
+                <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30 transition-transform duration-300 group-hover:scale-110">
                   <service.icon className="size-6" />
                 </span>
                 <Link
                   href={`/services#${service.slug}`}
                   aria-label={`Learn more about ${service.title}`}
-                  className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-500 opacity-0 transition-all group-hover:opacity-100 hover:border-volt-500/50 hover:text-white"
+                  className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-500 opacity-0 transition-all group-hover:opacity-100 hover:border-steel-500/50 hover:text-white"
                 >
                   <ArrowUpRight className="size-4" />
                 </Link>
@@ -58,7 +58,7 @@ export default function Services({ limit }: { limit?: number }) {
           <Reveal className="mt-10 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-volt-500/60 hover:bg-volt-500/10"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-steel-500/60 hover:bg-steel-500/10"
             >
               View all {SERVICES.length} services <ArrowUpRight className="size-4" />
             </Link>

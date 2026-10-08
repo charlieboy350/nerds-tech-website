@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 
 function FaqItem({ q, a, open, onToggle, index }: { q: string; a: string; open: boolean; onToggle: () => void; index: number }) {
   return (
-    <div className={`overflow-hidden rounded-2xl border transition-colors ${open ? "border-volt-500/50 bg-ink-800" : "border-white/10 bg-ink-800/50 hover:border-white/25"}`}>
+    <div className={`overflow-hidden rounded-2xl border transition-colors ${open ? "border-steel-500/50 bg-ink-800" : "border-white/10 bg-ink-800/50 hover:border-white/25"}`}>
       <button
         onClick={onToggle}
         aria-expanded={open}
@@ -20,7 +20,7 @@ function FaqItem({ q, a, open, onToggle, index }: { q: string; a: string; open: 
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.25 }}
-          className={`grid size-8 shrink-0 place-items-center rounded-full ${open ? "bg-volt-500 text-white" : "bg-white/5 text-slate-400"}`}
+          className={`grid size-8 shrink-0 place-items-center rounded-full ${open ? "bg-steel-500 text-white" : "bg-white/5 text-slate-400"}`}
         >
           <Plus className="size-4" />
         </motion.span>

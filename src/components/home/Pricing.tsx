@@ -32,12 +32,12 @@ export default function Pricing() {
               }}
               className={`relative flex flex-col rounded-3xl border p-8 ${
                 tier.featured
-                  ? "border-volt-500/60 bg-gradient-to-b from-volt-500/15 to-ink-800 shadow-2xl shadow-volt-500/20 lg:-my-4 lg:py-12"
+                  ? "border-steel-500/60 bg-gradient-to-b from-steel-500/15 to-ink-800 shadow-2xl shadow-steel-500/20 lg:-my-4 lg:py-12"
                   : "border-white/10 bg-ink-800/60"
               }`}
             >
               {tier.featured && (
-                <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-gradient-to-r from-volt-500 to-mint-400 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-gradient-to-r from-steel-500 to-brand-400 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
                   <Sparkles className="size-3.5" /> Most popular
                 </span>
               )}
@@ -50,7 +50,7 @@ export default function Pricing() {
               <ul className="mt-7 flex-1 space-y-3.5">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm text-slate-300">
-                    <span className={`mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ${tier.featured ? "bg-volt-500/25 text-volt-300" : "bg-white/5 text-mint-300"}`}>
+                    <span className={`mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ${tier.featured ? "bg-steel-500/25 text-steel-300" : "bg-white/5 text-brand-300"}`}>
                       <Check className="size-3" strokeWidth={3} />
                     </span>
                     {feature}
@@ -61,7 +61,7 @@ export default function Pricing() {
                 href="/contact"
                 className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
                   tier.featured
-                    ? "bg-gradient-to-r from-volt-500 to-mint-400 text-white shadow-lg shadow-volt-500/30 hover:scale-[1.02]"
+                    ? "bg-gradient-to-r from-steel-500 to-brand-400 text-white shadow-lg shadow-steel-500/30 hover:scale-[1.02]"
                     : "border border-white/15 text-white hover:border-white/40 hover:bg-white/5"
                 }`}
               >

@@ -13,7 +13,7 @@ export default function SectionHeading({ eyebrow, title, sub, align = "center" }
   const alignCls = align === "center" ? "text-center mx-auto" : "text-left";
   return (
     <Reveal className={`max-w-2xl ${alignCls}`}>
-      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-volt-400">{eyebrow}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">{eyebrow}</p>
       <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
         {title}
       </h2>
