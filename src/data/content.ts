@@ -44,6 +44,8 @@ export interface Project {
   description: string;
   result: string;
   image: string;
+  /** CSS object-position for the full-bleed hero (e.g. "center 25%"). Defaults to center. */
+  imagePosition?: string;
   timeline: string;
   services: string[];
   overview: string[];
@@ -481,6 +483,7 @@ export const PROJECTS: Project[] = [
       "Bookings, memberships, trainer schedules, and payments — previously spread across four tools — rebuilt as one dashboard the whole team actually enjoys using.",
     result: "4 tools → 1 platform · 38% fewer no-shows",
     image: "/projects/ironpulse.jpg",
+    imagePosition: "center 25%",
     timeline: "8 weeks",
     services: ["Web Design & Development", "AI Automation"],
     overview: [

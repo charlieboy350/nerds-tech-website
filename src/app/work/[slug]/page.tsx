@@ -140,18 +140,20 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </div>
       </header>
 
-      {/* Hero image — full image, never cropped */}
+      {/* Hero image — full-bleed banner */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <div className="relative h-64 overflow-hidden rounded-3xl border border-white/10 bg-ink-900 sm:h-96 lg:h-[28rem]">
+          <div className="relative h-64 overflow-hidden rounded-3xl border border-white/10 sm:h-96 lg:h-[28rem]">
             <Image
               src={project.image}
               alt={`${project.client} — ${project.title}`}
               fill
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
-              className="object-contain"
+              className="object-cover"
+              style={{ objectPosition: project.imagePosition ?? "center" }}
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent" aria-hidden="true" />
           </div>
         </Reveal>
       </div>
