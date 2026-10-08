@@ -14,15 +14,29 @@ const inputCls =
 export default function ContactSection() {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    // Demo only: simulate a submit. Wire this to your API / form service.
-    setTimeout(() => {
-      setSending(false);
+    setError(null);
+    try {
+      const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json?.ok) {
+        throw new Error(json?.error ?? "Something went wrong. Please try again.");
+      }
       setSent(true);
-    }, 900);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -111,6 +125,15 @@ export default function ContactSection() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+                  {/* Honeypot — invisible to humans, catches bots */}
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute h-0 w-0 overflow-hidden opacity-0"
+                  />
                   <div>
                     <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-300">Name *</label>
                     <input id="name" name="name" required placeholder="Jane Cooper" className={inputCls} autoComplete="name" />
@@ -144,6 +167,11 @@ export default function ContactSection() {
                     <textarea id="message" name="message" required rows={5} placeholder="What are you building? What does success look like?" className={`${inputCls} resize-none`} />
                   </div>
                   <div className="sm:col-span-2">
+                    {error && (
+                      <p role="alert" className="mb-4 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+                        {error}
+                      </p>
+                    )}
                     <button
                       type="submit"
                       disabled={sending}
