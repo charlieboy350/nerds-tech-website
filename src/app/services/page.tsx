@@ -56,7 +56,7 @@ export default function ServicesPage() {
                 <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
                   <div className="flex-1">
                     <div className="flex items-center gap-4">
-                      <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-volt-500/20 to-mint-400/10 text-volt-300 ring-1 ring-volt-500/30">
+                      <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
                         <service.icon className="size-7" />
                       </span>
                       <div>
@@ -77,7 +77,7 @@ export default function ServicesPage() {
                     <ul className="mt-4 space-y-2.5">
                       {service.deliverables.map((d) => (
                         <li key={d} className="flex items-start gap-2.5 text-sm text-slate-300">
-                          <Check className="mt-0.5 size-4 shrink-0 text-mint-300" strokeWidth={3} />
+                          <Check className="mt-0.5 size-4 shrink-0 text-brand-300" strokeWidth={3} />
                           {d}
                         </li>
                       ))}

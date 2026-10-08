@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-950 transition-all hover:bg-volt-300"
+            className="group inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-950 transition-all hover:bg-steel-300"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

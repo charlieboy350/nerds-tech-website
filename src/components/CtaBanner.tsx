@@ -10,10 +10,10 @@ export default function CtaBanner() {
     <section className="relative py-20 sm:py-24" aria-label="Call to action">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-volt-500/30 bg-gradient-to-br from-volt-500/20 via-ink-800 to-ink-900 px-8 py-14 text-center sm:px-16 sm:py-20">
+          <div className="relative overflow-hidden rounded-3xl border border-steel-500/30 bg-gradient-to-br from-steel-500/20 via-ink-800 to-ink-900 px-8 py-14 text-center sm:px-16 sm:py-20">
             <div className="bg-grid absolute inset-0 opacity-50" aria-hidden="true" />
             <motion.div
-              className="absolute -top-24 left-1/2 h-64 w-[560px] -translate-x-1/2 rounded-full bg-volt-500/25 blur-[100px]"
+              className="absolute -top-24 left-1/2 h-64 w-[560px] -translate-x-1/2 rounded-full bg-steel-500/25 blur-[100px]"
               aria-hidden="true"
               animate={{ opacity: [0.5, 0.9, 0.5], scale: [1, 1.08, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

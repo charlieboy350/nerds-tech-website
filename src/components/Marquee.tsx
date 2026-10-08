@@ -13,7 +13,7 @@ export default function Marquee() {
             <span className="font-display text-lg font-semibold uppercase tracking-widest text-slate-500">
               {s.title}
             </span>
-            <span className="size-1.5 rounded-full bg-volt-500" />
+            <span className="size-1.5 rounded-full bg-steel-500" />
           </span>
         ))}
       </div>

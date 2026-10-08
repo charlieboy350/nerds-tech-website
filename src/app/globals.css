@@ -9,13 +9,17 @@
   --color-ink-800: #12121e;
   --color-ink-700: #1c1c2c;
 
-  --color-volt-300: #c4b5fd;
-  --color-volt-400: #a78bfa;
-  --color-volt-500: #8b5cf6;
+  /* Brand secondary — steel blue sampled from the NerdsTech logo */
+  --color-steel-300: #b3cbe4;
+  --color-steel-400: #84a9cf;
+  --color-steel-500: #5d8fc0;
+  --color-steel-600: #456f9c;
 
-  --color-mint-300: #5eead4;
-  --color-mint-400: #2dd4bf;
-  --color-mint-500: #14b8a6;
+  /* Brand primary — cyan sampled from the NerdsTech logo wordmark */
+  --color-brand-300: #9fdcf0;
+  --color-brand-400: #63c6e4;
+  --color-brand-500: #45b3d4;
+  --color-brand-600: #2f93b8;
 
   --animate-marquee: marquee 42s linear infinite;
   --animate-float: float 9s ease-in-out infinite;
@@ -48,7 +52,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-volt-500);
+  background: var(--color-brand-500);
   color: white;
 }
 
@@ -67,9 +71,9 @@ body {
   background: #3a3a58;
 }
 
-/* Gradient headline text */
+/* Gradient headline text — cyan to steel blue, like the logo */
 .text-gradient {
-  background: linear-gradient(100deg, #c4b5fd 0%, #8b5cf6 35%, #2dd4bf 100%);
+  background: linear-gradient(100deg, #9fdcf0 0%, #45b3d4 45%, #5d8fc0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -78,8 +82,8 @@ body {
 /* Dotted grid backdrop used on hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(139, 92, 246, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(139, 92, 246, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(69, 179, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(69, 179, 212, 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
@@ -90,8 +94,8 @@ body {
 }
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.45);
-  box-shadow: 0 20px 60px -18px rgba(139, 92, 246, 0.45);
+  border-color: rgba(69, 179, 212, 0.45);
+  box-shadow: 0 20px 60px -18px rgba(69, 179, 212, 0.45);
 }
 
 /* Respect users who prefer reduced motion */

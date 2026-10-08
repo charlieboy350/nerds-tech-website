@@ -39,7 +39,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-volt-500/60 hover:text-white"
+                  className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-steel-500/60 hover:text-white"
                 >
                   <Icon className="size-4" />
                 </a>
@@ -77,15 +77,15 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Get in touch</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 size-4 shrink-0 text-volt-400" />
+                <Mail className="mt-0.5 size-4 shrink-0 text-steel-400" />
                 <a href={`mailto:${SITE.email}`} className="hover:text-white">{SITE.email}</a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 size-4 shrink-0 text-volt-400" />
+                <Phone className="mt-0.5 size-4 shrink-0 text-steel-400" />
                 <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="hover:text-white">{SITE.phone}</a>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-volt-400" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-steel-400" />
                 <span>{SITE.address}</span>
               </li>
             </ul>

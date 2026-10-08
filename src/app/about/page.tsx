@@ -91,7 +91,7 @@ export default function AboutPage() {
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.08}>
                 <article className="card-glow h-full rounded-2xl border border-white/10 bg-ink-800/60 p-8">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-volt-500/20 to-mint-400/10 text-volt-300 ring-1 ring-volt-500/30">
+                  <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
                     <v.icon className="size-6" />
                   </span>
                   <h3 className="mt-5 font-display text-xl font-semibold text-white">{v.title}</h3>
