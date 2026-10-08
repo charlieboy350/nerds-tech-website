@@ -140,7 +140,19 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-300">Email *</label>
-                    <input id="email" name="email" type="email" required placeholder="jane@company.com" autoComplete="off" className={inputCls} />
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="jane@company.com"
+                      autoComplete="off"
+                      readOnly
+                      onFocus={(e) => {
+                        e.currentTarget.readOnly = false;
+                      }}
+                      className={inputCls}
+                    />
                   </div>
                   <div>
                     <label htmlFor="service" className="mb-2 block text-sm font-medium text-slate-300">Service</label>
