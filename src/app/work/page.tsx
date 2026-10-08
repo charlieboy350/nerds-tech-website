@@ -26,7 +26,7 @@ export default function WorkPage() {
         title="Work we're proud to sign."
         sub="A selection of recent launches across web, brand, mobile, and AI. Every project below shipped on time — and kept performing after."
       />
-      <Work limit={PROJECTS.length} filterable />
+      <Work limit={PROJECTS.length} filterable tight />
       <Testimonials />
       <CtaBanner />
     </>

@@ -11,14 +11,14 @@ import Reveal from "@/components/Reveal";
 
 const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
 
-export default function Work({ limit = 6, filterable = false }: { limit?: number; filterable?: boolean }) {
+export default function Work({ limit = 6, filterable = false, tight = false }: { limit?: number; filterable?: boolean; tight?: boolean }) {
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === active);
   const projects = filtered.slice(0, limit);
   const countFor = (cat: string) => (cat === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.category === cat).length);
 
   return (
-    <section className="relative py-20 sm:py-28" aria-label="Selected work">
+    <section className={`relative ${tight ? "pt-10 pb-20 sm:pt-14 sm:pb-28" : "py-20 sm:py-28"}`} aria-label="Selected work">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Recent work"
