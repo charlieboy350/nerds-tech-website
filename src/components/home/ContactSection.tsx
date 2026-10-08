@@ -139,14 +139,16 @@ export default function ContactSection() {
                     <input id="name" name="name" required placeholder="Jane Cooper" autoComplete="off" className={inputCls} />
                   </div>
                   <div>
-                    <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-300">Email *</label>
+                    <label htmlFor="em" className="mb-2 block text-sm font-medium text-slate-300">Email *</label>
                     <input
-                      id="email"
-                      name="email"
-                      type="email"
+                      id="em"
+                      name="em"
+                      type="text"
+                      inputMode="email"
                       required
                       placeholder="jane@company.com"
-                      autoComplete="off"
+                      autoComplete="new-password"
+                      data-lpignore="true"
                       readOnly
                       onFocus={(e) => {
                         e.currentTarget.readOnly = false;

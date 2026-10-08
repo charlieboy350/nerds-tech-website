@@ -55,7 +55,8 @@ export async function POST(req: NextRequest) {
     }
 
     const name = String(body.name ?? "").trim();
-    const email = String(body.email ?? "").trim();
+    // Field is named "em" (not "email") so Chrome doesn't recognise it as an email field.
+    const email = String(body.em ?? body.email ?? "").trim();
     const service = String(body.service ?? "").trim();
     const budget = String(body.budget ?? "").trim();
     const message = String(body.message ?? "").trim();
