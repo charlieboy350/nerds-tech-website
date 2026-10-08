@@ -38,7 +38,7 @@ export default function Navbar() {
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-9 w-auto transition-all duration-300 group-hover:scale-[1.04] group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
+            className="h-9 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
             priority
           />
         </Link>

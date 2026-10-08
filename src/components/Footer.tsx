@@ -25,7 +25,7 @@ export default function Footer() {
                 alt={`${SITE.name} logo`}
                 width={200}
                 height={52}
-                className="h-11 w-auto transition-all duration-300 group-hover:scale-[1.04] group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
+                className="h-11 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
