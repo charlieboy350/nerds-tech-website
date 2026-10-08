@@ -124,7 +124,7 @@ export default function ContactSection() {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
+                <form onSubmit={handleSubmit} autoComplete="off" className="grid gap-5 sm:grid-cols-2">
                   {/* Honeypot — invisible to humans, catches bots */}
                   <input
                     type="text"
@@ -136,15 +136,15 @@ export default function ContactSection() {
                   />
                   <div>
                     <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-300">Name *</label>
-                    <input id="name" name="name" required placeholder="Jane Cooper" className={inputCls} autoComplete="name" />
+                    <input id="name" name="name" required placeholder="Jane Cooper" autoComplete="off" className={inputCls} />
                   </div>
                   <div>
                     <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-300">Email *</label>
-                    <input id="email" name="email" type="email" required placeholder="jane@company.com" className={inputCls} autoComplete="email" />
+                    <input id="email" name="email" type="email" required placeholder="jane@company.com" autoComplete="off" className={inputCls} />
                   </div>
                   <div>
                     <label htmlFor="service" className="mb-2 block text-sm font-medium text-slate-300">Service</label>
-                    <select id="service" name="service" className={inputCls} defaultValue="">
+                    <select id="service" name="service" autoComplete="off" className={inputCls} defaultValue="">
                       <option value="" disabled>Select a service</option>
                       {SERVICES.map((s) => (
                         <option key={s.slug} value={s.title}>{s.title}</option>
@@ -154,7 +154,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <label htmlFor="budget" className="mb-2 block text-sm font-medium text-slate-300">Budget</label>
-                    <select id="budget" name="budget" className={inputCls} defaultValue="">
+                    <select id="budget" name="budget" autoComplete="off" className={inputCls} defaultValue="">
                       <option value="" disabled>Select a range</option>
                       <option>Under $2k</option>
                       <option>$2k – $5k</option>
@@ -164,7 +164,7 @@ export default function ContactSection() {
                   </div>
                   <div className="sm:col-span-2">
                     <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-300">Project details *</label>
-                    <textarea id="message" name="message" required rows={5} placeholder="What are you building? What does success look like?" className={`${inputCls} resize-none`} />
+                    <textarea id="message" name="message" required rows={5} placeholder="What are you building? What does success look like?" autoComplete="off" className={`${inputCls} resize-none`} />
                   </div>
                   <div className="sm:col-span-2">
                     {error && (
