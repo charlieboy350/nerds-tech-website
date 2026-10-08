@@ -98,6 +98,52 @@ body {
   box-shadow: 0 20px 60px -18px rgba(69, 179, 212, 0.45);
 }
 
+/* 3D flip cards (Services section) — front shows the service, back the case study */
+.flip-inner {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-front {
+  height: 100%;
+}
+.flip-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+/* Hover flip only on devices with a real hover pointer (desktop) */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .group:hover .flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+/* Tap-to-flip state (touch) + keyboard focus on the back link */
+.flip-inner.is-flipped,
+.flip-inner:has(a.flip-back:focus-visible) {
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+    cursor: default;
+  }
+  .flip-inner.is-flipped {
+    transform: none;
+  }
+  .flip-back {
+    display: none;
+  }
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -22,6 +22,8 @@ export interface Service {
   short: string;
   long: string;
   deliverables: string[];
+  /** Project slug shown on the back of the flip card ("see it in action"). */
+  relatedProject?: string;
 }
 
 export interface ProjectMetric {
@@ -56,6 +58,7 @@ export interface Project {
 export const SERVICES: Service[] = [
   {
     slug: "ai-automation",
+    relatedProject: "harbor-realty",
     icon: Bot,
     title: "AI Automation",
     short: "Workflows that run themselves — lead routing, follow-ups, invoicing, reporting.",
@@ -64,6 +67,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "ai-chat-support",
+    relatedProject: "vertex-support",
     icon: MessagesSquare,
     title: "AI Chat Support",
     short: "A trained assistant that answers customers instantly, day or night.",
@@ -72,6 +76,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "ai-codebase-integration",
+    relatedProject: "vertex-support",
     icon: Puzzle,
     title: "AI Codebase Integration",
     short: "We integrate AI into your existing product — carefully, one module at a time.",
@@ -80,6 +85,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "web-design-development",
+    relatedProject: "ironpulse-fitness",
     icon: Code2,
     title: "Web Design & Development",
     short: "Hand-coded, lightning-fast websites. No bloated page builders.",
@@ -88,6 +94,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "logo-design",
+    relatedProject: "atelier-north",
     icon: PenTool,
     title: "Logo Design",
     short: "A mark drawn from your story, not a template.",
@@ -96,6 +103,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "branding",
+    relatedProject: "atelier-north",
     icon: Fingerprint,
     title: "Brand Identity",
     short: "Colors, type, and voice that hold together everywhere you show up.",
@@ -104,6 +112,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "content-writing",
+    relatedProject: "cornerstone-dental",
     icon: FileText,
     title: "Content Writing",
     short: "Copy that holds attention and moves readers toward yes.",
@@ -112,6 +121,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "seo",
+    relatedProject: "cornerstone-dental",
     icon: TrendingUp,
     title: "SEO & AI Search",
     short: "Get found on Google — and cited in AI answers.",
@@ -120,6 +130,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "social-media-marketing",
+    relatedProject: "pulsefit",
     icon: Share2,
     title: "Social Media Marketing",
     short: "Campaigns tuned to how each platform actually works.",
@@ -128,6 +139,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "motion-graphics",
+    relatedProject: "pulsefit",
     icon: Clapperboard,
     title: "Motion Graphics",
     short: "Explainers and product reveals that say more in ten seconds.",
@@ -136,6 +148,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "mobile-app-development",
+    relatedProject: "swiftbite",
     icon: Smartphone,
     title: "Mobile App Development",
     short: "iOS & Android apps that feel native, minus the maintenance drama.",
