@@ -379,6 +379,7 @@ export const PROJECTS: Project[] = [
       "A social fitness app with training plans, live challenges, and streaks — designed to bring users back every single morning.",
     result: "4.9★ · 120k downloads",
     image: "/projects/pulse-fit.jpg",
+    imagePosition: "center 31%",
     timeline: "12 weeks",
     services: ["Mobile App Development", "Motion Graphics", "Brand Identity"],
     overview: [
