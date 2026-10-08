@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -8,8 +9,13 @@ import { PROJECTS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 
-export default function Work({ limit = 6 }: { limit?: number }) {
-  const projects = PROJECTS.slice(0, limit);
+const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
+
+export default function Work({ limit = 6, filterable = false }: { limit?: number; filterable?: boolean }) {
+  const [active, setActive] = useState("All");
+  const filtered = active === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === active);
+  const projects = filtered.slice(0, limit);
+  const countFor = (cat: string) => (cat === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.category === cat).length);
 
   return (
     <section className="relative py-20 sm:py-28" aria-label="Selected work">
@@ -20,12 +26,41 @@ export default function Work({ limit = 6 }: { limit?: number }) {
           sub="Real projects, real outcomes. Every engagement below combined at least two of our disciplines — that's where the magic happens."
         />
 
+        {filterable && (
+          <Reveal className="mt-8">
+            <div className="flex flex-wrap justify-center gap-2.5" role="tablist" aria-label="Filter projects by category">
+              {CATEGORIES.map((cat) => {
+                const isActive = active === cat;
+                return (
+                  <button
+                    key={cat}
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setActive(cat)}
+                    className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                      isActive
+                        ? "border-brand-400/60 bg-brand-500/15 text-brand-200 shadow-[0_8px_24px_-10px_rgba(69,179,212,0.6)]"
+                        : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/30 hover:text-white"
+                    }`}
+                  >
+                    {cat}
+                    <span className={`ml-2 text-xs ${isActive ? "text-brand-300" : "text-slate-500"}`}>
+                      {countFor(cat)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </Reveal>
+        )}
+
         <motion.div
+          key={active}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
           variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
-          className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
             <motion.article
