@@ -14,7 +14,7 @@ import {
   TrendingUp,
   Wrench,
 } from "lucide-react";
-import { PROJECTS } from "@/data/content";
+import { PROJECTS, SERVICES } from "@/data/content";
 import { SITE } from "@/site";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -127,14 +127,25 @@ export default async function CaseStudyPage({ params }: PageProps) {
           </Reveal>
           <Reveal delay={0.24}>
             <div className="mt-6 flex flex-wrap gap-2">
-              {project.services.map((service) => (
-                <span
-                  key={service}
-                  className="rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10"
-                >
-                  {service}
-                </span>
-              ))}
+              {project.services.map((service) => {
+                const match = SERVICES.find((s) => s.title === service);
+                const cls =
+                  "rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-brand-200 hover:ring-brand-400/40 hover:shadow-[0_8px_20px_-8px_rgba(69,179,212,0.5)]";
+                return match ? (
+                  <Link
+                    key={service}
+                    href={`/services#${match.slug}`}
+                    title={`Learn more about ${service}`}
+                    className={cls}
+                  >
+                    {service}
+                  </Link>
+                ) : (
+                  <span key={service} className={`${cls} cursor-default`}>
+                    {service}
+                  </span>
+                );
+              })}
             </div>
           </Reveal>
         </div>
