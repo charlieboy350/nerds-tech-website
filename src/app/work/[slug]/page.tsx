@@ -321,9 +321,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="mt-8 text-center">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:border-brand-500/60 hover:bg-brand-500/10"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
           >
-            View all case studies <ArrowUpRight className="size-4" />
+            View all case studies <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
       </nav>

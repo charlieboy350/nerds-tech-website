@@ -113,7 +113,7 @@ export default function AiIntegration() {
                   </Link>
                   <Link
                     href="/services#ai-codebase-integration"
-                    className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5 sm:w-auto"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)] sm:w-auto"
                   >
                     How it works
                   </Link>

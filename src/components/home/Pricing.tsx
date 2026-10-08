@@ -62,7 +62,7 @@ export default function Pricing() {
                 className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
                   tier.featured
                     ? "bg-gradient-to-r from-steel-500 to-brand-400 text-white shadow-lg shadow-steel-500/30 hover:scale-[1.02]"
-                    : "border border-white/15 text-white hover:border-white/40 hover:bg-white/5"
+                    : "border border-white/15 bg-white/[0.03] text-white backdrop-blur-sm hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
                 }`}
               >
                 {tier.cta}
