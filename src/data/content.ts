@@ -713,6 +713,18 @@ export const PROCESS = [
 
 /* ------------------------------- Testimonials ---------------------------- */
 
+/** Maps project service tags that aren't service titles to the closest service page. */
+export const SERVICE_TAG_LINKS: Record<string, string> = {
+  "UI/UX Design": "web-design-development",
+  "CRM Integration": "ai-automation",
+  "Analytics Dashboards": "web-design-development",
+};
+
+/** Resolve a project service tag to a /services anchor slug, if one fits. */
+export function serviceSlugFor(tag: string): string | undefined {
+  return SERVICES.find((s) => s.title === tag)?.slug ?? SERVICE_TAG_LINKS[tag];
+}
+
 export const TESTIMONIALS = [
   {
     quote:
