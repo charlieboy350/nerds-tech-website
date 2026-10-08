@@ -70,16 +70,30 @@ export default function AiIntegration() {
                       hidden: { opacity: 0, y: 26 },
                       show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
                     }}
-                    className="rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/50 hover:shadow-[0_18px_50px_-18px_rgba(69,179,212,0.5)]"
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-steel-500/25 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
+                    {/* Top accent line sweeps in on hover */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-6 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-transparent via-brand-400 to-transparent transition-transform duration-500 group-hover:scale-x-100"
+                    />
+                    {/* Corner glow fades in on hover */}
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-brand-400/0 blur-3xl transition-colors duration-500 group-hover:bg-brand-400/15"
+                    />
+                    <div className="relative flex items-center gap-3">
+                      <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-steel-500/25 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30 transition-all duration-300 group-hover:scale-110 group-hover:text-brand-300 group-hover:ring-brand-400/50">
                         <step.icon className="size-5" />
                       </span>
-                      <span className="font-display text-sm font-bold text-slate-500">0{i + 1}</span>
+                      <span className="font-display text-sm font-bold text-slate-500 transition-colors duration-300 group-hover:text-brand-300">
+                        0{i + 1}
+                      </span>
                     </div>
-                    <h3 className="mt-4 font-display text-lg font-semibold text-white">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-400">{step.text}</p>
+                    <h3 className="relative mt-4 font-display text-lg font-semibold text-white transition-colors duration-300 group-hover:text-brand-200">
+                      {step.title}
+                    </h3>
+                    <p className="relative mt-2 text-sm leading-relaxed text-slate-400">{step.text}</p>
                   </motion.li>
                 ))}
               </motion.ol>
