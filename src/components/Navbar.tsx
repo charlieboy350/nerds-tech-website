@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-950 transition-all hover:bg-steel-300"
+            className="group inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink-950 transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-400 hover:to-steel-500 hover:text-white hover:shadow-[0_8px_28px_-8px_rgba(69,179,212,0.7)]"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -103,7 +103,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-1.5 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink-950"
+                  className="flex items-center justify-center gap-1.5 rounded-full bg-white px-5 py-3 text-sm font-semibold text-ink-950 transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-400 hover:to-steel-500 hover:text-white"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </Link>
