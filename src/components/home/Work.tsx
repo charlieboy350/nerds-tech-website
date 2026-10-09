@@ -37,7 +37,7 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setActive(cat)}
-                    className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                    className={`whitespace-nowrap rounded-full border px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                       isActive
                         ? "border-brand-400/60 bg-brand-500/15 text-brand-200 shadow-[0_8px_24px_-10px_rgba(69,179,212,0.6)]"
                         : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/30 hover:text-white"
@@ -115,7 +115,7 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
           <Reveal className="mt-10 text-center">
             <Link
               href="/work"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
+              className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
             >
               View all case studies <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
