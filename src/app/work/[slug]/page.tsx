@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { PROJECTS, serviceSlugFor } from "@/data/content";
 import { SITE } from "@/site";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
@@ -120,7 +120,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black,transparent)]" aria-hidden="true" />
         <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-[130px]" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
-          <Reveal>
+          <GsapReveal>
             <div className="flex flex-wrap items-center gap-3">
               <span className="rounded-full border border-brand-500/40 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
                 {project.category}
@@ -129,23 +129,23 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <Clock className="size-4" /> {project.timeline}
               </span>
             </div>
-          </Reveal>
-          <Reveal delay={0.08}>
+          </GsapReveal>
+          <GsapReveal delay={0.08}>
             <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {project.client}: <span className="text-gradient">{project.title}</span>
             </h1>
-          </Reveal>
-          <Reveal delay={0.16}>
+          </GsapReveal>
+          <GsapReveal delay={0.16}>
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
               {project.description}
             </p>
-          </Reveal>
-          <Reveal delay={0.24}>
+          </GsapReveal>
+          <GsapReveal delay={0.24}>
             <div className="mt-6 flex flex-wrap gap-2">
               {project.services.map((service) => {
                 const slug = serviceSlugFor(service);
                 const cls =
-                  "rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-brand-200 hover:ring-brand-400/40 hover:shadow-[0_8px_20px_-8px_rgba(69,179,212,0.5)]";
+                  "rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-brand-200 hover:ring-brand-400/40 hover:shadow-[0_8px_20px_-8px_rgba(139,92,246,0.5)]";
                 return slug ? (
                   <Link
                     key={service}
@@ -162,13 +162,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 );
               })}
             </div>
-          </Reveal>
+          </GsapReveal>
         </div>
       </header>
 
       {/* Hero image — full-bleed banner */}
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
+        <GsapReveal>
           <div className="relative h-64 overflow-hidden rounded-3xl border border-white/10 sm:h-96 lg:h-[28rem]">
             <Image
               src={project.image}
@@ -181,19 +181,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent" aria-hidden="true" />
           </div>
-        </Reveal>
+        </GsapReveal>
       </div>
 
       {/* Metrics */}
       <section aria-label="Key results" className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {project.metrics.map((metric, i) => (
-            <Reveal key={metric.label} delay={i * 0.07}>
+            <GsapReveal key={metric.label} delay={i * 0.07}>
               <div className="card-glow h-full rounded-2xl border border-white/10 bg-ink-800/60 p-6 text-center">
                 <p className="font-display text-3xl font-bold text-brand-300 sm:text-4xl">{metric.value}</p>
                 <p className="mt-2 text-sm leading-snug text-slate-400">{metric.label}</p>
               </div>
-            </Reveal>
+            </GsapReveal>
           ))}
         </div>
       </section>
@@ -206,13 +206,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
               Overview
             </p>
           </div>
-          <Reveal>
+          <GsapReveal>
             <div className="max-w-3xl space-y-5 text-base leading-relaxed text-slate-300 sm:text-lg">
               {project.overview.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
             </div>
-          </Reveal>
+          </GsapReveal>
         </div>
       </section>
 
@@ -227,8 +227,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
             <ul className="max-w-3xl space-y-4">
               {project.challenge.map((item, i) => (
-                <Reveal key={i} delay={i * 0.06}>
-                  <li className="group relative flex gap-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_14px_40px_-16px_rgba(69,179,212,0.45)]">
+                <GsapReveal key={i} delay={i * 0.06}>
+                  <li className="group relative flex gap-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_14px_40px_-16px_rgba(139,92,246,0.45)]">
                     <span
                       aria-hidden="true"
                       className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gradient-to-b from-brand-400 to-steel-500 transition-transform duration-300 group-hover:scale-y-100"
@@ -240,7 +240,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                       {item}
                     </p>
                   </li>
-                </Reveal>
+                </GsapReveal>
               ))}
             </ul>
           </div>
@@ -256,7 +256,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {project.approach.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.07}>
+            <GsapReveal key={step.title} delay={i * 0.07}>
               <div className="card-glow h-full rounded-2xl border border-white/10 bg-ink-800/60 p-7">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex size-10 items-center justify-center rounded-xl bg-brand-500/15 text-brand-300 ring-1 ring-brand-500/30">
@@ -269,7 +269,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <h3 className="mt-4 font-display text-xl font-semibold text-white">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">{step.text}</p>
               </div>
-            </Reveal>
+            </GsapReveal>
           ))}
         </div>
       </section>
@@ -277,13 +277,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Result highlight + testimonial */}
       <section aria-label="Outcome" className="border-y border-white/5 bg-ink-900/50 py-14 sm:py-20">
         <div className="mx-auto max-w-4xl px-5 text-center sm:px-8">
-          <Reveal>
+          <GsapReveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-brand-500/40 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-300">
               <TrendingUp className="size-4" /> The outcome
             </p>
             <p className="mt-6 font-display text-3xl font-bold text-white sm:text-4xl">{project.result}</p>
-          </Reveal>
-          <Reveal delay={0.1}>
+          </GsapReveal>
+          <GsapReveal delay={0.1}>
             <figure className="mx-auto mt-10 max-w-3xl rounded-3xl border border-white/10 bg-ink-800/60 p-8 sm:p-10">
               <Quote className="mx-auto size-8 text-brand-400" aria-hidden="true" />
               <blockquote className="mt-4 text-base leading-relaxed text-slate-200 sm:text-lg">
@@ -293,8 +293,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 <span className="font-semibold text-white">{project.testimonial.name}</span> — {project.testimonial.role}
               </figcaption>
             </figure>
-          </Reveal>
-          <Reveal delay={0.16}>
+          </GsapReveal>
+          <GsapReveal delay={0.16}>
             <ul className="mx-auto mt-8 flex w-fit flex-col items-start gap-3 text-sm text-slate-400 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2">
               {project.metrics.slice(1).map((m) => (
                 <li key={m.label} className="flex items-start gap-2 text-left">
@@ -305,7 +305,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 </li>
               ))}
             </ul>
-          </Reveal>
+          </GsapReveal>
         </div>
       </section>
 
@@ -336,7 +336,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="mt-8 text-center">
           <Link
             href="/work"
-            className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
+            className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)]"
           >
             View all case studies <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
