@@ -233,7 +233,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-1.5 rounded-full bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
+                  className="whitespace-nowrap flex items-center justify-center gap-1.5 rounded-full bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </Link>
