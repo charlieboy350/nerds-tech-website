@@ -89,7 +89,7 @@ export default function HoverFaq({ faqs }: { faqs: HoverFaqEntry[] }) {
           index={i}
           q={faq.q}
           a={faq.a}
-          open={openIndex === i || hoverIndex === i}
+          open={(hoverIndex !== null ? hoverIndex : openIndex) === i}
           onToggle={() => setOpenIndex(openIndex === i ? null : i)}
           onHover={(hovering) =>
             setHoverIndex(canHover ? (hovering ? i : null) : null)
