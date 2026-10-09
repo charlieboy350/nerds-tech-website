@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, Check, ChevronRight, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Check, ChevronRight, Clock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
@@ -122,12 +122,21 @@ export default async function BlogPostPage({
           <p className="mt-5 text-lg leading-relaxed text-slate-400">{post.excerpt}</p>
         </Reveal>
         <Reveal delay={0.2}>
-          <p className="mt-6 flex items-center gap-3 text-sm text-slate-500">
-            {formatDate(post.date)}
-            <span aria-hidden="true">·</span>
-            <Clock className="size-4" /> {post.readTime} min read
-            <span aria-hidden="true">·</span> By {SITE.name}
-          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <span className="inline-flex items-center gap-1.5 text-slate-300">
+              <Calendar className="size-4 text-brand-400" />
+              {formatDate(post.date)}
+            </span>
+            <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
+            <span className="inline-flex items-center gap-1.5 text-slate-300">
+              <Clock className="size-4 text-brand-400" />
+              {post.readTime} min read
+            </span>
+            <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
+            <span className="text-slate-400">
+              By <span className="font-semibold text-white">{SITE.name}</span>
+            </span>
+          </div>
         </Reveal>
       </header>
 
