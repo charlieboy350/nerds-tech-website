@@ -40,7 +40,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative py-20 sm:py-28" aria-label="Contact">
+    <section className="relative overflow-hidden py-20 sm:py-28" aria-label="Contact">
       <div className="absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-steel-500/10 blur-[140px]" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
