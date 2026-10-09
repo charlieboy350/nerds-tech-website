@@ -189,7 +189,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={sending}
-                      className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 sm:w-auto"
+                      className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 sm:w-auto"
                     >
                       {sending ? "Sending…" : "Send message"}
                       <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
