@@ -171,7 +171,7 @@ export default async function BlogPostPage({
             </div>
             <Link
               href="/contact"
-              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
+              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
             >
               Talk to us about automation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
