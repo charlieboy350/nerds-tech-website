@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { HeartHandshake, Zap, Eye, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 import Stats from "@/components/home/Stats";
 import CtaBanner from "@/components/CtaBanner";
 import { SITE } from "@/site";
@@ -53,7 +53,7 @@ export default function AboutPage() {
 
       <section className="py-10 sm:py-14" aria-label="Our story">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
-          <Reveal>
+          <GsapReveal>
             <div className="space-y-5 text-base leading-relaxed text-slate-400 sm:text-lg">
               <p>
                 Most agencies sell you a slice: a logo here, a website there, an ad campaign
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 </span>
               </p>
             </div>
-          </Reveal>
+          </GsapReveal>
         </div>
       </section>
 
@@ -89,7 +89,7 @@ export default function AboutPage() {
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {VALUES.map((v, i) => (
-              <Reveal key={v.title} delay={i * 0.08}>
+              <GsapReveal key={v.title} delay={i * 0.08}>
                 <article className="card-glow h-full rounded-2xl border border-white/10 bg-ink-800/60 p-8">
                   <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
                     <v.icon className="size-6" />
@@ -97,7 +97,7 @@ export default function AboutPage() {
                   <h3 className="mt-5 font-display text-xl font-semibold text-white">{v.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-slate-400 sm:text-[15px]">{v.text}</p>
                 </article>
-              </Reveal>
+              </GsapReveal>
             ))}
           </div>
         </div>
