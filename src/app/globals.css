@@ -4,22 +4,22 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink-950: #06060c;
-  --color-ink-900: #0b0b14;
-  --color-ink-800: #12121e;
-  --color-ink-700: #1c1c2c;
+  --color-ink-950: #07060e;
+  --color-ink-900: #0c0a17;
+  --color-ink-800: #141126;
+  --color-ink-700: #201a3a;
 
-  /* Brand secondary — steel blue sampled from the NerdsTech logo */
-  --color-steel-300: #b3cbe4;
-  --color-steel-400: #84a9cf;
-  --color-steel-500: #5d8fc0;
-  --color-steel-600: #456f9c;
+  /* Brand primary — electric violet */
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
 
-  /* Brand primary — cyan sampled from the NerdsTech logo wordmark */
-  --color-brand-300: #9fdcf0;
-  --color-brand-400: #63c6e4;
-  --color-brand-500: #45b3d4;
-  --color-brand-600: #2f93b8;
+  /* Brand secondary — aurora cyan (harmony with the NerdsTech logo) */
+  --color-steel-300: #a5f3fc;
+  --color-steel-400: #67e8f9;
+  --color-steel-500: #22d3ee;
+  --color-steel-600: #0e7490;
 
   --animate-marquee: marquee 42s linear infinite;
   --animate-float: float 9s ease-in-out infinite;
@@ -61,10 +61,10 @@ body {
    mobile browsers render the exact same gradient as desktop (Tailwind v4's
    bg-gradient-* uses modern interpolation syntax those browsers drop). */
 .btn-gradient {
-  background-image: linear-gradient(to right, #5d8fc0, #63c6e4);
+  background-image: linear-gradient(to right, #22d3ee, #a78bfa);
 }
 .btn-gradient-rev {
-  background-image: linear-gradient(to right, #63c6e4, #5d8fc0);
+  background-image: linear-gradient(to right, #a78bfa, #22d3ee);
 }
 .btn-gradient-white {
   background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
@@ -75,19 +75,19 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0b14;
+  background: #0c0a17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a40;
+  background: #2b2347;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a58;
+  background: #3d3163;
 }
 
-/* Gradient headline text — cyan to steel blue, like the logo */
+/* Gradient headline text — aurora violet to fuchsia to cyan */
 .text-gradient {
-  background: linear-gradient(100deg, #9fdcf0 0%, #45b3d4 45%, #5d8fc0 100%);
+  background: linear-gradient(100deg, #c4b5fd 0%, #e879f9 45%, #22d3ee 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -96,9 +96,28 @@ body {
 /* Dotted grid backdrop used on hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(69, 179, 212, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(69, 179, 212, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(139, 92, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
   background-size: 56px 56px;
+}
+
+/* Aurora mesh backdrop — layered violet/fuchsia/cyan glows */
+.aurora-bg {
+  background:
+    radial-gradient(42rem 22rem at 12% 8%, rgba(139, 92, 246, 0.22), transparent 60%),
+    radial-gradient(36rem 20rem at 88% 12%, rgba(34, 211, 238, 0.14), transparent 60%),
+    radial-gradient(40rem 24rem at 50% 100%, rgba(232, 121, 249, 0.1), transparent 62%);
+}
+
+/* Film grain overlay for a premium finish */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
 }
 
 /* Card glow on hover */
@@ -108,8 +127,8 @@ body {
 }
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(69, 179, 212, 0.45);
-  box-shadow: 0 20px 60px -18px rgba(69, 179, 212, 0.45);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 20px 60px -18px rgba(139, 92, 246, 0.45);
 }
 
 /* 3D flip cards (Services section) — front shows the service, back the case study */
