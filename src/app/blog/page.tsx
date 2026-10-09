@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Clock } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
 import { BLOG_POSTS, formatDate } from "@/data/blog";
@@ -68,10 +68,10 @@ export default function BlogPage() {
 
       <div className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
         {featured && (
-          <Reveal>
+          <GsapReveal>
             <Link
               href={`/blog/${featured.slug}`}
-              className="group mb-10 block overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(69,179,212,0.4)] sm:p-12"
+              className="group mb-10 block overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)] sm:p-12"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
                 {featured.category}
@@ -88,15 +88,15 @@ export default function BlogPage() {
                 {formatDate(featured.date)} · <Clock className="size-3.5" /> {featured.readTime} min read
               </span>
             </Link>
-          </Reveal>
+          </GsapReveal>
         )}
 
         <div className="grid gap-6 sm:grid-cols-2">
           {rest.map((post, i) => (
-            <Reveal key={post.slug} delay={Math.min(i * 0.06, 0.24)}>
+            <GsapReveal key={post.slug} delay={Math.min(i * 0.06, 0.24)}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(69,179,212,0.4)]"
+                className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)]"
               >
                 <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300 ring-1 ring-white/10">
                   {post.category}
@@ -112,7 +112,7 @@ export default function BlogPage() {
                   <ArrowUpRight className="size-4 text-slate-500 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-300" />
                 </span>
               </Link>
-            </Reveal>
+            </GsapReveal>
           ))}
         </div>
       </div>
