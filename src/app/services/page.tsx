@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import CtaBanner from "@/components/CtaBanner";
@@ -30,7 +31,7 @@ const servicesSchema = {
       name: s.title,
       description: s.long,
       provider: { "@id": `${SITE.url}/#organization` },
-      url: `${SITE.url}/services#${s.slug}`,
+      url: `${SITE.url}/services/${s.slug}`,
     },
   })),
 };
@@ -78,6 +79,13 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <p className="mt-5 max-w-2xl leading-relaxed text-slate-400">{service.long}</p>
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="group mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 transition-colors hover:text-brand-200"
+                    >
+                      Problems it solves & how
+                      <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </Link>
                   </div>
                   <div className="lg:w-72 lg:shrink-0">
                     <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
