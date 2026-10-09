@@ -39,7 +39,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
               return (
                 <Link
                   key={service.slug}
-                  href={`/services#${service.slug}`}
+                  href={`/services/${service.slug}`}
                   className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-white/5"
                 >
                   <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-brand-500/10 text-brand-300 ring-1 ring-brand-400/20 transition-colors duration-200 group-hover/item:bg-brand-500/20 group-hover/item:text-brand-200">
@@ -197,7 +197,7 @@ export default function Navbar() {
                       {SERVICES.map((service) => (
                         <li key={service.slug}>
                           <Link
-                            href={`/services#${service.slug}`}
+                            href={`/services/${service.slug}`}
                             className="block rounded-lg px-6 py-2.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
                           >
                             {service.title}
