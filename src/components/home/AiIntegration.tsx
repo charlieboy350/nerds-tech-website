@@ -106,7 +106,7 @@ export default function AiIntegration() {
                 <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+                    className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
                   >
                     Discuss your codebase
                     <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
