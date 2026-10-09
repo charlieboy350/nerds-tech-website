@@ -41,7 +41,7 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="mx-auto mt-7 max-w-4xl text-center font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="mx-auto mt-7 max-w-4xl text-center font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
         >
           Your business on autopilot.
           <br />
