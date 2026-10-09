@@ -53,7 +53,7 @@ export default function Services({ limit }: { limit?: number }) {
                         <service.icon className="size-6" />
                       </span>
                       <Link
-                        href={`/services#${service.slug}`}
+                        href={`/services/${service.slug}`}
                         aria-label={`Learn more about ${service.title}`}
                         onClick={(e) => e.stopPropagation()}
                         className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-500 opacity-0 transition-all group-hover:opacity-100 hover:border-steel-500/50 hover:text-white"
