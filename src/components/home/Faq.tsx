@@ -7,10 +7,13 @@ import { FAQS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 
-function FaqItem({ q, a, open, onToggle, index }: { q: string; a: string; open: boolean; onToggle: () => void; index: number }) {
+function FaqItem({ q, a, open, onToggle, onHover, index }: { q: string; a: string; open: boolean; onToggle: () => void; onHover: (hovering: boolean) => void; index: number }) {
   return (
-    <div className={`overflow-hidden rounded-2xl border transition-colors ${open ? "border-steel-500/50 bg-ink-800" : "border-white/10 bg-ink-800/50 hover:border-white/25"}`}>
-      <button
+    <div
+      onMouseEnter={() => onHover(true)}
+      onMouseLeave={() => onHover(false)}
+      className={`overflow-hidden rounded-2xl border transition-colors ${open ? "border-steel-500/50 bg-ink-800" : "border-white/10 bg-ink-800/50 hover:border-white/25"}`}
+    >      <button
         onClick={onToggle}
         aria-expanded={open}
         aria-controls={`faq-panel-${index}`}
@@ -44,6 +47,13 @@ function FaqItem({ q, a, open, onToggle, index }: { q: string; a: string; open: 
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
+  // Hover expansion only on devices with a real hover capability (desktops).
+  // Touch devices keep the tap-to-toggle behavior.
+  const canHover =
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover)").matches;
 
   return (
     <section className="relative py-20 sm:py-28" aria-label="Frequently asked questions">
@@ -60,8 +70,11 @@ export default function Faq() {
               index={i}
               q={faq.q}
               a={faq.a}
-              open={openIndex === i}
+              open={openIndex === i || hoverIndex === i}
               onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+              onHover={(hovering) =>
+                setHoverIndex(canHover ? (hovering ? i : null) : null)
+              }
             />
           ))}
         </Reveal>
