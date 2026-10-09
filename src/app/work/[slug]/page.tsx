@@ -295,10 +295,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </figure>
           </Reveal>
           <Reveal delay={0.16}>
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-400">
+            <ul className="mt-8 flex flex-col items-center gap-3 text-sm text-slate-400 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2">
               {project.metrics.slice(1).map((m) => (
-                <li key={m.label} className="inline-flex items-center gap-2">
-                  <CheckCircle2 className="size-4 text-brand-400" />
+                <li key={m.label} className="flex items-start gap-2 text-left">
+                  <CheckCircle2 className="size-4 shrink-0 translate-y-0.5 text-brand-400" />
                   <span>
                     <strong className="text-white">{m.value}</strong> {m.label.charAt(0).toLowerCase() + m.label.slice(1)}
                   </span>
