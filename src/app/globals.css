@@ -57,6 +57,19 @@ body {
   color: white;
 }
 
+/* Plain linear gradients for buttons — written without `in oklab` so older
+   mobile browsers render the exact same gradient as desktop (Tailwind v4's
+   bg-gradient-* uses modern interpolation syntax those browsers drop). */
+.btn-gradient {
+  background-image: linear-gradient(to right, #5d8fc0, #63c6e4);
+}
+.btn-gradient-rev {
+  background-image: linear-gradient(to right, #63c6e4, #5d8fc0);
+}
+.btn-gradient-white {
+  background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
+}
+
 /* Slim dark scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
