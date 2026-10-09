@@ -106,14 +106,14 @@ export default function AiIntegration() {
                 <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-steel-500 bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+                    className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
                   >
                     Discuss your codebase
                     <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link
                     href="/services#ai-codebase-integration"
-                    className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)] sm:w-auto"
+                    className="inline-flex whitespace-nowrap w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)] sm:w-auto"
                   >
                     How it works
                   </Link>
