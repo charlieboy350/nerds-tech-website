@@ -10,7 +10,7 @@ import { NAV_LINKS, SITE } from "@/site";
 import { SERVICES } from "@/data/content";
 
 const linkBase =
-  "block rounded-full px-5 py-2 text-sm font-semibold transition-all duration-300";
+  "block whitespace-nowrap rounded-full px-3.5 py-2 text-[13px] font-semibold transition-all duration-300 lg:px-5 lg:text-sm";
 
 function ServicesDropdown({ pathname }: { pathname: string }) {
   const isActive = pathname === "/services";
@@ -108,7 +108,7 @@ export default function Navbar() {
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-9 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)]"
+            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(69,179,212,0.55)] lg:h-9"
             priority
           />
         </Link>
@@ -138,7 +138,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-400 to-steel-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(69,179,212,0.85)] hover:brightness-110"
+            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-400 to-steel-500 px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(69,179,212,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
