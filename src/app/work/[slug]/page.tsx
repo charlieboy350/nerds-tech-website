@@ -149,7 +149,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 return slug ? (
                   <Link
                     key={service}
-                    href={`/services#${slug}`}
+                    href={`/services/${slug}`}
                     title={`Learn more about ${service}`}
                     className={cls}
                   >
