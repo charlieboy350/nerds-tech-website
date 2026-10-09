@@ -67,9 +67,9 @@ export default function Hero() {
           </Link>
           <Link
             href="/work"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)] sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-ink-950 shadow-xl shadow-black/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-12px_rgba(255,255,255,0.35)] active:translate-y-0 sm:w-auto"
           >
-            <PlayCircle className="size-5 text-steel-300" />
+            <PlayCircle className="size-5 text-steel-600 transition-transform duration-300 group-hover:scale-110" />
             See our work
           </Link>
         </motion.div>
