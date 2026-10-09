@@ -22,7 +22,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
         aria-current={isActive ? "page" : undefined}
         className={`${linkBase} flex items-center gap-1.5 ${
           isActive
-            ? "bg-gradient-to-r from-brand-400 to-steel-500 text-white shadow-[0_6px_20px_-6px_rgba(69,179,212,0.7)]"
+            ? "bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 text-white shadow-[0_6px_20px_-6px_rgba(69,179,212,0.7)]"
             : "text-slate-400 hover:bg-white/10 hover:text-white"
         }`}
       >
@@ -124,7 +124,7 @@ export default function Navbar() {
                   aria-current={isActive ? "page" : undefined}
                   className={`${linkBase} ${
                     isActive
-                      ? "bg-gradient-to-r from-brand-400 to-steel-500 text-white shadow-[0_6px_20px_-6px_rgba(69,179,212,0.7)]"
+                      ? "bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 text-white shadow-[0_6px_20px_-6px_rgba(69,179,212,0.7)]"
                       : "text-slate-400 hover:bg-white/10 hover:text-white"
                   }`}
                 >
@@ -138,7 +138,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-400 to-steel-500 px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(69,179,212,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
+            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(69,179,212,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -233,7 +233,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-brand-400 to-steel-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
+                  className="flex items-center justify-center gap-1.5 rounded-full bg-brand-400 bg-gradient-to-r from-brand-400 to-steel-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </Link>
