@@ -60,14 +60,14 @@ export default function Hero() {
         <motion.div variants={item} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/contact"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-steel-500 bg-gradient-to-r from-steel-500 to-brand-400 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
           >
             Start your project
             <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
             href="/work"
-            className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-b from-white to-slate-300 px-8 py-4 text-base font-semibold text-ink-950 shadow-xl shadow-black/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-12px_rgba(255,255,255,0.4)] active:translate-y-0 sm:w-auto before:pointer-events-none before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:transition-transform before:duration-700 before:ease-out hover:before:translate-x-full"
+            className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-white bg-gradient-to-b from-white to-slate-300 px-8 py-4 text-base font-semibold text-ink-950 shadow-xl shadow-black/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-12px_rgba(255,255,255,0.4)] active:translate-y-0 sm:w-auto before:pointer-events-none before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:transition-transform before:duration-700 before:ease-out hover:before:translate-x-full"
           >
             <PlayCircle className="size-5 text-steel-600 transition-transform duration-300 group-hover:scale-110" />
             View case studies
