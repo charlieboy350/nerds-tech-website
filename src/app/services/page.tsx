@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
 import { SERVICES } from "@/data/content";
@@ -58,7 +58,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8">
         <ol className="space-y-6">
           {SERVICES.map((service, i) => (
-            <Reveal key={service.slug} delay={Math.min(i * 0.03, 0.2)}>
+            <GsapReveal key={service.slug} delay={Math.min(i * 0.03, 0.2)}>
               <li
                 id={service.slug}
                 className="card-glow scroll-mt-24 rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm sm:p-10"
@@ -102,7 +102,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </li>
-            </Reveal>
+            </GsapReveal>
           ))}
         </ol>
       </div>
