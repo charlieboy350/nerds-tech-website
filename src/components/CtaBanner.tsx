@@ -28,7 +28,7 @@ export default function CtaBanner() {
               </p>
               <Link
                 href="/contact"
-                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-ink-950 transition-transform hover:scale-[1.03] active:scale-[0.98]"
+                className="group mt-8 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-ink-950 transition-transform hover:scale-[1.03] active:scale-[0.98]"
               >
                 Book your free consultation
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
