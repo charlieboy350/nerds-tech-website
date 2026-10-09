@@ -150,7 +150,7 @@ export default async function ServicePage({
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {detail.problems.map((problem, i) => (
               <Reveal key={problem.title} delay={Math.min(i * 0.06, 0.24)}>
-                <article className="flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:border-brand-400/30">
+                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(69,179,212,0.4)]">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-red-400/90">
                     The problem
                   </span>
@@ -188,8 +188,8 @@ export default async function ServicePage({
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {service.deliverables.map((d, i) => (
               <Reveal key={d} delay={Math.min(i * 0.05, 0.2)}>
-                <li className="flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5">
-                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300">
+                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(69,179,212,0.45)]">
+                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 group-hover:shadow-[0_0_16px_rgba(69,179,212,0.5)]">
                     <Check className="size-3.5" />
                   </span>
                   <span className="text-[15px] text-slate-200">{d}</span>
