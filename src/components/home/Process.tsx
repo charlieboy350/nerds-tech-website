@@ -32,13 +32,13 @@ export default function Process() {
                   hidden: { opacity: 0, x: -30 },
                   show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
                 }}
-                className="relative flex gap-6 rounded-2xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur-sm transition-colors hover:border-steel-500/40 sm:p-8 md:ml-0"
+                className="group relative flex gap-6 rounded-2xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(69,179,212,0.4)] sm:p-8 md:ml-0"
               >
-                <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-steel-500 to-brand-400 font-display text-lg font-bold text-white shadow-lg shadow-steel-500/25">
+                <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-steel-500 to-brand-400 font-display text-lg font-bold text-white shadow-lg shadow-steel-500/25 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_28px_rgba(69,179,212,0.55)]">
                   {phase.step}
                 </span>
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-white">{phase.title}</h3>
+                  <h3 className="font-display text-xl font-semibold text-white transition-colors duration-300 group-hover:text-brand-200">{phase.title}</h3>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">{phase.text}</p>
                 </div>
               </motion.li>
