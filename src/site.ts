@@ -6,7 +6,7 @@
 export const SITE = {
   name: "NerdsTech",
   tagline: "AI · Design · Development — under one roof",
-  url: "https://nerdstech.co",
+  url: "https://www.nerdstech.co",
   description:
     "NerdsTech is a full-stack digital studio crafting AI automation, high-converting websites, bold branding, and mobile apps — one team, zero hand-offs.",
   email: "support@nerdstech.co",

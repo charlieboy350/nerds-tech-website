@@ -73,9 +73,24 @@ export default async function CaseStudyPage({ params }: PageProps) {
     mainEntityOfPage: `${SITE.url}/work/${project.slug}`,
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Work", item: `${SITE.url}/work` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${project.client} — ${project.title}`,
+        item: `${SITE.url}/work/${project.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
-      <JsonLd data={articleJsonLd} />
+      <JsonLd data={[articleJsonLd, breadcrumbJsonLd]} />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-5 pt-28 sm:px-8 sm:pt-36">

@@ -10,7 +10,7 @@ export default function Marquee() {
       <div className="flex w-max animate-marquee items-center gap-10 whitespace-nowrap">
         {items.map((s, i) => (
           <span key={`${s.slug}-${i}`} className="flex items-center gap-10">
-            <span className="font-display text-lg font-semibold uppercase tracking-widest text-slate-500">
+            <span className="font-display text-lg font-semibold uppercase tracking-widest text-slate-400">
               {s.title}
             </span>
             <span className="size-1.5 rounded-full bg-steel-500" />

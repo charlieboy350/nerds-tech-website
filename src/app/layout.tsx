@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE.url },
   category: "technology",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
 };

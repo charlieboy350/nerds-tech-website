@@ -35,10 +35,19 @@ const servicesSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE.url}/services` },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={servicesSchema} />
+      <JsonLd data={[servicesSchema, breadcrumbSchema]} />
       <PageHero
         eyebrow="Services"
         title="Everything your brand needs. Nothing it doesn't."

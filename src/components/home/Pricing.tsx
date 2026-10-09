@@ -71,7 +71,7 @@ export default function Pricing() {
           ))}
         </motion.div>
 
-        <p className="mt-8 text-center text-xs text-slate-500">
+        <p className="mt-8 text-center text-xs text-slate-400">
           Placeholder pricing — final quotes are fixed and tailored to your scope.
         </p>
       </div>

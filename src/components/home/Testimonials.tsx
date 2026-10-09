@@ -32,7 +32,7 @@ export default function Testimonials() {
               className="card-glow flex flex-col rounded-2xl border border-white/10 bg-ink-800/60 p-7"
             >
               <Quote className="size-8 text-steel-500/60" aria-hidden="true" />
-              <div className="mt-3 flex gap-1" aria-label="5 out of 5 stars">
+              <div className="mt-3 flex gap-1" role="img" aria-label="5 out of 5 stars">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="size-4 fill-amber-400 text-amber-400" aria-hidden="true" />
                 ))}
