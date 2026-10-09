@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check, ChevronRight, Clock } from "lucide-react"
 import Reveal from "@/components/Reveal";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
+import HoverFaq from "@/components/HoverFaq";
 import { BLOG_POSTS, getPost, formatDate } from "@/data/blog";
 import { SITE } from "@/site";
 
@@ -183,16 +184,9 @@ export default async function BlogPostPage({
             <h2 className="font-display text-2xl font-bold tracking-tight text-white">
               Frequently asked questions
             </h2>
-            <div className="mt-6 space-y-4">
-              {post.faqs.map((faq) => (
-                <div
-                  key={faq.q}
-                  className="rounded-2xl border border-white/10 bg-ink-800/50 p-6"
-                >
-                  <h3 className="font-display text-base font-semibold text-white">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{faq.a}</p>
-                </div>
-              ))}
+            <p className="mt-2 text-sm text-slate-500">Hover a card to reveal the answer.</p>
+            <div className="mt-6">
+              <HoverFaq faqs={post.faqs} />
             </div>
           </section>
         )}
