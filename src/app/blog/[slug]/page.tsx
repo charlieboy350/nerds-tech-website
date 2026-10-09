@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronRight, Clock } from "lucide-react";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 import CtaBanner from "@/components/CtaBanner";
 import JsonLd from "@/components/JsonLd";
 import HoverFaq from "@/components/HoverFaq";
@@ -108,20 +108,20 @@ export default async function BlogPostPage({
       </nav>
 
       <header className="mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-14">
-        <Reveal>
+        <GsapReveal>
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
             {post.category}
           </span>
-        </Reveal>
-        <Reveal delay={0.08}>
+        </GsapReveal>
+        <GsapReveal delay={0.08}>
           <h1 className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
             {post.title}
           </h1>
-        </Reveal>
-        <Reveal delay={0.16}>
+        </GsapReveal>
+        <GsapReveal delay={0.16}>
           <p className="mt-5 text-lg leading-relaxed text-slate-400">{post.excerpt}</p>
-        </Reveal>
-        <Reveal delay={0.2}>
+        </GsapReveal>
+        <GsapReveal delay={0.2}>
           <div className="mt-6 flex flex-col items-center gap-2 text-sm sm:flex-row sm:flex-wrap sm:justify-start sm:gap-x-4 sm:gap-y-2">
             <div className="flex items-center gap-x-4">
               <span className="inline-flex items-center gap-1.5 text-slate-300">
@@ -139,12 +139,12 @@ export default async function BlogPostPage({
               By <span className="font-semibold text-white">{SITE.name}</span>
             </span>
           </div>
-        </Reveal>
+        </GsapReveal>
       </header>
 
       <article className="mx-auto max-w-4xl px-5 py-12 sm:px-8">
         {post.sections.map((section, i) => (
-          <Reveal key={section.heading} delay={Math.min(i * 0.03, 0.15)}>
+          <GsapReveal key={section.heading} delay={Math.min(i * 0.03, 0.15)}>
             <section className="mb-12">
               <h2 className="font-display text-2xl font-bold tracking-tight text-white">
                 {section.heading}
@@ -167,10 +167,10 @@ export default async function BlogPostPage({
                 </ul>
               )}
             </section>
-          </Reveal>
+          </GsapReveal>
         ))}
 
-        <Reveal>
+        <GsapReveal>
           <section className="mb-12 rounded-3xl border border-brand-400/20 bg-brand-500/5 p-8 sm:p-10">
             <h2 className="font-display text-2xl font-bold tracking-tight text-white">
               {post.closingHeading}
@@ -182,13 +182,13 @@ export default async function BlogPostPage({
             </div>
             <Link
               href="/contact"
-              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(69,179,212,0.5)] transition-all duration-300 hover:brightness-110"
+              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(139,92,246,0.5)] transition-all duration-300 hover:brightness-110"
             >
               Talk to us about automation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </section>
-        </Reveal>
+        </GsapReveal>
 
         {post.faqs.length > 0 && (
           <section aria-label="Frequently asked questions" className="mb-4">
@@ -231,7 +231,7 @@ export default async function BlogPostPage({
         <div className="mt-8 text-center">
           <Link
             href="/blog"
-            className="inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)]"
+            className="inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)]"
           >
             <ArrowLeft className="size-4" /> All articles
           </Link>
