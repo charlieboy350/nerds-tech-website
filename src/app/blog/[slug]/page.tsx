@@ -122,17 +122,19 @@ export default async function BlogPostPage({
           <p className="mt-5 text-lg leading-relaxed text-slate-400">{post.excerpt}</p>
         </Reveal>
         <Reveal delay={0.2}>
-          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <span className="inline-flex items-center gap-1.5 text-slate-300">
-              <Calendar className="size-4 text-brand-400" />
-              {formatDate(post.date)}
-            </span>
-            <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
-            <span className="inline-flex items-center gap-1.5 text-slate-300">
-              <Clock className="size-4 text-brand-400" />
-              {post.readTime} min read
-            </span>
-            <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
+          <div className="mt-6 flex flex-col items-center gap-2 text-sm sm:flex-row sm:flex-wrap sm:justify-start sm:gap-x-4 sm:gap-y-2">
+            <div className="flex items-center gap-x-4">
+              <span className="inline-flex items-center gap-1.5 text-slate-300">
+                <Calendar className="size-4 text-brand-400" />
+                {formatDate(post.date)}
+              </span>
+              <span className="size-1 rounded-full bg-slate-600" aria-hidden="true" />
+              <span className="inline-flex items-center gap-1.5 text-slate-300">
+                <Clock className="size-4 text-brand-400" />
+                {post.readTime} min read
+              </span>
+            </div>
+            <span className="hidden size-1 rounded-full bg-slate-600 sm:block" aria-hidden="true" />
             <span className="text-slate-400">
               By <span className="font-semibold text-white">{SITE.name}</span>
             </span>
