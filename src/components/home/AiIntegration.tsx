@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, SearchCheck, Map, Puzzle, GraduationCap, ShieldCheck } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 
 const STEPS = [
   {
@@ -33,7 +33,7 @@ export default function AiIntegration() {
   return (
     <section className="relative py-20 sm:py-28" aria-label="AI codebase integration">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
+        <GsapReveal>
           <div className="relative overflow-hidden rounded-3xl border border-steel-500/30 bg-gradient-to-b from-ink-800 to-ink-900 px-6 py-12 sm:px-12 sm:py-16">
             <div className="bg-grid absolute inset-0 opacity-40" aria-hidden="true" />
             <motion.div
@@ -70,7 +70,7 @@ export default function AiIntegration() {
                       hidden: { opacity: 0, y: 26 },
                       show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
                     }}
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/50 hover:shadow-[0_18px_50px_-18px_rgba(69,179,212,0.5)]"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/50 hover:shadow-[0_18px_50px_-18px_rgba(139,92,246,0.5)]"
                   >
                     {/* Top accent line sweeps in on hover */}
                     <span
@@ -98,7 +98,7 @@ export default function AiIntegration() {
                 ))}
               </motion.ol>
 
-              <Reveal className="mt-10 text-center">
+              <GsapReveal className="mt-10 text-center">
                 <p className="inline-flex items-center gap-2 rounded-full border border-brand-400/25 bg-brand-400/5 px-5 py-2.5 text-sm text-brand-300">
                   <ShieldCheck className="size-4" />
                   We work in your repo, your stack, your process. Your code stays yours.
@@ -113,15 +113,15 @@ export default function AiIntegration() {
                   </Link>
                   <Link
                     href="/services#ai-codebase-integration"
-                    className="inline-flex whitespace-nowrap w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(69,179,212,0.6)] sm:w-auto"
+                    className="inline-flex whitespace-nowrap w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)] sm:w-auto"
                   >
                     How it works
                   </Link>
                 </div>
-              </Reveal>
+              </GsapReveal>
             </div>
           </div>
-        </Reveal>
+        </GsapReveal>
       </div>
     </section>
   );
