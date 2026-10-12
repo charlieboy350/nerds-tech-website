@@ -107,14 +107,18 @@ export default async function BlogPostPage({
         </ol>
       </nav>
 
-      <header className="mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-14">
+      <header className="relative overflow-hidden pt-10 sm:pt-14">
+        <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black,transparent)]" aria-hidden="true" />
+        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[140px]" aria-hidden="true" />
+        <div className="relative mx-auto max-w-4xl px-5 sm:px-8">
         <GsapReveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 shadow-[0_0_24px_-6px_rgba(139,92,246,0.5)]">
             {post.category}
           </span>
         </GsapReveal>
         <GsapReveal delay={0.08}>
-          <h1 className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-gradient mt-5 font-display text-3xl font-bold tracking-tight sm:text-5xl">
             {post.title}
           </h1>
         </GsapReveal>
@@ -140,6 +144,7 @@ export default async function BlogPostPage({
             </span>
           </div>
         </GsapReveal>
+        </div>
       </header>
 
       <article className="mx-auto max-w-4xl px-5 py-12 sm:px-8">
