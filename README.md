@@ -2,7 +2,9 @@
 
 Official website for **NerdsTech** (nerdstech.co) — AI automation, web design & development, branding, SEO, and mobile app studio.
 
-Built with **Next.js 16** (App Router), **React 19**, **Tailwind CSS v4**, and **Framer Motion**.
+Built with **Next.js 16** (App Router), **React 19**, **Tailwind CSS v4**, Framer Motion, and GSAP.
+
+Theme: **Aurora** — electric violet + aurora cyan on deep ink.
 
 ## Getting started
 
