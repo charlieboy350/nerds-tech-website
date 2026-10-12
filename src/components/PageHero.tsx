@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -21,9 +21,9 @@ export default function PageHero({ eyebrow, title, sub }: PageHeroProps) {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="relative mx-auto max-w-7xl px-5 text-center sm:px-8"
       >
-        <Reveal>
+        <GsapReveal>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">{eyebrow}</p>
-        </Reveal>
+        </GsapReveal>
         <h1 className="mx-auto mt-4 max-w-3xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
           {title}
         </h1>
