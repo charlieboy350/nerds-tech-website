@@ -6,7 +6,8 @@ import { Send, CheckCircle2, Mail, Phone, MapPin } from "lucide-react";
 import { SERVICES, PRICING } from "@/data/content";
 import { SITE } from "@/site";
 import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
+import { trackEvent } from "@/components/GoogleAnalytics";
 
 const inputCls =
   "w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-steel-500/70 focus:ring-2 focus:ring-steel-500/20";
@@ -32,6 +33,9 @@ export default function ContactSection() {
         throw new Error(json?.error ?? "Something went wrong. Please try again.");
       }
       setSent(true);
+      // Marketing: feed Google Ads / GA4 a conversion so ad spend optimizes
+      // toward real inquiries. No-op until the GA tag is configured.
+      trackEvent("generate_lead", { method: "contact_form" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     } finally {
@@ -51,7 +55,7 @@ export default function ContactSection() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-5">
           {/* Info panel */}
-          <Reveal className="lg:col-span-2">
+          <GsapReveal className="lg:col-span-2">
             <div className="flex h-full flex-col rounded-3xl border border-white/10 bg-gradient-to-b from-ink-800 to-ink-900 p-8">
               <h3 className="font-display text-xl font-semibold text-white">Get in touch directly</h3>
               <p className="mt-2 text-sm text-slate-400">
@@ -93,10 +97,10 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </Reveal>
+          </GsapReveal>
 
           {/* Form */}
-          <Reveal delay={0.1} className="lg:col-span-3">
+          <GsapReveal delay={0.1} className="lg:col-span-3">
             <div className="rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm">
               {sent ? (
                 <motion.div
@@ -201,7 +205,7 @@ export default function ContactSection() {
                 </form>
               )}
             </div>
-          </Reveal>
+          </GsapReveal>
         </div>
       </div>
     </section>
