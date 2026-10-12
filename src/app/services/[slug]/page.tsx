@@ -99,7 +99,10 @@ export default async function ServicePage({
       {/* Hero */}
       <header className="relative overflow-hidden pt-10 pb-14 sm:pt-14 sm:pb-20">
         <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black,transparent)]" aria-hidden="true" />
-        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-[130px]" aria-hidden="true" />
+        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[140px]" aria-hidden="true" />
+        <div className="absolute top-40 -left-32 h-72 w-72 rounded-full bg-steel-500/20 blur-[120px]" aria-hidden="true" />
+        <div className="absolute top-48 -right-24 h-72 w-72 rounded-full bg-fuchsia-500/15 blur-[120px]" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <GsapReveal>
             <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
@@ -107,7 +110,7 @@ export default async function ServicePage({
             </span>
           </GsapReveal>
           <GsapReveal delay={0.08}>
-            <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-gradient mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               {service.title}
             </h1>
           </GsapReveal>
