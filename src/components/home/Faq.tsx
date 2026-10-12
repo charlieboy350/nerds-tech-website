@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { FAQS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
+import GsapReveal from "@/components/gsap/GsapReveal";
 
 function FaqItem({ q, a, open, onToggle, onHover, index }: { q: string; a: string; open: boolean; onToggle: () => void; onHover: (hovering: boolean) => void; index: number }) {
   return (
@@ -63,7 +63,7 @@ export default function Faq() {
           title="Questions? Good. We like those."
           sub="Straight answers to the things every client asks before starting."
         />
-        <Reveal className="mt-12 space-y-4">
+        <GsapReveal className="mt-12 space-y-4">
           {FAQS.map((faq, i) => (
             <FaqItem
               key={faq.q}
@@ -77,7 +77,7 @@ export default function Faq() {
               }
             />
           ))}
-        </Reveal>
+        </GsapReveal>
       </div>
     </section>
   );
