@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return {};
-  const title = `${project.client} — ${project.title} | Case Study`;
+  const title = `${project.client}, ${project.title} | Case Study`;
   const description = `${project.client} case study: ${project.description} Result: ${project.result}.`;
   return {
     title,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       type: "article",
-      images: [{ url: `${SITE.url}${project.image}`, alt: `${project.client} — ${project.title}` }],
+      images: [{ url: `${SITE.url}${project.image}`, alt: `${project.client}, ${project.title}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -65,7 +65,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${project.client} — ${project.title}`,
+    headline: `${project.client} | ${project.title}`,
     description: project.description,
     image: `${SITE.url}${project.image}`,
     author: { "@type": "Organization", name: "NerdsTech", url: SITE.url },
@@ -82,7 +82,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         position: 3,
-        name: `${project.client} — ${project.title}`,
+        name: `${project.client} | ${project.title}`,
         item: `${SITE.url}/work/${project.slug}`,
       },
     ],
@@ -172,7 +172,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <div className="relative h-64 overflow-hidden rounded-3xl border border-white/10 sm:h-96 lg:h-[28rem]">
             <Image
               src={project.image}
-              alt={`${project.client} — ${project.title}`}
+              alt={`${project.client} | ${project.title}`}
               fill
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
@@ -252,7 +252,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <SectionHeading
           eyebrow="Approach"
           title="How we got there."
-          sub="No magic — just a disciplined process, applied with care at every step."
+          sub="No magic, just a disciplined process, applied with care at every step."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {project.approach.map((step, i) => (
@@ -290,7 +290,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 “{project.testimonial.quote}”
               </blockquote>
               <figcaption className="mt-5 text-sm text-slate-400">
-                <span className="font-semibold text-white">{project.testimonial.name}</span> — {project.testimonial.role}
+                <span className="font-semibold text-white">{project.testimonial.name}</span>, {project.testimonial.role}
               </figcaption>
             </figure>
           </GsapReveal>
@@ -319,7 +319,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <ArrowLeft className="size-5 shrink-0 text-slate-500 transition-colors group-hover:text-brand-300" />
             <span>
               <span className="block text-xs uppercase tracking-wider text-slate-500">Previous case study</span>
-              <span className="mt-1 block font-display font-semibold text-white">{prev.client} — {prev.title}</span>
+              <span className="mt-1 block font-display font-semibold text-white">{prev.client}, {prev.title}</span>
             </span>
           </Link>
           <Link
@@ -328,7 +328,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           >
             <span>
               <span className="block text-xs uppercase tracking-wider text-slate-500">Next case study</span>
-              <span className="mt-1 block font-display font-semibold text-white">{next.client} — {next.title}</span>
+              <span className="mt-1 block font-display font-semibold text-white">{next.client}, {next.title}</span>
             </span>
             <ArrowRight className="size-5 shrink-0 text-slate-500 transition-colors group-hover:text-brand-300" />
           </Link>
