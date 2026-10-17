@@ -23,7 +23,7 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
         <SectionHeading
           eyebrow="Recent work"
           title="A few things we've shipped."
-          sub="Real projects, real outcomes. Every engagement below combined at least two of our disciplines — that's where the magic happens."
+          sub="Real projects, real outcomes. Every engagement below combined at least two of our disciplines, that's where the magic happens."
         />
 
         {filterable && (
@@ -75,7 +75,7 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
               <div className="relative h-44 overflow-hidden">
                 <Image
                   src={project.image}
-                  alt={`${project.client} — ${project.title}`}
+                  alt={`${project.client} | ${project.title}`}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
