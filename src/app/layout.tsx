@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE } from "@/site";
 
 const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} | AI Automation, Web Design & Branding Studio`,
     description: SITE.description,
-    images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: `${SITE.name} — AI, Design & Development studio` }],
+    images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: `${SITE.name}, AI, Design & Development studio` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -101,6 +102,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-ink-950 font-sans text-slate-100">
         <JsonLd data={[organizationSchema, websiteSchema]} />
+        <GoogleAnalytics />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-black"
