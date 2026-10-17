@@ -9,7 +9,7 @@ import { BLOG_POSTS, formatDate } from "@/data/blog";
 import { SITE } from "@/site";
 
 export const metadata: Metadata = {
-  title: "Blog — SaaS Automation Guides & Playbooks",
+  title: "Blog | SaaS Automation Guides & Playbooks",
   description:
     "Practical guides on converting SaaS systems into automated machines: finance automation, onboarding, AI support, churn prevention, and the full automation roadmap.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "churn prevention",
   ],
   openGraph: {
-    title: "Blog — SaaS Automation Guides & Playbooks",
+    title: "Blog | SaaS Automation Guides & Playbooks",
     description:
       "Practical guides on converting SaaS systems into automated machines: finance, onboarding, AI support, and retention.",
   },
@@ -63,7 +63,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="SaaS automation, explained properly."
-        sub="Playbooks for turning manual SaaS operations into self-running systems — finance, onboarding, support, and retention."
+        sub="Playbooks for turning manual SaaS operations into self-running systems, finance, onboarding, support, and retention."
       />
 
       <div className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
