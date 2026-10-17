@@ -10,7 +10,7 @@ const STEPS = [
   {
     icon: SearchCheck,
     title: "Audit",
-    text: "We map your codebase and score each module for AI value versus risk — so effort goes where it pays.",
+    text: "We map your codebase and score each module for AI value versus risk, so effort goes where it pays.",
   },
   {
     icon: Map,
@@ -52,8 +52,8 @@ export default function AiIntegration() {
             <div className="relative">
               <SectionHeading
                 eyebrow="AI integration, done carefully"
-                title={<>Already have a product? We&apos;ll bring AI to it — <span className="text-gradient">one module at a time.</span></>}
-                sub="No rip-and-replace. No six-month rewrite. We study your codebase, find where AI actually pays off, and integrate it module by module — each one shipped, tested, and stable before the next begins."
+                title={<>Already have a product? We&apos;ll bring AI to it, <span className="text-gradient">one module at a time.</span></>}
+                sub="No rip-and-replace. No six-month rewrite. We study your codebase, find where AI actually pays off, and integrate it module by module, each one shipped, tested, and stable before the next begins."
               />
 
               <motion.ol
