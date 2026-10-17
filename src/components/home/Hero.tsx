@@ -96,7 +96,7 @@ export default function Hero() {
 
         <p data-hero="sub" className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg">
           {SITE.name} blends AI automation, standout design, and clean engineering into one
-          connected studio. One team takes you from first sketch to launched product —
+          connected studio. One team takes you from first sketch to launched product,
           and keeps it growing long after.
         </p>
 
