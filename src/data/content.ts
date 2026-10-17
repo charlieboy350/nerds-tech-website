@@ -63,8 +63,8 @@ export const SERVICES: Service[] = [
     relatedProject: "harbor-realty",
     icon: Bot,
     title: "AI Automation",
-    short: "Workflows that run themselves — lead routing, follow-ups, invoicing, reporting.",
-    long: "We wire your tools together so repetitive work happens on its own. From instant lead routing and smart follow-ups to invoice reminders and weekly reports — your operations keep moving while you sleep.",
+    short: "Workflows that run themselves, lead routing, follow-ups, invoicing, reporting.",
+    long: "We wire your tools together so repetitive work happens on its own. From instant lead routing and smart follow-ups to invoice reminders and weekly reports, your operations keep moving while you sleep.",
     deliverables: ["Workflow audit & mapping", "CRM / tool integrations", "AI agents & triggers", "Team training & docs"],
   },
   {
@@ -81,8 +81,8 @@ export const SERVICES: Service[] = [
     relatedProject: "vertex-support",
     icon: Puzzle,
     title: "AI Codebase Integration",
-    short: "We integrate AI into your existing product — carefully, one module at a time.",
-    long: "Already have a working product? You don't need a risky rewrite to benefit from AI. We audit your codebase, pinpoint the modules where AI creates the most value, and integrate them one by one — each module shipped, tested, and stable before we move to the next.",
+    short: "We integrate AI into your existing product, carefully, one module at a time.",
+    long: "Already have a working product? You don't need a risky rewrite to benefit from AI. We audit your codebase, pinpoint the modules where AI creates the most value, and integrate them one by one, each module shipped, tested, and stable before we move to the next.",
     deliverables: ["AI-readiness codebase audit", "Module-by-module integration roadmap", "Incremental, tested AI rollouts", "Docs & team handover"],
   },
   {
@@ -91,7 +91,7 @@ export const SERVICES: Service[] = [
     icon: Code2,
     title: "Web Design & Development",
     short: "Hand-coded, lightning-fast websites. No bloated page builders.",
-    long: "Custom websites built with modern frameworks — fast by default, accessible, and easy to scale. Every page is designed around one job: turning visitors into customers.",
+    long: "Custom websites built with modern frameworks, fast by default, accessible, and easy to scale. Every page is designed around one job: turning visitors into customers.",
     deliverables: ["UX/UI design", "Next.js development", "CMS integration", "Speed & Core Web Vitals tuning"],
   },
   {
@@ -100,7 +100,7 @@ export const SERVICES: Service[] = [
     icon: PenTool,
     title: "Logo Design",
     short: "A mark drawn from your story, not a template.",
-    long: "Logos built from strategy first: who you are, who you're for, and where the mark has to live. The result is recognizable at a glance — from a favicon to a billboard.",
+    long: "Logos built from strategy first: who you are, who you're for, and where the mark has to live. The result is recognizable at a glance, from a favicon to a billboard.",
     deliverables: ["Discovery & moodboards", "3 original concepts", "Refinement rounds", "Full file & usage kit"],
   },
   {
@@ -109,7 +109,7 @@ export const SERVICES: Service[] = [
     icon: Fingerprint,
     title: "Brand Identity",
     short: "Colors, type, and voice that hold together everywhere you show up.",
-    long: "A complete identity system — palette, typography, imagery rules, and tone of voice — documented so every touchpoint reads like one confident decision.",
+    long: "A complete identity system, palette, typography, imagery rules, and tone of voice, documented so every touchpoint reads like one confident decision.",
     deliverables: ["Brand strategy", "Visual identity system", "Brand guidelines book", "Collateral templates"],
   },
   {
@@ -126,7 +126,7 @@ export const SERVICES: Service[] = [
     relatedProject: "cornerstone-dental",
     icon: TrendingUp,
     title: "SEO & AI Search",
-    short: "Get found on Google — and cited in AI answers.",
+    short: "Get found on Google, and cited in AI answers.",
     long: "Technical fixes, keyword strategy, and structured content engineered for classic search and the new AI-search era: featured snippets, LLM citations, and local packs.",
     deliverables: ["Technical SEO audit", "Keyword & topic strategy", "On-page optimization", "llms.txt & AI-readiness"],
   },
@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
     icon: Share2,
     title: "Social Media Marketing",
     short: "Campaigns tuned to how each platform actually works.",
-    long: "Content calendars, creatives, and paid campaigns built per-platform — not copy-pasted. We track what converts, not just what gets likes.",
+    long: "Content calendars, creatives, and paid campaigns built per-platform, not copy-pasted. We track what converts, not just what gets likes.",
     deliverables: ["Channel strategy", "Creative production", "Paid social management", "Monthly growth reports"],
   },
   {
@@ -145,7 +145,7 @@ export const SERVICES: Service[] = [
     icon: Clapperboard,
     title: "Motion Graphics",
     short: "Explainers and product reveals that say more in ten seconds.",
-    long: "Animated explainers, logo stings, product reveals, and social clips — motion that makes complex ideas instantly obvious and brands instantly memorable.",
+    long: "Animated explainers, logo stings, product reveals, and social clips, motion that makes complex ideas instantly obvious and brands instantly memorable.",
     deliverables: ["Explainer videos", "Product animations", "Social clip packs", "Logo & brand motion"],
   },
   {
@@ -154,7 +154,7 @@ export const SERVICES: Service[] = [
     icon: Smartphone,
     title: "Mobile App Development",
     short: "iOS & Android apps that feel native, minus the maintenance drama.",
-    long: "Native-feeling apps for iOS and Android from a single codebase. Designed, built, shipped to the stores, and maintained — without the usual headaches.",
+    long: "Native-feeling apps for iOS and Android from a single codebase. Designed, built, shipped to the stores, and maintained, without the usual headaches.",
     deliverables: ["Product & UX design", "Cross-platform build", "App Store deployment", "Maintenance plans"],
   },
 ];
@@ -174,19 +174,19 @@ export const PROJECTS: Project[] = [
     timeline: "5 weeks",
     services: ["AI Automation", "AI Chat Support", "CRM Integration"],
     overview: [
-      "Harbor Realty is a mid-size residential brokerage handling 200+ active listings across three cities. Every new listing triggered a flood of portal inquiries — but their agents were responding in the order messages arrived, which meant serious buyers waited behind casual browsers, and most after-hours questions sat unanswered until morning.",
-      "We rebuilt their entire intake: an AI assistant trained on live listings, neighborhood data, and financing FAQs now answers buyers instantly, day or night — while a smart routing workflow scores every lead and puts the hot ones in front of the right agent within seconds.",
+      "Harbor Realty is a mid-size residential brokerage handling 200+ active listings across three cities. Every new listing triggered a flood of portal inquiries, but their agents were responding in the order messages arrived, which meant serious buyers waited behind casual browsers, and most after-hours questions sat unanswered until morning.",
+      "We rebuilt their entire intake: an AI assistant trained on live listings, neighborhood data, and financing FAQs now answers buyers instantly, day or night, while a smart routing workflow scores every lead and puts the hot ones in front of the right agent within seconds.",
     ],
     challenge: [
-      "New listings attracted hundreds of inquiries within hours, yet agents replied first-come-first-served — hot buyers waited behind window-shoppers.",
+      "New listings attracted hundreds of inquiries within hours, yet agents replied first-come-first-served, hot buyers waited behind window-shoppers.",
       "Over 60% of buyer questions arrived after office hours and sat unanswered until morning, by which time many buyers had moved on.",
-      "Follow-up depended entirely on individual agent discipline — no system, no consistency, no visibility for management.",
+      "Follow-up depended entirely on individual agent discipline, no system, no consistency, no visibility for management.",
       "Their CRM held rich client data, but nothing acted on it automatically; it was a database, not an engine.",
     ],
     approach: [
       {
         title: "Map the chaos",
-        text: "We shadowed the team for a week and mapped every inquiry touchpoint — portals, website, phone, walk-ins — then identified exactly where leads stalled or leaked.",
+        text: "We shadowed the team for a week and mapped every inquiry touchpoint, portals, website, phone, walk-ins, then identified exactly where leads stalled or leaked.",
       },
       {
         title: "Score & route",
@@ -194,7 +194,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Train the assistant",
-        text: "Deployed an AI chat assistant trained on live listings, price histories, school zones, and mortgage FAQs — with strict handoff rules so complex negotiations always reach a human.",
+        text: "Deployed an AI chat assistant trained on live listings, price histories, school zones, and mortgage FAQs, with strict handoff rules so complex negotiations always reach a human.",
       },
       {
         title: "Automate follow-up",
@@ -209,7 +209,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "Our agents used to lose entire evenings to inbox triage. Now the hot leads are already talking to someone before the agent's coffee is done — and nobody drops a follow-up anymore.",
+        "Our agents used to lose entire evenings to inbox triage. Now the hot leads are already talking to someone before the agent's coffee is done, and nobody drops a follow-up anymore.",
       name: "Sofia L.",
       role: "CMO, Harbor Realty",
     },
@@ -220,17 +220,17 @@ export const PROJECTS: Project[] = [
     title: "AI support ticket triage",
     category: "AI Automation",
     description:
-      "Incoming tickets get classified, prioritized, and answered by AI in seconds — only the tricky ones reach a human agent, with full context attached.",
+      "Incoming tickets get classified, prioritized, and answered by AI in seconds, only the tricky ones reach a human agent, with full context attached.",
     result: "68% tickets auto-resolved",
     image: "/projects/vertex-support.jpg",
     timeline: "4 weeks",
     services: ["AI Automation", "AI Chat Support"],
     overview: [
       "Vertex SaaS runs a B2B project-management platform with support volume growing threefold year over year. Their six-person support team was drowning: tickets sat unclassified, urgent outages waited behind password resets, and agents spent their days copy-pasting the same answers.",
-      "We built an AI triage layer in front of their helpdesk. Every ticket is now classified, prioritized, and — where possible — resolved by AI in seconds. Human agents only see the tickets that genuinely need judgment, arriving with full context and a suggested response already drafted.",
+      "We built an AI triage layer in front of their helpdesk. Every ticket is now classified, prioritized, and, where possible, resolved by AI in seconds. Human agents only see the tickets that genuinely need judgment, arriving with full context and a suggested response already drafted.",
     ],
     challenge: [
-      "Ticket volume had tripled in a year while headcount stayed flat — backlog was measured in days, not hours.",
+      "Ticket volume had tripled in a year while headcount stayed flat, backlog was measured in days, not hours.",
       "Urgent issues (outages, billing failures) queued behind routine questions with no prioritization.",
       "Agents answered the same 20 questions on repeat, burning out the team on work a machine could do.",
       "First-response times were slipping and CSAT was trending down quarter over quarter.",
@@ -238,11 +238,11 @@ export const PROJECTS: Project[] = [
     approach: [
       {
         title: "Classify everything",
-        text: "Trained a classifier on 18 months of ticket history to tag topic, sentiment, urgency, and account value — reaching 94% agreement with human taggers.",
+        text: "Trained a classifier on 18 months of ticket history to tag topic, sentiment, urgency, and account value, reaching 94% agreement with human taggers.",
       },
       {
         title: "Resolve the routine",
-        text: "Built an answer engine on their docs, changelogs, and resolved tickets that fully resolves common requests — password resets, plan changes, how-tos — without human touch.",
+        text: "Built an answer engine on their docs, changelogs, and resolved tickets that fully resolves common requests, password resets, plan changes, how-tos, without human touch.",
       },
       {
         title: "Route the rest",
@@ -261,7 +261,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "Support went from our biggest cost center to a quiet machine. Our agents finally do the interesting work — the AI handles the repetitive 70%.",
+        "Support went from our biggest cost center to a quiet machine. Our agents finally do the interesting work, the AI handles the repetitive 70%.",
       name: "Arjun M.",
       role: "Head of Support, Vertex SaaS",
     },
@@ -272,17 +272,17 @@ export const PROJECTS: Project[] = [
     title: "Inventory forecasting automation",
     category: "AI Automation",
     description:
-      "AI predicts demand per store and triggers reorders automatically — shelves stay stocked without the spreadsheet gymnastics.",
+      "AI predicts demand per store and triggers reorders automatically, shelves stay stocked without the spreadsheet gymnastics.",
     result: "31% less overstock",
     image: "/projects/bloom-retail.jpg",
     timeline: "6 weeks",
     services: ["AI Automation", "Analytics Dashboards"],
     overview: [
-      "Bloom Retail operates 24 home-goods stores, and every one of them was ordering on gut feel. Bestsellers stocked out in busy locations while slow stores drowned in overstock — and the planning team spent two days a week wrestling spreadsheets to make it all work.",
+      "Bloom Retail operates 24 home-goods stores, and every one of them was ordering on gut feel. Bestsellers stocked out in busy locations while slow stores drowned in overstock, and the planning team spent two days a week wrestling spreadsheets to make it all work.",
       "We built a demand-forecasting engine that predicts sales per store per SKU, then triggers reorders automatically. Planners went from spreadsheet operators to exception managers: the system handles the routine, humans handle the judgment calls.",
     ],
     challenge: [
-      "Overstock tied up cash in slow stores while busy locations lost sales to empty shelves — the same SKU, opposite problems.",
+      "Overstock tied up cash in slow stores while busy locations lost sales to empty shelves, the same SKU, opposite problems.",
       "Ordering ran on manager intuition and a 40-tab spreadsheet updated twice a week by hand.",
       "Seasonal swings and local events (festivals, weather) made demand unpredictable with manual methods.",
       "No one could answer the basic question: how accurate are our forecasts? Because there were none.",
@@ -290,11 +290,11 @@ export const PROJECTS: Project[] = [
     approach: [
       {
         title: "Unify the data",
-        text: "Connected POS, warehouse, and supplier feeds into one clean dataset — two years of sales history, promotions, and seasonality, deduplicated and normalized.",
+        text: "Connected POS, warehouse, and supplier feeds into one clean dataset, two years of sales history, promotions, and seasonality, deduplicated and normalized.",
       },
       {
         title: "Forecast per store",
-        text: "Built demand models at store × SKU granularity, factoring in seasonality, promotions, local events, and weather — refreshed nightly.",
+        text: "Built demand models at store × SKU granularity, factoring in seasonality, promotions, local events, and weather, refreshed nightly.",
       },
       {
         title: "Automate reorders",
@@ -302,7 +302,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Make it visible",
-        text: "A simple dashboard shows forecast accuracy, stock health, and money tied up in overstock — the numbers the CFO actually cares about.",
+        text: "A simple dashboard shows forecast accuracy, stock health, and money tied up in overstock, the numbers the CFO actually cares about.",
       },
     ],
     metrics: [
@@ -313,7 +313,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "We stopped guessing. The system orders better than our best manager did — and our planners finally spend their time on strategy instead of spreadsheets.",
+        "We stopped guessing. The system orders better than our best manager did, and our planners finally spend their time on strategy instead of spreadsheets.",
       name: "Priya S.",
       role: "Operations Director, Bloom Retail",
     },
@@ -330,19 +330,19 @@ export const PROJECTS: Project[] = [
     timeline: "10 weeks",
     services: ["Mobile App Development", "UI/UX Design"],
     overview: [
-      "TableTap started as one restaurant group's fix for a painful problem: 18% of reservations never showed up, and Friday-night front-of-house was controlled chaos. They needed more than a booking form — they needed the whole arrival experience rethought.",
-      "We designed and built native-feeling iOS and Android apps covering discovery, booking, table-side QR check-in, and smart push reminders — plus a lightweight staff dashboard so hosts see the whole evening at a glance.",
+      "TableTap started as one restaurant group's fix for a painful problem: 18% of reservations never showed up, and Friday-night front-of-house was controlled chaos. They needed more than a booking form, they needed the whole arrival experience rethought.",
+      "We designed and built native-feeling iOS and Android apps covering discovery, booking, table-side QR check-in, and smart push reminders, plus a lightweight staff dashboard so hosts see the whole evening at a glance.",
     ],
     challenge: [
       "No-shows ran at 18%, leaving prime tables empty on the busiest nights with no way to fill them last-minute.",
-      "Reservations came through phone calls, DMs, and walk-ins — nothing centralized, double-bookings were routine.",
+      "Reservations came through phone calls, DMs, and walk-ins, nothing centralized, double-bookings were routine.",
       "Guests hated downloading clunky apps; whatever we built had to feel instant and effortless.",
-      "Hosts juggled paper lists and memory during rush — one bad night could tank a week's reviews.",
+      "Hosts juggled paper lists and memory during rush, one bad night could tank a week's reviews.",
     ],
     approach: [
       {
         title: "Design the arrival",
-        text: "Mapped the full guest journey from 'where should we eat?' to seated with menus — then removed every unnecessary tap. Booking takes under 30 seconds.",
+        text: "Mapped the full guest journey from 'where should we eat?' to seated with menus, then removed every unnecessary tap. Booking takes under 30 seconds.",
       },
       {
         title: "Kill the no-show",
@@ -350,11 +350,11 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "QR check-in",
-        text: "Table-side QR codes let guests check in and browse the menu from their phones — hosts see arrivals in real time, no paper lists.",
+        text: "Table-side QR codes let guests check in and browse the menu from their phones, hosts see arrivals in real time, no paper lists.",
       },
       {
         title: "One codebase, two stores",
-        text: "Built cross-platform from a single codebase for iOS and Android, with a staff web dashboard for hosts and managers — shipped to both stores in one release cycle.",
+        text: "Built cross-platform from a single codebase for iOS and Android, with a staff web dashboard for hosts and managers, shipped to both stores in one release cycle.",
       },
     ],
     metrics: [
@@ -376,34 +376,34 @@ export const PROJECTS: Project[] = [
     title: "Workout tracking app",
     category: "Mobile App",
     description:
-      "A social fitness app with training plans, live challenges, and streaks — designed to bring users back every single morning.",
+      "A social fitness app with training plans, live challenges, and streaks, designed to bring users back every single morning.",
     result: "4.9★ · 120k downloads",
     image: "/projects/pulse-fit.jpg",
     imagePosition: "center 31%",
     timeline: "12 weeks",
     services: ["Mobile App Development", "Motion Graphics", "Brand Identity"],
     overview: [
-      "The fitness app market is brutally crowded, and most apps lose 80% of users within 30 days. PulseFit's bet: make consistency addictive. They came to us with training science and a community vision — we turned it into an app people open every morning.",
-      "We built a social fitness platform around training plans, live challenges, and streak mechanics — with an onboarding flow so smooth that new users log their first workout within 90 seconds of signing up.",
+      "The fitness app market is brutally crowded, and most apps lose 80% of users within 30 days. PulseFit's bet: make consistency addictive. They came to us with training science and a community vision, we turned it into an app people open every morning.",
+      "We built a social fitness platform around training plans, live challenges, and streak mechanics, with an onboarding flow so smooth that new users log their first workout within 90 seconds of signing up.",
     ],
     challenge: [
-      "Category-wide D30 retention sits below 20% — the app had to earn its place on the home screen daily.",
+      "Category-wide D30 retention sits below 20%, the app had to earn its place on the home screen daily.",
       "Logging workouts felt like data entry in every competitor; the core loop had to feel like play, not paperwork.",
-      "Social features in fitness apps usually become ghost towns — challenges needed real stakes and real momentum.",
+      "Social features in fitness apps usually become ghost towns, challenges needed real stakes and real momentum.",
       "Launch marketing was locked to a fixed date; the app had to be store-ready with zero slip.",
     ],
     approach: [
       {
         title: "90-second first workout",
-        text: "Redesigned onboarding around one goal: log a workout within 90 seconds of signup. No account walls, no 12-screen setup — value first, profile later.",
+        text: "Redesigned onboarding around one goal: log a workout within 90 seconds of signup. No account walls, no 12-screen setup, value first, profile later.",
       },
       {
         title: "Make streaks sacred",
-        text: "Built streak mechanics with rest-day logic that forgives intelligently — punishing enough to motivate, smart enough not to break when life happens.",
+        text: "Built streak mechanics with rest-day logic that forgives intelligently, punishing enough to motivate, smart enough not to break when life happens.",
       },
       {
         title: "Challenges with teeth",
-        text: "Live group challenges with leaderboards, team modes, and end-of-week recaps engineered for the share — growth baked into the product.",
+        text: "Live group challenges with leaderboards, team modes, and end-of-week recaps engineered for the share, growth baked into the product.",
       },
       {
         title: "Motion that motivates",
@@ -418,7 +418,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "They obsessed over the first 90 seconds the way most agencies obsess over the logo. Our day-30 retention is more than double the category — that was the whole bet, and it paid off.",
+        "They obsessed over the first 90 seconds the way most agencies obsess over the logo. Our day-30 retention is more than double the category, that was the whole bet, and it paid off.",
       name: "Lena W.",
       role: "CEO, PulseFit",
     },
@@ -429,25 +429,25 @@ export const PROJECTS: Project[] = [
     title: "Food delivery app",
     category: "Mobile App",
     description:
-      "Ordering, live order tracking, and rider dispatch in one snappy app — from craving to doorstep in under 30 minutes.",
+      "Ordering, live order tracking, and rider dispatch in one snappy app, from craving to doorstep in under 30 minutes.",
     result: "45k orders in month one",
     image: "/projects/swift-bite.jpg",
     timeline: "14 weeks",
     services: ["Mobile App Development", "Web Design & Development", "Brand Identity"],
     overview: [
-      "SwiftBite set out to launch food delivery in a mid-size city in 90 days — competing against giants with a fraction of the budget. They didn't need a slightly better clone; they needed the whole three-sided marketplace (customers, riders, restaurants) working flawlessly on day one.",
-      "We shipped all three apps plus a dispatch engine from a single codebase: customer ordering with live tracking, a rider app with smart batching, and a restaurant dashboard — then stayed through launch week to tune it live.",
+      "SwiftBite set out to launch food delivery in a mid-size city in 90 days, competing against giants with a fraction of the budget. They didn't need a slightly better clone; they needed the whole three-sided marketplace (customers, riders, restaurants) working flawlessly on day one.",
+      "We shipped all three apps plus a dispatch engine from a single codebase: customer ordering with live tracking, a rider app with smart batching, and a restaurant dashboard, then stayed through launch week to tune it live.",
     ],
     challenge: [
-      "Three apps needed to launch simultaneously — customer, rider, and restaurant — with a hard 90-day deadline.",
+      "Three apps needed to launch simultaneously, customer, rider, and restaurant, with a hard 90-day deadline.",
       "Dispatch is the whole business: bad routing means cold food, late riders, and one-star reviews from day one.",
-      "Restaurants needed to trust a brand-new platform with their dinner rush — onboarding had to be effortless.",
+      "Restaurants needed to trust a brand-new platform with their dinner rush, onboarding had to be effortless.",
       "Unit economics had to work at local scale, without the subsidy war chests of national competitors.",
     ],
     approach: [
       {
         title: "One codebase, three apps",
-        text: "Built customer, rider, and restaurant experiences from a shared core — one team, one release train, no duplicated logic to drift apart.",
+        text: "Built customer, rider, and restaurant experiences from a shared core, one team, one release train, no duplicated logic to drift apart.",
       },
       {
         title: "Dispatch that thinks",
@@ -455,7 +455,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Track everything live",
-        text: "Customers watch their order move in real time — kitchen, rider, doorstep — which cut 'where is my food?' support contacts by 70%.",
+        text: "Customers watch their order move in real time, kitchen, rider, doorstep, which cut 'where is my food?' support contacts by 70%.",
       },
       {
         title: "Launch-week war room",
@@ -470,7 +470,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "From idea to 45,000 orders in a month. The dispatch engine they built is the reason we survived launch week — and the reason we're still growing.",
+        "From idea to 45,000 orders in a month. The dispatch engine they built is the reason we survived launch week, and the reason we're still growing.",
       name: "Omar F.",
       role: "Co-founder, SwiftBite",
     },
@@ -481,7 +481,7 @@ export const PROJECTS: Project[] = [
     title: "Gym management platform",
     category: "Web App",
     description:
-      "Bookings, memberships, trainer schedules, and payments — previously spread across four tools — rebuilt as one dashboard the whole team actually enjoys using.",
+      "Bookings, memberships, trainer schedules, and payments, previously spread across four tools, rebuilt as one dashboard the whole team actually enjoys using.",
     result: "4 tools → 1 platform · 38% fewer no-shows",
     image: "/projects/ironpulse.jpg",
     imagePosition: "center 25%",
@@ -489,18 +489,18 @@ export const PROJECTS: Project[] = [
     services: ["Web Design & Development", "AI Automation"],
     overview: [
       "IronPulse Fitness was running on four disconnected tools: one for bookings, one for memberships, one for trainer schedules, and spreadsheets for payments. Staff re-entered the same data three times, double-bookings were weekly events, and chasing failed payments ate entire afternoons.",
-      "We rebuilt everything as one platform the whole team actually enjoys using — bookings, memberships, schedules, and payments in a single dashboard, with automated reminders and dunning that quietly fixed the no-show and late-payment problems.",
+      "We rebuilt everything as one platform the whole team actually enjoys using, bookings, memberships, schedules, and payments in a single dashboard, with automated reminders and dunning that quietly fixed the no-show and late-payment problems.",
     ],
     challenge: [
       "Four tools meant four logins, four data silos, and staff re-typing the same member data across all of them.",
       "Double-booked classes and trainers were a weekly embarrassment with paying members.",
       "No-shows ran high because reminders depended on whoever remembered to send them.",
-      "Failed payments were chased manually — awkward for staff, slow for cash flow.",
+      "Failed payments were chased manually, awkward for staff, slow for cash flow.",
     ],
     approach: [
       {
         title: "One source of truth",
-        text: "Consolidated members, bookings, schedules, and billing into a single database and dashboard — one login, zero re-entry.",
+        text: "Consolidated members, bookings, schedules, and billing into a single database and dashboard, one login, zero re-entry.",
       },
       {
         title: "Scheduling that prevents conflicts",
@@ -508,11 +508,11 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Reminders on autopilot",
-        text: "Automated class reminders and rebooking nudges run themselves — the single biggest lever on the no-show rate.",
+        text: "Automated class reminders and rebooking nudges run themselves, the single biggest lever on the no-show rate.",
       },
       {
         title: "Payments without awkwardness",
-        text: "Integrated billing with automatic retries and polite dunning sequences — failed payments get resolved by the system, not by front-desk staff.",
+        text: "Integrated billing with automatic retries and polite dunning sequences, failed payments get resolved by the system, not by front-desk staff.",
       },
     ],
     metrics: [
@@ -534,25 +534,25 @@ export const PROJECTS: Project[] = [
     title: "Analytics dashboard",
     category: "Web App",
     description:
-      "A real-time analytics product for e-commerce teams — custom charts, alerts, and exports, wrapped in an interface non-technical founders understand.",
+      "A real-time analytics product for e-commerce teams, custom charts, alerts, and exports, wrapped in an interface non-technical founders understand.",
     result: "0.9s avg. load · 12k daily users",
     image: "/projects/pulseboard.jpg",
     timeline: "7 weeks",
     services: ["Web Design & Development", "UI/UX Design"],
     overview: [
-      "Pulseboard sells analytics to e-commerce teams — but their own dashboard was slow, cluttered, and intimidating to the non-technical founders who actually signed the checks. Trial users bounced before they ever saw an insight.",
-      "We rebuilt the product around one principle: any merchant should understand their numbers in under a minute. Custom chart builder, real-time data, and alerts — wrapped in an interface that feels obvious, loading in under a second.",
+      "Pulseboard sells analytics to e-commerce teams, but their own dashboard was slow, cluttered, and intimidating to the non-technical founders who actually signed the checks. Trial users bounced before they ever saw an insight.",
+      "We rebuilt the product around one principle: any merchant should understand their numbers in under a minute. Custom chart builder, real-time data, and alerts, wrapped in an interface that feels obvious, loading in under a second.",
     ],
     challenge: [
-      "Dashboards took 6+ seconds to load — trial users assumed the product was broken and left.",
+      "Dashboards took 6+ seconds to load, trial users assumed the product was broken and left.",
       "The interface was built for analysts, but buyers were founders who wanted answers, not query builders.",
-      "Every new chart type required engineering time — the product couldn't keep up with customer requests.",
+      "Every new chart type required engineering time, the product couldn't keep up with customer requests.",
       "'Where do I click?' was the most common support ticket about reporting.",
     ],
     approach: [
       {
         title: "Speed as a feature",
-        text: "Re-architected data fetching with aggressive caching and progressive loading — median dashboard load dropped from 6.2s to 0.9s.",
+        text: "Re-architected data fetching with aggressive caching and progressive loading, median dashboard load dropped from 6.2s to 0.9s.",
       },
       {
         title: "Answers, not queries",
@@ -560,7 +560,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Charts without code",
-        text: "A drag-and-drop chart builder lets users create custom views in seconds — new visualizations ship without engineering tickets.",
+        text: "A drag-and-drop chart builder lets users create custom views in seconds, new visualizations ship without engineering tickets.",
       },
       {
         title: "Alerts that matter",
@@ -575,7 +575,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "Our merchants finally understand their own numbers. Trial-to-paid conversion jumped the month the new dashboard shipped — speed and clarity sold it.",
+        "Our merchants finally understand their own numbers. Trial-to-paid conversion jumped the month the new dashboard shipped, speed and clarity sold it.",
       name: "David C.",
       role: "CTO, Pulseboard",
     },
@@ -592,19 +592,19 @@ export const PROJECTS: Project[] = [
     timeline: "5 weeks",
     services: ["Logo Design", "Brand Identity", "Content Writing"],
     overview: [
-      "Atelier North designs beautiful buildings — but their own brand looked like a template. Proposals went out with inconsistent formatting, the website didn't match the pitch decks, and a premium studio was presenting like a commodity firm.",
+      "Atelier North designs beautiful buildings, but their own brand looked like a template. Proposals went out with inconsistent formatting, the website didn't match the pitch decks, and a premium studio was presenting like a commodity firm.",
       "We built them an identity as considered as their architecture: a refined wordmark, a typographic system with real personality, and a guidelines book so thorough the whole team can produce on-brand work without a designer on call.",
     ],
     challenge: [
       "A premium architecture studio was visually indistinguishable from budget competitors.",
-      "Every proposal looked different — partners formatted decks their own way, eroding credibility with clients.",
+      "Every proposal looked different, partners formatted decks their own way, eroding credibility with clients.",
       "The website, pitch materials, and site signage told three different brand stories.",
-      "They needed the rebrand done between project deadlines — no six-month luxury timeline.",
+      "They needed the rebrand done between project deadlines, no six-month luxury timeline.",
     ],
     approach: [
       {
         title: "Strategy before sketching",
-        text: "A half-day workshop with the partners defined the positioning: quiet confidence, material honesty, Nordic restraint — then we translated that into design principles.",
+        text: "A half-day workshop with the partners defined the positioning: quiet confidence, material honesty, Nordic restraint, then we translated that into design principles.",
       },
       {
         title: "Wordmark & type system",
@@ -612,7 +612,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "The guidelines book",
-        text: "A 40+ page identity manual covering logo usage, color, typography, imagery, and tone of voice — written for architects, not designers.",
+        text: "A 40+ page identity manual covering logo usage, color, typography, imagery, and tone of voice, written for architects, not designers.",
       },
       {
         title: "Templates that stick",
@@ -645,13 +645,13 @@ export const PROJECTS: Project[] = [
     services: ["SEO & AI Search", "Content Writing", "Web Design & Development"],
     overview: [
       "Cornerstone Dental runs three locations in a metro area with a dentist on every block. They were invisible where it mattered: the Google map pack. Paid ads were eating the marketing budget, and every new patient effectively had a purchase price.",
-      "We rebuilt their local search presence from the ground up — technical cleanup, service pages rewritten around real patient questions, a review engine that runs itself, and structured data tuned for both Google and AI search answers.",
+      "We rebuilt their local search presence from the ground up, technical cleanup, service pages rewritten around real patient questions, a review engine that runs itself, and structured data tuned for both Google and AI search answers.",
     ],
     challenge: [
-      "Three locations, zero map-pack visibility — competitors owned the top three spots for every money keyword.",
+      "Three locations, zero map-pack visibility, competitors owned the top three spots for every money keyword.",
       "Service pages were thin, duplicated across locations, and written for search engines circa 2015.",
       "A review drought: 40 reviews across three locations in a market where leaders had 600+.",
-      "Paid search was profitable but fragile — pausing ads meant the phone stopped ringing.",
+      "Paid search was profitable but fragile, pausing ads meant the phone stopped ringing.",
     ],
     approach: [
       {
@@ -660,7 +660,7 @@ export const PROJECTS: Project[] = [
       },
       {
         title: "Pages patients want",
-        text: "Rewrote every service page around real patient questions — costs, pain, recovery time — in plain language, unique per location.",
+        text: "Rewrote every service page around real patient questions, costs, pain, recovery time, in plain language, unique per location.",
       },
       {
         title: "Review engine",
@@ -679,7 +679,7 @@ export const PROJECTS: Project[] = [
     ],
     testimonial: {
       quote:
-        "We used to pay for every single patient click. Now the phone rings on its own — and it keeps ringing even when we pause the ads.",
+        "We used to pay for every single patient click. Now the phone rings on its own, and it keeps ringing even when we pause the ads.",
       name: "Daniel K.",
       role: "Owner, Cornerstone Dental",
     },
@@ -692,7 +692,7 @@ export const PROCESS = [
   {
     step: "01",
     title: "Discover",
-    text: "We dig into your goals, customers, and bottlenecks — then map the shortest path from where you are to where you need to be.",
+    text: "We dig into your goals, customers, and bottlenecks, then map the shortest path from where you are to where you need to be.",
   },
   {
     step: "02",
@@ -740,7 +740,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Fast, honest, and allergic to jargon. They told us what we didn't need — then built exactly what we did.",
+      "Fast, honest, and allergic to jargon. They told us what we didn't need, then built exactly what we did.",
     name: "Sofia L.",
     role: "CMO, Harbor Realty",
   },
@@ -763,7 +763,7 @@ export const PRICING = [
     name: "Grow",
     price: "$4,900",
     period: "starting at",
-    blurb: "Our most popular — a full website built to convert.",
+    blurb: "Our most popular, a full website built to convert.",
     features: [
       "Custom multi-page website",
       "Copywriting & brand polish",
@@ -798,7 +798,7 @@ export const PRICING = [
 export const FAQS = [
   {
     q: "How quickly can we start a project?",
-    a: "Most projects kick off within one week of signing. Smaller builds (landing pages, brand refreshes) can start even sooner — tell us your deadline and we'll be honest about what's possible.",
+    a: "Most projects kick off within one week of signing. Smaller builds (landing pages, brand refreshes) can start even sooner, tell us your deadline and we'll be honest about what's possible.",
   },
   {
     q: "Do you only work with large companies?",
@@ -806,11 +806,11 @@ export const FAQS = [
   },
   {
     q: "Who owns the final code and designs?",
-    a: "You do — 100%. On final payment, all source files, designs, and accounts transfer to you. No lock-in, no hostage situations, no licensing surprises.",
+    a: "You do, 100%. On final payment, all source files, designs, and accounts transfer to you. No lock-in, no hostage situations, no licensing surprises.",
   },
   {
     q: "Will my website actually rank on Google?",
-    a: "Every site we ship is technically SEO-ready: fast loads, clean structure, proper metadata, and AI-search formatting. Rankings also depend on competition and content over time — we'll give you a straight answer about your market before you spend a dollar.",
+    a: "Every site we ship is technically SEO-ready: fast loads, clean structure, proper metadata, and AI-search formatting. Rankings also depend on competition and content over time, we'll give you a straight answer about your market before you spend a dollar.",
   },
   {
     q: "Do you provide support after launch?",
