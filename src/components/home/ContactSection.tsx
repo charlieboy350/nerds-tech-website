@@ -50,7 +50,7 @@ export default function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Let's connect the dots."
-          sub="Tell us what you're building — we'll tell you how fast we can ship it. Replies within 24 hours, usually much faster."
+          sub="Tell us what you're building, we'll tell you how fast we can ship it. Replies within 24 hours, usually much faster."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-5">
@@ -59,7 +59,7 @@ export default function ContactSection() {
             <div className="flex h-full flex-col rounded-3xl border border-white/10 bg-gradient-to-b from-ink-800 to-ink-900 p-8">
               <h3 className="font-display text-xl font-semibold text-white">Get in touch directly</h3>
               <p className="mt-2 text-sm text-slate-400">
-                Prefer email or a quick call? We’re easy to reach — and a human always answers.
+                Prefer email or a quick call? We’re easy to reach, and a human always answers.
               </p>
               <ul className="mt-8 space-y-5">
                 <li className="flex items-start gap-4">
@@ -118,7 +118,7 @@ export default function ContactSection() {
                   </motion.span>
                   <h3 className="mt-6 font-display text-2xl font-bold text-white">Message received!</h3>
                   <p className="mt-2 max-w-sm text-sm text-slate-400">
-                    Thanks for reaching out — we’ll get back to you within 24 hours with next steps.
+                    Thanks for reaching out, we’ll get back to you within 24 hours with next steps.
                   </p>
                   <button
                     onClick={() => setSent(false)}
