@@ -8,11 +8,11 @@ import CtaBanner from "@/components/CtaBanner";
 import { SITE } from "@/site";
 
 export const metadata: Metadata = {
-  title: "About — The Studio Behind the Work",
+  title: "About | The Studio Behind the Work",
   description:
     "NerdsTech is a full-stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero hand-offs, outcomes over deliverables.",
   openGraph: {
-    title: "About — The Studio Behind the Work",
+    title: "About | The Studio Behind the Work",
     description:
       "NerdsTech is a full-stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero hand-offs, outcomes over deliverables.",
   },
@@ -23,7 +23,7 @@ const VALUES = [
   {
     icon: Users,
     title: "One team, zero hand-offs",
-    text: "Designers, engineers, and AI specialists sit together — literally and figuratively. Nothing gets lost translating between vendors because there are no vendors.",
+    text: "Designers, engineers, and AI specialists sit together, literally and figuratively. Nothing gets lost translating between vendors because there are no vendors.",
   },
   {
     icon: Zap,
@@ -33,7 +33,7 @@ const VALUES = [
   {
     icon: Eye,
     title: "Radical transparency",
-    text: "Fixed quotes, shared timelines, and honest advice — including telling you when you don't need us. You always know what's happening and why.",
+    text: "Fixed quotes, shared timelines, and honest advice, including telling you when you don't need us. You always know what's happening and why.",
   },
   {
     icon: HeartHandshake,
@@ -48,7 +48,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A studio built for how business runs today."
-        sub={`${SITE.name} started with a simple frustration: great companies juggling five vendors who never talked to each other. So we put AI, design, and engineering under one roof — and never looked back.`}
+        sub={`${SITE.name} started with a simple frustration: great companies juggling five vendors who never talked to each other. So we put AI, design, and engineering under one roof, and never looked back.`}
       />
 
       <section className="py-10 sm:py-14" aria-label="Our story">
@@ -57,13 +57,13 @@ export default function AboutPage() {
             <div className="space-y-5 text-base leading-relaxed text-slate-400 sm:text-lg">
               <p>
                 Most agencies sell you a slice: a logo here, a website there, an ad campaign
-                somewhere else. Then you become the project manager stitching it all together —
+                somewhere else. Then you become the project manager stitching it all together,
                 the most expensive, least qualified person for that job.
               </p>
               <p>
                 We built {SITE.name} to be the opposite: a single team that owns the whole
                 picture. Our AI specialists automate the busywork, our designers make it
-                beautiful, our engineers make it fast — and because we all work together,
+                beautiful, our engineers make it fast, and because we all work together,
                 the brand, the site, and the systems actually agree with each other.
               </p>
               <p>
