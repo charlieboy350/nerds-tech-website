@@ -13,7 +13,7 @@ export default function Pricing() {
         <SectionHeading
           eyebrow="Pricing"
           title="Honest pricing, no mystery quotes."
-          sub="Starting points, not ceilings. Every project gets a fixed quote before we begin — the number we agree on is the number you pay."
+          sub="Starting points, not ceilings. Every project gets a fixed quote before we begin, the number we agree on is the number you pay."
         />
 
         <motion.div
@@ -72,7 +72,7 @@ export default function Pricing() {
         </motion.div>
 
         <p className="mt-8 text-center text-xs text-slate-400">
-          Placeholder pricing — final quotes are fixed and tailored to your scope.
+          Placeholder pricing, final quotes are fixed and tailored to your scope.
         </p>
       </div>
     </section>
