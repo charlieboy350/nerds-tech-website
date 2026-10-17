@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -136,13 +137,12 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <Link
-            href="/contact"
+          <ContactButton
             className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-brand-400 btn-gradient-rev px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(139,92,246,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(139,92,246,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+          </ContactButton>
         </div>
 
         <button
@@ -231,12 +231,12 @@ export default function Navbar() {
                 </li>
               ))}
               <li className="pt-2">
-                <Link
-                  href="/contact"
-                  className="whitespace-nowrap flex items-center justify-center gap-1.5 rounded-full bg-brand-400 btn-gradient-rev px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(139,92,246,0.5)] transition-all duration-300 hover:brightness-110"
+                <ContactButton
+                  onClick={() => setOpen(false)}
+                  className="whitespace-nowrap flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-400 btn-gradient-rev px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(139,92,246,0.5)] transition-all duration-300 hover:brightness-110"
                 >
                   Start a project <ArrowUpRight className="size-4" />
-                </Link>
+                </ContactButton>
               </li>
             </ul>
           </motion.div>

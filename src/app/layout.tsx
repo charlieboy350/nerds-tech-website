@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ContactModalProvider } from "@/components/contact/ContactModalContext";
+import ContactModal from "@/components/contact/ContactModal";
 import { SITE } from "@/site";
 
 const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
@@ -101,6 +103,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-ink-950 font-sans text-slate-100">
+        <ContactModalProvider>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <GoogleAnalytics />
         <a
@@ -114,6 +117,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <ContactModal />
+        </ContactModalProvider>
       </body>
     </html>
   );

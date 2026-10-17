@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { ArrowRight, ArrowUpRight, Sparkles, PlayCircle } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
@@ -103,13 +104,12 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <div data-hero="cta">
             <Magnetic>
-              <Link
-                href="/contact"
+              <ContactButton
                 className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-brand-500/40 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
               >
                 Start your project
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </ContactButton>
             </Magnetic>
           </div>
           <div data-hero="cta">

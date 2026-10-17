@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { PRICING } from "@/data/content";
@@ -57,8 +58,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/contact"
+              <ContactButton
                 className={`mt-8 inline-flex whitespace-nowrap items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
                   tier.featured
                     ? "bg-steel-500 btn-gradient text-white shadow-lg shadow-steel-500/30 hover:scale-[1.02]"
@@ -66,7 +66,7 @@ export default function Pricing() {
                 }`}
               >
                 {tier.cta}
-              </Link>
+              </ContactButton>
             </motion.article>
           ))}
         </motion.div>

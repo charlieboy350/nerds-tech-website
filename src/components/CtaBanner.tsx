@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
@@ -56,13 +57,12 @@ export default function CtaBanner() {
               </GsapReveal>
               <GsapReveal delay={0.18}>
                 <Magnetic>
-                  <Link
-                    href="/contact"
+                  <ContactButton
                     className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-center text-sm font-semibold text-ink-950 shadow-[0_0_40px_-10px_rgba(255,255,255,0.4)] transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto sm:px-8 sm:text-base"
                   >
                     Book your free consultation
                     <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  </ContactButton>
                 </Magnetic>
               </GsapReveal>
             </div>

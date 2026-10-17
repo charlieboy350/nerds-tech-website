@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
@@ -121,13 +122,12 @@ export default async function ServicePage({
           </GsapReveal>
           <GsapReveal delay={0.24}>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact"
+              <ContactButton
                 className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
               >
                 Start your project
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </ContactButton>
               <Link
                 href="/services"
                 className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)] sm:w-auto"

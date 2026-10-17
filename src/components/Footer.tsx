@@ -5,6 +5,7 @@ import { XIcon, InstagramIcon, LinkedInIcon, DribbbleIcon } from "@/components/S
 import CopyrightYear from "@/components/CopyrightYear";
 import { NAV_LINKS, SITE } from "@/site";
 import { SERVICES } from "@/data/content";
+import ContactButton from "@/components/contact/ContactButton";
 
 const SOCIAL_ICONS = [
   { label: "X (Twitter)", href: SITE.socials.x, Icon: XIcon },
@@ -52,9 +53,15 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {[{ label: "Home", href: "/" }, ...NAV_LINKS].map((link) => (
                 <li key={link.href + link.label}>
-                  <Link href={link.href} className="text-sm text-slate-400 transition-colors hover:text-white">
-                    {link.label}
-                  </Link>
+                  {link.href === "/contact" ? (
+                    <ContactButton className="text-sm text-slate-400 transition-colors hover:text-white">
+                      {link.label}
+                    </ContactButton>
+                  ) : (
+                    <Link href={link.href} className="text-sm text-slate-400 transition-colors hover:text-white">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

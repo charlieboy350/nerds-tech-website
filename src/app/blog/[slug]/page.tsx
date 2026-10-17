@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactButton from "@/components/contact/ContactButton";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronRight, Clock } from "lucide-react";
 import GsapReveal from "@/components/gsap/GsapReveal";
@@ -185,13 +186,12 @@ export default async function BlogPostPage({
                 <p key={j}>{para}</p>
               ))}
             </div>
-            <Link
-              href="/contact"
+            <ContactButton
               className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(139,92,246,0.5)] transition-all duration-300 hover:brightness-110"
             >
               Talk to us about automation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </ContactButton>
           </section>
         </GsapReveal>
 
