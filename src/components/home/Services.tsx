@@ -19,7 +19,7 @@ export default function Services({ limit }: { limit?: number }) {
         <SectionHeading
           eyebrow="What we build"
           title="Eleven disciplines. One connected team."
-          sub="Every service works on its own — or together as one connected build. Pick what you need today; add the rest when you're ready."
+          sub="Every service works on its own, or together as one connected build. Pick what you need today; add the rest when you're ready."
         />
 
         <motion.div
