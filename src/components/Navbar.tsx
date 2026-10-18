@@ -107,11 +107,14 @@ export default function Navbar() {
           <Image
             src="/n-mark.svg"
             alt={`${SITE.name} logo`}
-            width={44}
-            height={44}
-            className="h-10 w-10 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.7)] lg:h-11 lg:w-11"
+            width={36}
+            height={36}
+            className="h-9 w-9 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.7)]"
             priority
           />
+          <span className="ml-2.5 text-xl font-extrabold tracking-tight text-white">
+            Nerds<span className="text-gradient">Tech</span>
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-md md:flex">
