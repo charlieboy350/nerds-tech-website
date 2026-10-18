@@ -118,19 +118,26 @@ export default function Navbar() {
           <ServicesDropdown pathname={pathname} />
           {NAV_LINKS.filter((link) => link.href !== "/services").map((link) => {
             const isActive = pathname === link.href;
+            const cls = `${linkBase} ${
+              isActive
+                ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(139,92,246,0.7)]"
+                : "text-slate-400 hover:bg-white/10 hover:text-white"
+            }`;
             return (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`${linkBase} ${
-                    isActive
-                      ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(139,92,246,0.7)]"
-                      : "text-slate-400 hover:bg-white/10 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                {link.href === "/contact" ? (
+                  <ContactButton className={cls}>
+                    {link.label}
+                  </ContactButton>
+                ) : (
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={cls}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -218,16 +225,25 @@ export default function Navbar() {
               </li>
               {NAV_LINKS.filter((link) => link.href !== "/services").map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`block rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
-                      pathname === link.href
-                        ? "bg-brand-500/10 text-white ring-1 ring-brand-400/30"
-                        : "text-slate-300 hover:bg-white/5 hover:pl-5 hover:text-white"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.href === "/contact" ? (
+                    <ContactButton
+                      onClick={() => setOpen(false)}
+                      className="block w-full rounded-lg px-3 py-3 text-left text-base font-medium text-slate-300 transition-all duration-300 hover:bg-white/5 hover:pl-5 hover:text-white active:scale-[0.98]"
+                    >
+                      {link.label}
+                    </ContactButton>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`block rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
+                        pathname === link.href
+                          ? "bg-brand-500/10 text-white ring-1 ring-brand-400/30"
+                          : "text-slate-300 hover:bg-white/5 hover:pl-5 hover:text-white"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
               <li className="pt-2">
