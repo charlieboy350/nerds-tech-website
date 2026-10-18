@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} | AI Automation, Web Design & Branding Studio`,
     description: SITE.description,
-    images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: `${SITE.name}, AI, Design & Development studio` }],
+    images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: `${SITE.name} | AI, Design & Development studio` }],
   },
   twitter: {
     card: "summary_large_image",

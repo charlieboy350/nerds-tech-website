@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import ContactButton from "@/components/contact/ContactButton";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { ArrowRight, ArrowUpRight, Sparkles, PlayCircle } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { SITE } from "@/site";
 import Magnetic from "@/components/gsap/Magnetic";
 import Parallax from "@/components/gsap/Parallax";
+import ContactButton from "@/components/contact/ContactButton";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -71,16 +71,16 @@ export default function Hero() {
 
   return (
     <section ref={root} className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28" aria-label="Introduction">
-      {/* Backdrop */}
-      <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" aria-hidden="true" />
+      {/* Backdrop — network mesh echoing the logo's "N", over ambient glows */}
+      <div className="net-nodes absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" aria-hidden="true" />
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
       <div data-orb="1" className="absolute -top-32 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[140px]" aria-hidden="true" />
       <div data-orb="2" className="absolute top-40 -left-32 h-96 w-96 rounded-full bg-steel-500/20 blur-[120px]" aria-hidden="true" />
-      <div data-orb="3" className="absolute top-64 -right-24 h-96 w-96 rounded-full bg-fuchsia-500/15 blur-[120px]" aria-hidden="true" />
+      <div data-orb="3" className="absolute top-64 -right-24 h-96 w-96 rounded-full bg-steel-400/15 blur-[120px]" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div data-hero="badge" className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 shadow-[0_0_24px_-6px_rgba(139,92,246,0.5)]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 shadow-[0_0_24px_-6px_rgba(73,198,231,0.55)]">
             <Sparkles className="size-3.5" />
             {SITE.tagline}
           </span>

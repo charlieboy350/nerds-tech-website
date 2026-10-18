@@ -5,13 +5,13 @@ import Faq from "@/components/home/Faq";
 import { SITE } from "@/site";
 
 export const metadata: Metadata = {
-  title: "Contact | Start Your Project",
+  title: "Contact — Start Your Project",
   description:
-    "Tell us what you're building and get a fixed quote within 24 hours. Email, call, or send the project form, a human always answers.",
+    "Tell us what you're building and get a fixed quote within 24 hours. Email, call, or send the project form — a human always answers.",
   openGraph: {
-    title: "Contact | Start Your Project",
+    title: "Contact — Start Your Project",
     description:
-      "Tell us what you're building and get a fixed quote within 24 hours. Email, call, or send the project form, a human always answers.",
+      "Tell us what you're building and get a fixed quote within 24 hours. Email, call, or send the project form — a human always answers.",
   },
   alternates: { canonical: `${SITE.url}/contact` },
 };

@@ -63,7 +63,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="SaaS automation, explained properly."
-        sub="Playbooks for turning manual SaaS operations into self-running systems, finance, onboarding, support, and retention."
+        sub="Playbooks for turning manual SaaS operations into self-running systems: finance, onboarding, support, and retention."
       />
 
       <div className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
@@ -71,7 +71,7 @@ export default function BlogPage() {
           <GsapReveal>
             <Link
               href={`/blog/${featured.slug}`}
-              className="group mb-10 block overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)] sm:p-12"
+              className="group mb-10 block overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)] sm:p-12"
             >
               <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
                 {featured.category}
@@ -96,7 +96,7 @@ export default function BlogPage() {
             <GsapReveal key={post.slug} delay={Math.min(i * 0.06, 0.24)}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)]"
+                className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)]"
               >
                 <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300 ring-1 ring-white/10">
                   {post.category}

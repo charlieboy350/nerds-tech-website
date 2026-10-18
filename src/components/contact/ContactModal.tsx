@@ -64,7 +64,7 @@ export default function ContactModal() {
                 exit={{ opacity: 0, y: 24, scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 320, damping: 28 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative m-auto w-full max-w-xl rounded-3xl border border-brand-400/25 bg-ink-800 shadow-[0_0_90px_-18px_rgba(139,92,246,0.55)]"
+                className="relative m-auto w-full max-w-xl rounded-3xl border border-brand-400/25 bg-ink-800 shadow-[0_0_90px_-18px_rgba(73,198,231,0.45)]"
               >
                 {/* Glow accents */}
                 <div

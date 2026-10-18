@@ -3,7 +3,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SITE } from "@/site";
 import SectionHeading from "@/components/SectionHeading";
-import GsapReveal from "@/components/gsap/GsapReveal";
+import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactSection() {
@@ -19,7 +19,7 @@ export default function ContactSection() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-5">
           {/* Info panel */}
-          <GsapReveal className="lg:col-span-2">
+          <Reveal className="lg:col-span-2">
             <div className="flex h-full flex-col rounded-3xl border border-white/10 bg-gradient-to-b from-ink-800 to-ink-900 p-8">
               <h3 className="font-display text-xl font-semibold text-white">Get in touch directly</h3>
               <p className="mt-2 text-sm text-slate-400">
@@ -61,14 +61,14 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </GsapReveal>
+          </Reveal>
 
           {/* Form */}
-          <GsapReveal delay={0.1} className="lg:col-span-3">
+          <Reveal delay={0.1} className="lg:col-span-3">
             <div className="rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm">
               <ContactForm idPrefix="section" />
             </div>
-          </GsapReveal>
+          </Reveal>
         </div>
       </div>
     </section>

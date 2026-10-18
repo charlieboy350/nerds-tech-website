@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { SERVICES, PROJECTS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
-import GsapReveal from "@/components/gsap/GsapReveal";
+import Reveal from "@/components/Reveal";
 
 export default function Services({ limit }: { limit?: number }) {
   const list = limit ? SERVICES.slice(0, limit) : SERVICES;
@@ -100,14 +100,14 @@ export default function Services({ limit }: { limit?: number }) {
         </motion.div>
 
         {limit && list.length < SERVICES.length && (
-          <GsapReveal className="mt-10 text-center">
+          <Reveal className="mt-10 text-center">
             <Link
               href="/services"
-              className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)]"
+              className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)]"
             >
               View all {SERVICES.length} services <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-          </GsapReveal>
+          </Reveal>
         )}
       </div>
     </section>

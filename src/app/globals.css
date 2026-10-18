@@ -4,22 +4,28 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink-950: #07060e;
-  --color-ink-900: #0c0a17;
-  --color-ink-800: #141126;
-  --color-ink-700: #201a3a;
+  /* Ink — deep blue-black surfaces, echoing the logo's black backdrop */
+  --color-ink-0: #f2f7fc;
+  --color-ink-950: #04070c;
+  --color-ink-900: #080d17;
+  --color-ink-800: #0d1524;
+  --color-ink-700: #162032;
 
-  /* Brand primary — electric violet */
-  --color-brand-300: #c4b5fd;
-  --color-brand-400: #a78bfa;
-  --color-brand-500: #8b5cf6;
-  --color-brand-600: #7c3aed;
+  /* Brand primary — NerdsTech cyan, sampled from the logo (#49C6E7) */
+  --color-brand-200: #b9ecfa;
+  --color-brand-300: #8bdef6;
+  --color-brand-400: #66d1ef;
+  --color-brand-500: #49c6e7;
+  --color-brand-600: #27a6c9;
+  --color-brand-700: #1b84a3;
 
-  /* Brand secondary — aurora cyan (harmony with the NerdsTech logo) */
-  --color-steel-300: #a5f3fc;
-  --color-steel-400: #67e8f9;
-  --color-steel-500: #22d3ee;
-  --color-steel-600: #0e7490;
+  /* Steel — NerdsTech steel blue, sampled from the logo (#5C7CBF) */
+  --color-steel-200: #c6d6ee;
+  --color-steel-300: #a6bfe6;
+  --color-steel-400: #82a0d6;
+  --color-steel-500: #5c7cbf;
+  --color-steel-600: #48649f;
+  --color-steel-700: #384e7e;
 
   --animate-marquee: marquee 42s linear infinite;
   --animate-float: float 9s ease-in-out infinite;
@@ -47,66 +53,71 @@ html {
 
 body {
   background-color: var(--color-ink-950);
-  color: #f4f4f8;
+  color: #eef4fa;
   font-family: var(--font-sans);
   overflow-x: clip;
 }
 
 ::selection {
   background: var(--color-brand-500);
-  color: white;
+  color: #04070c;
 }
 
-/* Plain linear gradients for buttons — written without `in oklab` so older
-   mobile browsers render the exact same gradient as desktop (Tailwind v4's
-   bg-gradient-* uses modern interpolation syntax those browsers drop). */
+/* Primary buttons — the logo's own cyan-to-steel gradient. Plain linear
+   gradients (no `in oklab`) so older mobile browsers render them exactly. */
 .btn-gradient {
-  background-image: linear-gradient(to right, #22d3ee, #a78bfa);
+  background-image: linear-gradient(to right, #49c6e7, #5c7cbf);
 }
 .btn-gradient-rev {
-  background-image: linear-gradient(to right, #a78bfa, #22d3ee);
+  background-image: linear-gradient(to right, #5c7cbf, #49c6e7);
 }
 .btn-gradient-white {
   background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
 }
 
-/* Slim dark scrollbar */
+/* Slim dark scrollbar, tinted to the theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0c0a17;
+  background: #080d17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2b2347;
+  background: #1c2a44;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d3163;
+  background: #2a4066;
 }
 
-/* Gradient headline text — aurora violet to fuchsia to cyan */
+/* Gradient headline text — steel blue melting into logo cyan */
 .text-gradient {
-  background: linear-gradient(100deg, #c4b5fd 0%, #e879f9 45%, #22d3ee 100%);
+  background: linear-gradient(100deg, #a6bfe6 0%, #49c6e7 60%, #66d1ef 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Dotted grid backdrop used on hero */
+/* Fine dotted grid backdrop, cyan-tinted */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(139, 92, 246, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(73, 198, 231, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(73, 198, 231, 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
-/* Aurora mesh backdrop — layered violet/fuchsia/cyan glows */
+/* Network-node backdrop — echoes the mesh "N" of the NerdsTech logo */
+.net-nodes {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%2349c6e7' stroke-opacity='0.13' stroke-width='1'%3E%3Cpath d='M20 30 L90 70 L170 40 L200 110 L120 150 L60 120 Z'/%3E%3Cpath d='M90 70 L120 150 M20 30 L60 120 M170 40 L200 110'/%3E%3C/g%3E%3Cg fill='%2349c6e7' fill-opacity='0.22'%3E%3Ccircle cx='20' cy='30' r='3.5'/%3E%3Ccircle cx='90' cy='70' r='3.5'/%3E%3Ccircle cx='170' cy='40' r='3.5'/%3E%3Ccircle cx='200' cy='110' r='3.5'/%3E%3Ccircle cx='120' cy='150' r='3.5'/%3E%3Ccircle cx='60' cy='120' r='3.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+/* Ambient mesh backdrop — layered cyan / steel-blue glows */
 .aurora-bg {
   background:
-    radial-gradient(42rem 22rem at 12% 8%, rgba(139, 92, 246, 0.22), transparent 60%),
-    radial-gradient(36rem 20rem at 88% 12%, rgba(34, 211, 238, 0.14), transparent 60%),
-    radial-gradient(40rem 24rem at 50% 100%, rgba(232, 121, 249, 0.1), transparent 62%);
+    radial-gradient(42rem 22rem at 12% 8%, rgba(73, 198, 231, 0.16), transparent 60%),
+    radial-gradient(36rem 20rem at 88% 12%, rgba(92, 124, 191, 0.2), transparent 60%),
+    radial-gradient(40rem 24rem at 50% 100%, rgba(73, 198, 231, 0.08), transparent 62%);
 }
 
 /* Film grain overlay for a premium finish */
@@ -127,8 +138,32 @@ body {
 }
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(167, 139, 250, 0.45);
-  box-shadow: 0 20px 60px -18px rgba(139, 92, 246, 0.45);
+  border-color: rgba(73, 198, 231, 0.4);
+  box-shadow: 0 20px 60px -18px rgba(73, 198, 231, 0.35);
+}
+
+/* Eyebrow pill — the small label above every section title */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(102, 209, 239, 0.28);
+  background: rgba(73, 198, 231, 0.08);
+  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-brand-300);
+}
+.eyebrow::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: var(--color-brand-400);
+  box-shadow: 0 0 10px 2px rgba(73, 198, 231, 0.7);
 }
 
 /* 3D flip cards (Services section) — front shows the service, back the case study */

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { buildInquiryEmail } from "@/lib/inquiry-email";
 
 /**
  * POST /api/contact
@@ -32,10 +33,6 @@ function rateLimited(ip: string): boolean {
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function escapeHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
 
 export async function POST(req: NextRequest) {
   try {
@@ -87,89 +84,16 @@ export async function POST(req: NextRequest) {
       auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
 
-    const subject = `New website inquiry from ${name}${service ? ` — ${service}` : ""}`;
-    const text = [
-      "New contact form submission (nerdstech.co)",
-      "",
-      `Name:    ${name}`,
-      `Email:   ${email}`,
-      `Service: ${service || "—"}`,
-      `Budget:  ${budget || "—"}`,
-      "",
-      "Message:",
-      message,
-    ].join("\n");
-
-    const esc = escapeHtml;
-    const fieldRow = (label: string, value: string, href?: string) => `
-      <tr>
-        <td style="padding:10px 0;border-bottom:1px solid #241f42;vertical-align:top;width:110px;">
-          <span style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8f86b8;">${label.toUpperCase()}</span>
-        </td>
-        <td style="padding:10px 0 10px 16px;border-bottom:1px solid #241f42;vertical-align:top;">
-          <span style="font-family:Arial,sans-serif;font-size:15px;color:#f4f4f8;">${
-            href
-              ? `<a href="${href}" style="color:#a78bfa;text-decoration:none;">${value}</a>`
-              : value
-          }</span>
-        </td>
-      </tr>`;
-
-    const html = `<!DOCTYPE html>
-<html lang="en">
-<body style="margin:0;padding:0;background-color:#07060e;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#07060e;padding:32px 12px;">
-    <tr>
-      <td align="center">
-        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#141126;border:1px solid #2e2560;border-radius:18px;overflow:hidden;">
-          <tr>
-            <td style="background-color:#8b5cf6;background-image:linear-gradient(90deg,#22d3ee,#a78bfa);padding:30px 36px;">
-              <div style="font-family:Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:3px;color:#07060e;">NERDSTECH.CO</div>
-              <div style="font-family:Arial,sans-serif;font-size:26px;font-weight:bold;color:#07060e;margin-top:8px;">New project inquiry</div>
-              <div style="font-family:Arial,sans-serif;font-size:13px;color:#07060e;opacity:0.75;margin-top:4px;">Someone wants to work with you — reply within 24h.</div>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:8px 36px 4px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                ${fieldRow("Name", esc(name))}
-                ${fieldRow("Email", esc(email), `mailto:${esc(email)}`)}
-                ${fieldRow("Service", esc(service || "Not specified"))}
-                ${fieldRow("Budget", esc(budget || "Not specified"))}
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:20px 36px 8px;">
-              <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#8f86b8;margin-bottom:10px;">MESSAGE</div>
-              <div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.7;color:#e8e6f5;background-color:#0c0a17;border-left:3px solid #a78bfa;border-radius:0 12px 12px 0;padding:18px 20px;white-space:pre-wrap;">${esc(message)}</div>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" style="padding:24px 36px 8px;">
-              <a href="mailto:${esc(email)}?subject=${encodeURIComponent(`Re: ${subject}`)}" style="display:inline-block;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#07060e;text-decoration:none;background-color:#a78bfa;background-image:linear-gradient(90deg,#22d3ee,#a78bfa);padding:14px 38px;border-radius:999px;">Reply to ${esc(name.split(" ")[0])}</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" style="padding:20px 36px 30px;">
-              <div style="font-family:Arial,sans-serif;font-size:12px;color:#6f659c;">Sent from the contact form at <a href="https://www.nerdstech.co" style="color:#a78bfa;text-decoration:none;">nerdstech.co</a> · <a href="mailto:support@nerdstech.co" style="color:#a78bfa;text-decoration:none;">support@nerdstech.co</a></div>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>`.trim();
+    const inquiry = buildInquiryEmail({ name, email, service, budget, message });
 
     await transporter.sendMail({
       from: `"NerdsTech Website" <${SMTP_USER}>`,
       to: TO,
       bcc: BCC,
       replyTo: `"${name.replace(/"/g, "")}" <${email}>`,
-      subject,
-      text,
-      html,
+      subject: inquiry.subject,
+      text: inquiry.text,
+      html: inquiry.html,
     });
 
     return NextResponse.json({ ok: true });

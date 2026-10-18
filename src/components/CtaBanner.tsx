@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import ContactButton from "@/components/contact/ContactButton";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import GsapReveal from "@/components/gsap/GsapReveal";
 import Magnetic from "@/components/gsap/Magnetic";
 import Parallax from "@/components/gsap/Parallax";
+import ContactButton from "@/components/contact/ContactButton";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -33,7 +33,7 @@ export default function CtaBanner() {
     <section className="relative py-20 sm:py-24" aria-label="Call to action">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <GsapReveal variant="scale">
-          <div className="grain relative overflow-hidden rounded-3xl border border-brand-400/30 bg-ink-800 px-8 py-14 text-center shadow-[0_0_90px_-24px_rgba(139,92,246,0.5)] sm:px-16 sm:py-20">
+          <div className="grain relative overflow-hidden rounded-3xl border border-brand-400/30 bg-ink-800 px-8 py-14 text-center shadow-[0_0_90px_-24px_rgba(73,198,231,0.5)] sm:px-16 sm:py-20">
             <div className="aurora-bg absolute inset-0" aria-hidden="true" />
             <div className="bg-grid absolute inset-0 opacity-60" aria-hidden="true" />
             <Parallax speed={14} className="absolute inset-0">

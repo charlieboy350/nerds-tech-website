@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactButton from "@/components/contact/ContactButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
@@ -11,6 +10,7 @@ import HoverFaq from "@/components/HoverFaq";
 import { SERVICES, PROJECTS } from "@/data/content";
 import { getServiceDetail } from "@/data/service-details";
 import { SITE } from "@/site";
+import ContactButton from "@/components/contact/ContactButton";
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -25,7 +25,7 @@ export async function generateMetadata({
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return {};
   const url = `${SITE.url}/services/${service.slug}`;
-  const title = `${service.title}, Problems We Solve & How`;
+  const title = `${service.title} | Problems We Solve & How`;
   return {
     title,
     description: service.long,
@@ -100,10 +100,7 @@ export default async function ServicePage({
       {/* Hero */}
       <header className="relative overflow-hidden pt-10 pb-14 sm:pt-14 sm:pb-20">
         <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black,transparent)]" aria-hidden="true" />
-        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[140px]" aria-hidden="true" />
-        <div className="absolute top-40 -left-32 h-72 w-72 rounded-full bg-steel-500/20 blur-[120px]" aria-hidden="true" />
-        <div className="absolute top-48 -right-24 h-72 w-72 rounded-full bg-fuchsia-500/15 blur-[120px]" aria-hidden="true" />
+        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-[130px]" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <GsapReveal>
             <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
@@ -111,7 +108,7 @@ export default async function ServicePage({
             </span>
           </GsapReveal>
           <GsapReveal delay={0.08}>
-            <h1 className="text-gradient mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {service.title}
             </h1>
           </GsapReveal>
@@ -130,7 +127,7 @@ export default async function ServicePage({
               </ContactButton>
               <Link
                 href="/services"
-                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(139,92,246,0.6)] sm:w-auto"
+                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)] sm:w-auto"
               >
                 All services
               </Link>
@@ -153,7 +150,7 @@ export default async function ServicePage({
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {detail.problems.map((problem, i) => (
               <GsapReveal key={problem.title} delay={Math.min(i * 0.06, 0.24)}>
-                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)]">
+                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)]">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-red-400/90">
                     The problem
                   </span>
@@ -191,8 +188,8 @@ export default async function ServicePage({
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {service.deliverables.map((d, i) => (
               <GsapReveal key={d} delay={Math.min(i * 0.05, 0.2)}>
-                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(139,92,246,0.45)]">
-                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 group-hover:shadow-[0_0_16px_rgba(139,92,246,0.5)]">
+                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(73,198,231,0.45)]">
+                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 group-hover:shadow-[0_0_16px_rgba(73,198,231,0.5)]">
                     <Check className="size-3.5" />
                   </span>
                   <span className="text-[15px] text-slate-200">{d}</span>
@@ -217,7 +214,7 @@ export default async function ServicePage({
           <GsapReveal delay={0.1}>
             <Link
               href={`/work/${related.slug}`}
-              className="group mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(139,92,246,0.4)] lg:grid-cols-2"
+              className="group mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)] lg:grid-cols-2"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
