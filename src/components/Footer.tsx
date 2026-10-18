@@ -22,11 +22,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
               <Image
-                src="/logo.png"
+                src="/n-mark.svg"
                 alt={`${SITE.name} logo`}
-                width={200}
-                height={52}
-                className="h-11 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(73,198,231,0.55)]"
+                width={48}
+                height={48}
+                className="h-12 w-12 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.7)]"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

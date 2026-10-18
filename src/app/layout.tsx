@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ContactModalProvider } from "@/components/contact/ContactModalContext";
 import ContactModal from "@/components/contact/ContactModal";
+import CustomCursor from "@/components/interactive/CustomCursor";
 import { SITE } from "@/site";
 
 const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
@@ -118,6 +119,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <ContactModal />
+        <CustomCursor />
         </ContactModalProvider>
       </body>
     </html>

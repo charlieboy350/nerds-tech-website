@@ -8,6 +8,7 @@ import { SITE } from "@/site";
 import Magnetic from "@/components/gsap/Magnetic";
 import Parallax from "@/components/gsap/Parallax";
 import ContactButton from "@/components/contact/ContactButton";
+import MouseGlow from "@/components/interactive/MouseGlow";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -76,6 +77,8 @@ export default function Hero() {
       <div data-orb="1" className="absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-brand-500/30 blur-[160px]" aria-hidden="true" />
       <div data-orb="2" className="absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[140px]" aria-hidden="true" />
       <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
+      {/* Cursor-following light — the hero reacts to the visitor */}
+      <MouseGlow size={640} opacity={0.16} />
       {/* Horizon glow — light rising from below */}
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-brand-500/[0.07] to-transparent" aria-hidden="true" />
       <div className="grain absolute inset-0" aria-hidden="true" />

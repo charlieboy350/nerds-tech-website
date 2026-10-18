@@ -56,6 +56,13 @@ html {
   overflow-x: clip;
 }
 
+/* Custom cursor takes over on precise pointers */
+@media (pointer: fine) {
+  body, body a, body button, body [role="button"] {
+    cursor: none;
+  }
+}
+
 body {
   background-color: var(--color-ink-950);
   color: #eef4fa;

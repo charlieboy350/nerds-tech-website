@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="nmark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#45d8ff"/>
+      <stop offset="1" stop-color="#0090ff"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#nmark)" stroke-width="7" stroke-linecap="round">
+    <path d="M38 94 V34"/>
+    <path d="M90 94 V34"/>
+    <path d="M38 34 L90 94"/>
+    <path d="M38 64 H90"/>
+    <path d="M38 64 L64 34"/>
+    <path d="M90 64 L64 94"/>
+  </g>
+  <g fill="#45d8ff">
+    <circle cx="38" cy="34" r="6"/>
+    <circle cx="38" cy="64" r="6"/>
+    <circle cx="38" cy="94" r="6"/>
+    <circle cx="90" cy="34" r="6"/>
+    <circle cx="90" cy="64" r="6"/>
+    <circle cx="90" cy="94" r="6"/>
+    <circle cx="64" cy="64" r="6"/>
+  </g>
+  <g fill="#0090ff">
+    <circle cx="64" cy="34" r="5"/>
+    <circle cx="64" cy="94" r="5"/>
+  </g>
+</svg>

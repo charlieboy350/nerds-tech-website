@@ -8,6 +8,7 @@ import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
+import TiltCard from "@/components/interactive/TiltCard";
 
 const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
 
@@ -69,8 +70,9 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
                 hidden: { opacity: 0, y: 30 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
               }}
-              className="card-glow group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60"
+              className="group relative"
             >
+              <TiltCard className="card-glow relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60">
               {/* Project photo */}
               <div className="relative h-44 overflow-hidden">
                 <Image
@@ -107,6 +109,7 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
                   Read the case study
                 </p>
               </div>
+              </TiltCard>
             </motion.article>
           ))}
         </motion.div>
