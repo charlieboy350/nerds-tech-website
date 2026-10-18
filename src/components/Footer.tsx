@@ -22,15 +22,12 @@ export default function Footer() {
           <div>
             <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
               <Image
-                src="/n-mark.svg"
+                src="/logo.png"
                 alt={`${SITE.name} logo`}
-                width={40}
-                height={40}
-                className="h-10 w-10 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.7)]"
+                width={200}
+                height={52}
+                className="h-11 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.55)]"
               />
-              <span className="ml-3 text-2xl font-extrabold tracking-tight text-white">
-                Nerds<span className="text-gradient">Tech</span>
-              </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
               {SITE.description}

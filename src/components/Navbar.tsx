@@ -105,16 +105,13 @@ export default function Navbar() {
       <nav aria-label="Main navigation" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
           <Image
-            src="/n-mark.svg"
+            src="/logo.png"
             alt={`${SITE.name} logo`}
-            width={36}
-            height={36}
-            className="h-9 w-9 transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.7)]"
+            width={168}
+            height={44}
+            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.55)] lg:h-9"
             priority
           />
-          <span className="ml-2.5 text-xl font-extrabold tracking-tight text-white">
-            Nerds<span className="text-gradient">Tech</span>
-          </span>
         </Link>
 
         <ul className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-md md:flex">
