@@ -4,33 +4,34 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  /* Ink — deep blue-black surfaces, echoing the logo's black backdrop */
-  --color-ink-0: #f2f7fc;
-  --color-ink-950: #04070c;
-  --color-ink-900: #080d17;
-  --color-ink-800: #0d1524;
-  --color-ink-700: #162032;
+  /* Void — pure cinematic black, deeper than before */
+  --color-ink-0: #f4f8fc;
+  --color-ink-950: #010204;
+  --color-ink-900: #060809;
+  --color-ink-800: #0b0e11;
+  --color-ink-700: #14181d;
 
-  /* Brand primary — NerdsTech cyan, sampled from the logo (#49C6E7) */
-  --color-brand-200: #b9ecfa;
-  --color-brand-300: #8bdef6;
-  --color-brand-400: #66d1ef;
-  --color-brand-500: #49c6e7;
-  --color-brand-600: #27a6c9;
-  --color-brand-700: #1b84a3;
+  /* Neon — electric cyan, the signature light source */
+  --color-brand-200: #c4f5ff;
+  --color-brand-300: #8ae9ff;
+  --color-brand-400: #45d8ff;
+  --color-brand-500: #00c2ff;
+  --color-brand-600: #0098d6;
+  --color-brand-700: #0a6fa3;
 
-  /* Steel — NerdsTech steel blue, sampled from the logo (#5C7CBF) */
-  --color-steel-200: #c6d6ee;
-  --color-steel-300: #a6bfe6;
-  --color-steel-400: #82a0d6;
-  --color-steel-500: #5c7cbf;
-  --color-steel-600: #48649f;
-  --color-steel-700: #384e7e;
+  /* Deep — rich blue for depth and shadows */
+  --color-steel-200: #c2d9f2;
+  --color-steel-300: #9cc2e8;
+  --color-steel-400: #6b9bd4;
+  --color-steel-500: #3d6fb5;
+  --color-steel-600: #2c5490;
+  --color-steel-700: #1e3a68;
 
   --animate-marquee: marquee 42s linear infinite;
   --animate-float: float 9s ease-in-out infinite;
   --animate-float-slow: float 14s ease-in-out infinite;
   --animate-pulse-glow: pulse-glow 5s ease-in-out infinite;
+  --animate-beam: beam 8s ease-in-out infinite;
 
   @keyframes marquee {
     from { transform: translateX(0); }
@@ -43,6 +44,10 @@
   @keyframes pulse-glow {
     0%, 100% { opacity: 0.55; }
     50% { opacity: 1; }
+  }
+  @keyframes beam {
+    0%, 100% { opacity: 0.6; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(30px); }
   }
 }
 
@@ -63,13 +68,15 @@ body {
   color: #04070c;
 }
 
-/* Primary buttons — the logo's own cyan-to-steel gradient. Plain linear
-   gradients (no `in oklab`) so older mobile browsers render them exactly. */
+/* Primary buttons — electric cyan gradient with luminous depth.
+   Plain linear gradients (no `in oklab`) so older mobile browsers render them exactly. */
 .btn-gradient {
-  background-image: linear-gradient(to right, #49c6e7, #5c7cbf);
+  background-image: linear-gradient(100deg, #00c2ff 0%, #0090ff 100%);
+  box-shadow: 0 8px 32px -8px rgba(0, 194, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .btn-gradient-rev {
-  background-image: linear-gradient(to right, #5c7cbf, #49c6e7);
+  background-image: linear-gradient(100deg, #0090ff 0%, #00c2ff 100%);
+  box-shadow: 0 8px 32px -8px rgba(0, 194, 255, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .btn-gradient-white {
   background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
@@ -90,9 +97,9 @@ body {
   background: #2a4066;
 }
 
-/* Gradient headline text — steel blue melting into logo cyan */
+/* Gradient headline text — white-hot core melting into electric cyan */
 .text-gradient {
-  background: linear-gradient(100deg, #a6bfe6 0%, #49c6e7 60%, #66d1ef 100%);
+  background: linear-gradient(100deg, #ffffff 0%, #8ae9ff 45%, #00c2ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -112,12 +119,26 @@ body {
   background-size: 220px 220px;
 }
 
-/* Ambient mesh backdrop — layered cyan / steel-blue glows */
+/* Cinematic light backdrop — dramatic cyan beams cutting through black */
 .aurora-bg {
   background:
-    radial-gradient(42rem 22rem at 12% 8%, rgba(73, 198, 231, 0.16), transparent 60%),
-    radial-gradient(36rem 20rem at 88% 12%, rgba(92, 124, 191, 0.2), transparent 60%),
-    radial-gradient(40rem 24rem at 50% 100%, rgba(73, 198, 231, 0.08), transparent 62%);
+    radial-gradient(52rem 30rem at 50% -8%, rgba(0, 194, 255, 0.22), transparent 62%),
+    radial-gradient(40rem 26rem at 8% 22%, rgba(0, 144, 255, 0.14), transparent 60%),
+    radial-gradient(44rem 28rem at 92% 18%, rgba(0, 194, 255, 0.1), transparent 60%),
+    radial-gradient(50rem 30rem at 50% 110%, rgba(0, 120, 200, 0.12), transparent 65%);
+}
+
+/* Light beam — a diagonal shaft of light for dramatic sections */
+.light-beam {
+  background: linear-gradient(115deg, transparent 42%, rgba(0, 194, 255, 0.09) 50%, transparent 58%);
+}
+
+/* Luminous card border — gradient edge that glows */
+.lumen-card {
+  position: relative;
+  background: linear-gradient(var(--color-ink-900), var(--color-ink-900)) padding-box,
+    linear-gradient(135deg, rgba(0, 194, 255, 0.35), rgba(255, 255, 255, 0.06) 40%, rgba(0, 194, 255, 0.12)) border-box;
+  border: 1px solid transparent;
 }
 
 /* Film grain overlay for a premium finish */
@@ -138,8 +159,17 @@ body {
 }
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(73, 198, 231, 0.4);
-  box-shadow: 0 20px 60px -18px rgba(73, 198, 231, 0.35);
+  border-color: rgba(0, 194, 255, 0.45);
+  box-shadow: 0 24px 70px -20px rgba(0, 194, 255, 0.4), 0 0 0 1px rgba(0, 194, 255, 0.12);
+}
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, rgba(0, 194, 255, 0.5), transparent);
+  opacity: 0.6;
 }
 
 /* Eyebrow pill — the small label above every section title */
@@ -148,14 +178,15 @@ body {
   align-items: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(102, 209, 239, 0.28);
-  background: rgba(73, 198, 231, 0.08);
-  padding: 0.4rem 1rem;
+  border: 1px solid rgba(0, 194, 255, 0.35);
+  background: rgba(0, 194, 255, 0.07);
+  padding: 0.45rem 1.1rem;
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-brand-300);
+  box-shadow: 0 0 24px -8px rgba(0, 194, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .eyebrow::before {
   content: "";

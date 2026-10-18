@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { ArrowRight, ArrowUpRight, Sparkles, PlayCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Zap, PlayCircle } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { SITE } from "@/site";
 import Magnetic from "@/components/gsap/Magnetic";
@@ -55,57 +55,62 @@ export default function Hero() {
           1.25
         );
 
-      // Ambient orb drift
+      // Cinematic light drift
       gsap.to("[data-orb='1']", {
-        x: 60, y: -40, duration: 9, yoyo: true, repeat: -1, ease: "sine.inOut",
+        x: 80, y: -50, duration: 10, yoyo: true, repeat: -1, ease: "sine.inOut",
       });
       gsap.to("[data-orb='2']", {
-        x: -50, y: 50, duration: 11, yoyo: true, repeat: -1, ease: "sine.inOut",
+        x: -60, y: 60, duration: 12, yoyo: true, repeat: -1, ease: "sine.inOut",
       });
-      gsap.to("[data-orb='3']", {
-        x: 40, y: 30, scale: 1.15, duration: 13, yoyo: true, repeat: -1, ease: "sine.inOut",
+      gsap.to("[data-beam='1']", {
+        opacity: 0.9, x: 40, duration: 9, yoyo: true, repeat: -1, ease: "sine.inOut",
       });
     }, root);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28" aria-label="Introduction">
-      {/* Backdrop — network mesh echoing the logo's "N", over ambient glows */}
-      <div className="net-nodes absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,black,transparent)]" aria-hidden="true" />
+    <section ref={root} className="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32" aria-label="Introduction">
+      {/* Cinematic backdrop — deep black with dramatic cyan light */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-      <div data-orb="1" className="absolute -top-32 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-brand-500/25 blur-[140px]" aria-hidden="true" />
-      <div data-orb="2" className="absolute top-40 -left-32 h-96 w-96 rounded-full bg-steel-500/20 blur-[120px]" aria-hidden="true" />
-      <div data-orb="3" className="absolute top-64 -right-24 h-96 w-96 rounded-full bg-steel-400/15 blur-[120px]" aria-hidden="true" />
+      <div data-orb="1" className="absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-brand-500/30 blur-[160px]" aria-hidden="true" />
+      <div data-orb="2" className="absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[140px]" aria-hidden="true" />
+      <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
+      {/* Horizon glow — light rising from below */}
+      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-brand-500/[0.07] to-transparent" aria-hidden="true" />
+      <div className="grain absolute inset-0" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div data-hero="badge" className="flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-300 shadow-[0_0_24px_-6px_rgba(73,198,231,0.55)]">
-            <Sparkles className="size-3.5" />
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-400/40 bg-brand-500/[0.08] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300 shadow-[0_0_32px_-6px_rgba(0,194,255,0.6)] backdrop-blur-sm">
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
+              <span className="relative inline-flex size-2 rounded-full bg-brand-400" />
+            </span>
             {SITE.tagline}
           </span>
         </div>
 
-        <h1 className="mx-auto mt-7 max-w-4xl text-center font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
           <span className="block overflow-hidden pb-1">
-            <span data-hero="line" className="block">Your business on autopilot.</span>
+            <span data-hero="line" className="block drop-shadow-[0_2px_24px_rgba(0,194,255,0.25)]">Your business on autopilot.</span>
           </span>
-          <span className="block overflow-hidden pb-2">
+          <span className="block overflow-hidden pb-3">
             <span data-hero="line" className="text-gradient block">Your brand impossible to ignore.</span>
           </span>
         </h1>
 
-        <p data-hero="sub" className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg">
+        <p data-hero="sub" className="mx-auto mt-7 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg">
           {SITE.name} blends AI automation, standout design, and clean engineering into one
           connected studio. One team takes you from first sketch to launched product,
           and keeps it growing long after.
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-11 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <div data-hero="cta">
             <Magnetic>
               <ContactButton
-                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-brand-500/40 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full btn-gradient px-9 py-4 text-base font-semibold text-white transition-transform hover:scale-[1.04] active:scale-[0.98] sm:w-auto"
               >
                 Start your project
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
@@ -116,9 +121,9 @@ export default function Hero() {
             <Magnetic>
               <Link
                 href="/work"
-                className="group relative inline-flex whitespace-nowrap w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-white btn-gradient-white px-8 py-4 text-base font-semibold text-ink-950 shadow-xl shadow-black/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_44px_-12px_rgba(255,255,255,0.4)] active:translate-y-0 sm:w-auto before:pointer-events-none before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/70 before:to-transparent before:transition-transform before:duration-700 before:ease-out hover:before:translate-x-full"
+                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_0_40px_-10px_rgba(0,194,255,0.5)] active:scale-[0.98] sm:w-auto"
               >
-                <PlayCircle className="size-5 text-brand-600 transition-transform duration-300 group-hover:scale-110" />
+                <PlayCircle className="size-5 text-brand-400 transition-transform duration-300 group-hover:scale-110" />
                 View case studies
               </Link>
             </Magnetic>
@@ -126,7 +131,7 @@ export default function Hero() {
         </div>
 
         <Parallax speed={-8}>
-          <dl className="mx-auto mt-14 flex max-w-lg items-center justify-center gap-8 text-center sm:gap-12">
+          <dl className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-10 text-center sm:gap-14">
             {[
               ["11", "services"],
               ["1", "team"],
@@ -134,23 +139,26 @@ export default function Hero() {
             ].map(([value, label]) => (
               <div key={label} data-hero="stat" className="flex flex-col items-center">
                 <dt className="sr-only">{label}</dt>
-                <dd className="font-display text-3xl font-bold text-white sm:text-4xl">{value}</dd>
-                <dd className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">{label}</dd>
+                <dd className="font-display text-4xl font-bold text-white sm:text-5xl drop-shadow-[0_0_20px_rgba(0,194,255,0.35)]">{value}</dd>
+                <dd className="mt-2 text-xs uppercase tracking-[0.24em] text-slate-500">{label}</dd>
               </div>
             ))}
           </dl>
         </Parallax>
 
-        <div data-hero="more" className="mt-10 flex justify-center">
+        <div data-hero="more" className="mt-12 flex justify-center">
           <Link
             href="/services"
-            className="group inline-flex items-center gap-1 text-sm font-medium text-slate-400 transition-colors hover:text-white"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-slate-400 transition-colors hover:text-brand-300"
           >
             Explore all services
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
       </div>
+
+      {/* Bottom fade into next section */}
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950 to-transparent" aria-hidden="true" />
     </section>
   );
 }
