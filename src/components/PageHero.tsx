@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import MouseGlow from "@/components/interactive/MouseGlow";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -16,15 +15,6 @@ export default function PageHero({ eyebrow, title, sub }: PageHeroProps) {
     <section className="relative overflow-hidden bg-ink-950 pt-36 pb-16 sm:pt-44 sm:pb-24" aria-label="Page introduction">
       {/* Cinematic backdrop */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-      <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
-      <div className="grain absolute inset-0 opacity-60" aria-hidden="true" />
-      {/* Cursor-following light */}
-      <MouseGlow size={560} opacity={0.14} />
-      {/* Horizon glow */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-400/60 to-transparent"
-      />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

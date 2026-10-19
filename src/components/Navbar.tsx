@@ -109,7 +109,7 @@ export default function Navbar() {
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(64,192,224,0.55)] lg:h-9"
+            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:brightness-110 lg:h-9"
             priority
           />
         </Link>

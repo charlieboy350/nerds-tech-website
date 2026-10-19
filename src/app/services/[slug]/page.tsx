@@ -128,7 +128,7 @@ export default async function ServicePage({
               </ContactButton>
               <Link
                 href="/services"
-                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)] sm:w-auto"
+                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)] sm:w-auto"
               >
                 All services
               </Link>
@@ -151,7 +151,7 @@ export default async function ServicePage({
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {detail.problems.map((problem, i) => (
               <GsapReveal key={problem.title} delay={Math.min(i * 0.06, 0.24)}>
-                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)]">
+                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(64,128,192,0.4)]">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-red-400/90">
                     The problem
                   </span>
@@ -189,8 +189,8 @@ export default async function ServicePage({
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {service.deliverables.map((d, i) => (
               <GsapReveal key={d} delay={Math.min(i * 0.05, 0.2)}>
-                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(73,198,231,0.45)]">
-                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 group-hover:shadow-[0_0_16px_rgba(73,198,231,0.5)]">
+                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(64,128,192,0.45)]">
+                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 ">
                     <Check className="size-3.5" />
                   </span>
                   <span className="text-[15px] text-slate-200">{d}</span>
@@ -215,7 +215,7 @@ export default async function ServicePage({
           <GsapReveal delay={0.1}>
             <Link
               href={`/work/${related.slug}`}
-              className="group mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)] lg:grid-cols-2"
+              className="group mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(64,128,192,0.4)] lg:grid-cols-2"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image

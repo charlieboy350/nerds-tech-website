@@ -75,15 +75,14 @@ body {
   color: #04070c;
 }
 
-/* Primary buttons — electric cyan gradient with luminous depth.
-   Plain linear gradients (no `in oklab`) so older mobile browsers render them exactly. */
+/* Primary buttons — solid brand color, clean subtle shadow */
 .btn-gradient {
-  background-image: linear-gradient(100deg, #2ba8c8 0%, #1e8aa8 100%);
-  box-shadow: 0 8px 32px -8px rgba(64, 192, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #2ba8c8;
+  box-shadow: 0 4px 14px -4px rgba(0, 0, 0, 0.4);
 }
 .btn-gradient-rev {
-  background-image: linear-gradient(100deg, #1e8aa8 0%, #2ba8c8 100%);
-  box-shadow: 0 8px 32px -8px rgba(64, 192, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #1e8aa8;
+  box-shadow: 0 4px 14px -4px rgba(0, 0, 0, 0.4);
 }
 .btn-gradient-white {
   background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
@@ -104,12 +103,9 @@ body {
   background: #2a4066;
 }
 
-/* Gradient headline text — white-hot core melting into electric cyan */
+/* Accent text — solid brand color */
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 0%, #7fd4ec 45%, #2ba8c8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #40c0e0;
 }
 
 /* Fine dotted grid backdrop, cyan-tinted */
@@ -126,26 +122,21 @@ body {
   background-size: 220px 220px;
 }
 
-/* Cinematic light backdrop — dramatic cyan beams cutting through black */
+/* Subtle backdrop — faint blue tint, flat and clean */
 .aurora-bg {
-  background:
-    radial-gradient(52rem 30rem at 50% -8%, rgba(64, 192, 224, 0.22), transparent 62%),
-    radial-gradient(40rem 26rem at 8% 22%, rgba(0, 144, 255, 0.14), transparent 60%),
-    radial-gradient(44rem 28rem at 92% 18%, rgba(64, 192, 224, 0.1), transparent 60%),
-    radial-gradient(50rem 30rem at 50% 110%, rgba(0, 120, 200, 0.12), transparent 65%);
+  background: radial-gradient(52rem 30rem at 50% -8%, rgba(64, 192, 224, 0.06), transparent 62%);
 }
 
-/* Light beam — a diagonal shaft of light for dramatic sections */
+/* Light beam — disabled for solid theme */
 .light-beam {
-  background: linear-gradient(115deg, transparent 42%, rgba(64, 192, 224, 0.09) 50%, transparent 58%);
+  background: transparent;
 }
 
-/* Luminous card border — gradient edge that glows */
+/* Card — clean solid border */
 .lumen-card {
   position: relative;
-  background: linear-gradient(var(--color-ink-900), var(--color-ink-900)) padding-box,
-    linear-gradient(135deg, rgba(64, 192, 224, 0.35), rgba(255, 255, 255, 0.06) 40%, rgba(64, 192, 224, 0.12)) border-box;
-  border: 1px solid transparent;
+  background: var(--color-ink-900);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Film grain overlay for a premium finish */
@@ -159,24 +150,18 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
 }
 
-/* Card glow on hover */
+/* Card hover — subtle lift, no glow */
 .card-glow {
   position: relative;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 .card-glow:hover {
-  transform: translateY(-6px);
-  border-color: rgba(64, 192, 224, 0.45);
-  box-shadow: 0 24px 70px -20px rgba(64, 192, 224, 0.4), 0 0 0 1px rgba(64, 192, 224, 0.12);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
 }
 .card-glow::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 1px;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, transparent, rgba(64, 192, 224, 0.5), transparent);
-  opacity: 0.6;
+  display: none;
 }
 
 /* Eyebrow pill — the small label above every section title */
@@ -193,7 +178,7 @@ body {
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-brand-300);
-  box-shadow: 0 0 24px -8px rgba(64, 192, 224, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: none;
 }
 .eyebrow::before {
   content: "";

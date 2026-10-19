@@ -33,7 +33,7 @@ export default function CtaBanner() {
     <section className="relative py-20 sm:py-24" aria-label="Call to action">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <GsapReveal variant="scale">
-          <div className="grain relative overflow-hidden rounded-[2rem] border border-brand-400/40 bg-ink-900 px-8 py-16 text-center shadow-[0_0_120px_-24px_rgba(64,192,224,0.55)] sm:px-16 sm:py-24">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-ink-900 px-8 py-16 text-center shadow-xl sm:px-16 sm:py-24">
             <div className="aurora-bg absolute inset-0" aria-hidden="true" />
             <div className="bg-grid absolute inset-0 opacity-50" aria-hidden="true" />
             <Parallax speed={14} className="absolute inset-0">

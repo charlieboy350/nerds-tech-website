@@ -71,7 +71,7 @@ export default function AiIntegration() {
                       hidden: { opacity: 0, y: 26 },
                       show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
                     }}
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/50 hover:shadow-[0_18px_50px_-18px_rgba(73,198,231,0.5)]"
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-950/60 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/50 hover:shadow-[0_18px_50px_-18px_rgba(64,128,192,0.5)]"
                   >
                     {/* Top accent line sweeps in on hover */}
                     <span
@@ -113,7 +113,7 @@ export default function AiIntegration() {
                   </ContactButton>
                   <Link
                     href="/services#ai-codebase-integration"
-                    className="inline-flex whitespace-nowrap w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)] sm:w-auto"
+                    className="inline-flex whitespace-nowrap w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)] sm:w-auto"
                   >
                     How it works
                   </Link>

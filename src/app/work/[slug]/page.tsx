@@ -146,7 +146,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               {project.services.map((service) => {
                 const slug = serviceSlugFor(service);
                 const cls =
-                  "rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-brand-200 hover:ring-brand-400/40 hover:shadow-[0_8px_20px_-8px_rgba(73,198,231,0.5)]";
+                  "rounded-full bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-brand-200 hover:ring-brand-400/40 hover:shadow-[0_8px_20px_-8px_rgba(64,128,192,0.5)]";
                 return slug ? (
                   <Link
                     key={service}
@@ -229,7 +229,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <ul className="max-w-3xl space-y-4">
               {project.challenge.map((item, i) => (
                 <GsapReveal key={i} delay={i * 0.06}>
-                  <li className="group relative flex gap-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_14px_40px_-16px_rgba(73,198,231,0.45)]">
+                  <li className="group relative flex gap-4 overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_14px_40px_-16px_rgba(64,128,192,0.45)]">
                     <span
                       aria-hidden="true"
                       className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gradient-to-b from-brand-400 to-steel-500 transition-transform duration-300 group-hover:scale-y-100"
@@ -337,7 +337,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="mt-8 text-center">
           <Link
             href="/work"
-            className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)]"
+            className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)]"
           >
             View all case studies <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>

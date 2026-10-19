@@ -8,7 +8,6 @@ import { SITE } from "@/site";
 import Magnetic from "@/components/gsap/Magnetic";
 import Parallax from "@/components/gsap/Parallax";
 import ContactButton from "@/components/contact/ContactButton";
-import MouseGlow from "@/components/interactive/MouseGlow";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -56,36 +55,19 @@ export default function Hero() {
           1.25
         );
 
-      // Cinematic light drift
-      gsap.to("[data-orb='1']", {
-        x: 80, y: -50, duration: 10, yoyo: true, repeat: -1, ease: "sine.inOut",
-      });
-      gsap.to("[data-orb='2']", {
-        x: -60, y: 60, duration: 12, yoyo: true, repeat: -1, ease: "sine.inOut",
-      });
-      gsap.to("[data-beam='1']", {
-        opacity: 0.9, x: 40, duration: 9, yoyo: true, repeat: -1, ease: "sine.inOut",
-      });
+
     }, root);
     return () => ctx.revert();
   }, []);
 
   return (
     <section ref={root} className="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32" aria-label="Introduction">
-      {/* Cinematic backdrop — deep black with dramatic cyan light */}
+      {/* Clean backdrop — subtle, flat */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-      <div data-orb="1" className="absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-brand-500/30 blur-[160px]" aria-hidden="true" />
-      <div data-orb="2" className="absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full bg-brand-600/20 blur-[140px]" aria-hidden="true" />
-      <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
-      {/* Cursor-following light — the hero reacts to the visitor */}
-      <MouseGlow size={640} opacity={0.16} />
-      {/* Horizon glow — light rising from below */}
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-brand-500/[0.07] to-transparent" aria-hidden="true" />
-      <div className="grain absolute inset-0" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div data-hero="badge" className="flex justify-center">
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-400/40 bg-brand-500/[0.08] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300 shadow-[0_0_32px_-6px_rgba(64,192,224,0.6)] backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300">
             <span className="relative flex size-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-brand-400" />
@@ -94,12 +76,12 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
+        <h1 className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
           <span className="block overflow-hidden pb-1">
-            <span data-hero="line" className="block drop-shadow-[0_2px_24px_rgba(64,192,224,0.25)]">Your business on autopilot.</span>
+            <span data-hero="line" className="block">Put your business on autopilot.</span>
           </span>
           <span className="block overflow-hidden pb-3">
-            <span data-hero="line" className="text-gradient block">Your brand impossible to ignore.</span>
+            <span data-hero="line" className="block text-brand-400">Make your brand impossible to ignore.</span>
           </span>
         </h1>
 
@@ -124,7 +106,7 @@ export default function Hero() {
             <Magnetic>
               <Link
                 href="/work"
-                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_0_40px_-10px_rgba(64,192,224,0.5)] active:scale-[0.98] sm:w-auto"
+                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-lg active:scale-[0.98] sm:w-auto"
               >
                 <PlayCircle className="size-5 text-brand-400 transition-transform duration-300 group-hover:scale-110" />
                 View case studies
@@ -142,7 +124,7 @@ export default function Hero() {
             ].map(([value, label]) => (
               <div key={label} data-hero="stat" className="flex flex-col items-center">
                 <dt className="sr-only">{label}</dt>
-                <dd className="font-display text-4xl font-bold text-white sm:text-5xl drop-shadow-[0_0_20px_rgba(64,192,224,0.35)]">{value}</dd>
+                <dd className="font-display text-4xl font-bold text-white sm:text-5xl ">{value}</dd>
                 <dd className="mt-2 text-xs uppercase tracking-[0.24em] text-slate-500">{label}</dd>
               </div>
             ))}

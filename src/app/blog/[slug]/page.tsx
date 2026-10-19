@@ -187,7 +187,7 @@ export default async function BlogPostPage({
               ))}
             </div>
             <ContactButton
-              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(73,198,231,0.5)] transition-all duration-300 hover:brightness-110"
+              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(64,128,192,0.5)] transition-all duration-300 hover:brightness-110"
             >
               Talk to us about automation
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -236,7 +236,7 @@ export default async function BlogPostPage({
         <div className="mt-8 text-center">
           <Link
             href="/blog"
-            className="inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(73,198,231,0.6)]"
+            className="inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)]"
           >
             <ArrowLeft className="size-4" /> All articles
           </Link>
