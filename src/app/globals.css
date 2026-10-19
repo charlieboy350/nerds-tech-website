@@ -4,28 +4,28 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  /* Void — deep charcoal black with warm undertone */
+  /* Void — deep navy-black to match logo tones */
   --color-ink-0: #f4f8fc;
-  --color-ink-950: #060807;
-  --color-ink-900: #0a0d0b;
-  --color-ink-800: #101413;
-  --color-ink-700: #1a1f1c;
+  --color-ink-950: #04090f;
+  --color-ink-900: #080f16;
+  --color-ink-800: #0d151e;
+  --color-ink-700: #14202b;
 
-  /* Emerald — rich green, the signature light source */
-  --color-brand-200: #a7f3d0;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
+  /* Logo blue — sampled from the NerdsTech logo (#40c0e0) */
+  --color-brand-200: #b8e8f5;
+  --color-brand-300: #7fd4ec;
+  --color-brand-400: #40c0e0;
+  --color-brand-500: #2ba8c8;
+  --color-brand-600: #1e8aa8;
+  --color-brand-700: #166a82;
 
-  /* Gold — warm amber for luxury accents */
-  --color-steel-200: #fde68a;
-  --color-steel-300: #fcd34d;
-  --color-steel-400: #fbbf24;
-  --color-steel-500: #f59e0b;
-  --color-steel-600: #d97706;
-  --color-steel-700: #92400e;
+  /* Steel — deeper logo blue (#4080c0) for depth */
+  --color-steel-200: #c0d8ec;
+  --color-steel-300: #90b8dc;
+  --color-steel-400: #6098cc;
+  --color-steel-500: #4080c0;
+  --color-steel-600: #2f639a;
+  --color-steel-700: #1f4a75;
 
   --animate-marquee: marquee 42s linear infinite;
   --animate-float: float 9s ease-in-out infinite;
@@ -78,12 +78,12 @@ body {
 /* Primary buttons — electric cyan gradient with luminous depth.
    Plain linear gradients (no `in oklab`) so older mobile browsers render them exactly. */
 .btn-gradient {
-  background-image: linear-gradient(100deg, #10b981 0%, #059669 100%);
-  box-shadow: 0 8px 32px -8px rgba(16, 185, 129, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(100deg, #2ba8c8 0%, #1e8aa8 100%);
+  box-shadow: 0 8px 32px -8px rgba(64, 192, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .btn-gradient-rev {
-  background-image: linear-gradient(100deg, #059669 0%, #10b981 100%);
-  box-shadow: 0 8px 32px -8px rgba(16, 185, 129, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(100deg, #1e8aa8 0%, #2ba8c8 100%);
+  box-shadow: 0 8px 32px -8px rgba(64, 192, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 .btn-gradient-white {
   background-image: linear-gradient(to bottom, #ffffff, #cbd5e1);
@@ -106,7 +106,7 @@ body {
 
 /* Gradient headline text — white-hot core melting into electric cyan */
 .text-gradient {
-  background: linear-gradient(100deg, #ffffff 0%, #6ee7b7 45%, #10b981 100%);
+  background: linear-gradient(100deg, #ffffff 0%, #7fd4ec 45%, #2ba8c8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -115,8 +115,8 @@ body {
 /* Fine dotted grid backdrop, cyan-tinted */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(52, 211, 153, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(52, 211, 153, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(64, 128, 192, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(64, 128, 192, 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
@@ -129,22 +129,22 @@ body {
 /* Cinematic light backdrop — dramatic cyan beams cutting through black */
 .aurora-bg {
   background:
-    radial-gradient(52rem 30rem at 50% -8%, rgba(16, 185, 129, 0.22), transparent 62%),
+    radial-gradient(52rem 30rem at 50% -8%, rgba(64, 192, 224, 0.22), transparent 62%),
     radial-gradient(40rem 26rem at 8% 22%, rgba(0, 144, 255, 0.14), transparent 60%),
-    radial-gradient(44rem 28rem at 92% 18%, rgba(16, 185, 129, 0.1), transparent 60%),
+    radial-gradient(44rem 28rem at 92% 18%, rgba(64, 192, 224, 0.1), transparent 60%),
     radial-gradient(50rem 30rem at 50% 110%, rgba(0, 120, 200, 0.12), transparent 65%);
 }
 
 /* Light beam — a diagonal shaft of light for dramatic sections */
 .light-beam {
-  background: linear-gradient(115deg, transparent 42%, rgba(16, 185, 129, 0.09) 50%, transparent 58%);
+  background: linear-gradient(115deg, transparent 42%, rgba(64, 192, 224, 0.09) 50%, transparent 58%);
 }
 
 /* Luminous card border — gradient edge that glows */
 .lumen-card {
   position: relative;
   background: linear-gradient(var(--color-ink-900), var(--color-ink-900)) padding-box,
-    linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(255, 255, 255, 0.06) 40%, rgba(16, 185, 129, 0.12)) border-box;
+    linear-gradient(135deg, rgba(64, 192, 224, 0.35), rgba(255, 255, 255, 0.06) 40%, rgba(64, 192, 224, 0.12)) border-box;
   border: 1px solid transparent;
 }
 
@@ -166,8 +166,8 @@ body {
 }
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(16, 185, 129, 0.45);
-  box-shadow: 0 24px 70px -20px rgba(16, 185, 129, 0.4), 0 0 0 1px rgba(16, 185, 129, 0.12);
+  border-color: rgba(64, 192, 224, 0.45);
+  box-shadow: 0 24px 70px -20px rgba(64, 192, 224, 0.4), 0 0 0 1px rgba(64, 192, 224, 0.12);
 }
 .card-glow::before {
   content: "";
@@ -175,7 +175,7 @@ body {
   inset: 0 0 auto 0;
   height: 1px;
   border-radius: 9999px;
-  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(64, 192, 224, 0.5), transparent);
   opacity: 0.6;
 }
 
@@ -185,15 +185,15 @@ body {
   align-items: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid rgba(16, 185, 129, 0.35);
-  background: rgba(16, 185, 129, 0.07);
+  border: 1px solid rgba(64, 192, 224, 0.35);
+  background: rgba(64, 192, 224, 0.07);
   padding: 0.45rem 1.1rem;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-brand-300);
-  box-shadow: 0 0 24px -8px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 24px -8px rgba(64, 192, 224, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .eyebrow::before {
   content: "";
@@ -201,7 +201,7 @@ body {
   height: 0.45rem;
   border-radius: 9999px;
   background: var(--color-brand-400);
-  box-shadow: 0 0 10px 2px rgba(52, 211, 153, 0.7);
+  box-shadow: 0 0 10px 2px rgba(64, 128, 192, 0.7);
 }
 
 /* 3D flip cards (Services section) — front shows the service, back the case study */

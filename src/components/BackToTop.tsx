@@ -23,7 +23,7 @@ export default function BackToTop() {
     <button
       onClick={goTop}
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-[150] grid size-12 place-items-center rounded-full border border-brand-400/40 bg-ink-800/80 text-brand-300 shadow-[0_0_24px_rgba(16,185,129,0.35)] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-brand-400/70 hover:text-white hover:shadow-[0_0_32px_rgba(16,185,129,0.55)] active:scale-95 ${
+      className={`fixed bottom-6 right-6 z-[150] grid size-12 place-items-center rounded-full border border-brand-400/40 bg-ink-800/80 text-brand-300 shadow-[0_0_24px_rgba(64,192,224,0.35)] backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-brand-400/70 hover:text-white hover:shadow-[0_0_32px_rgba(64,192,224,0.55)] active:scale-95 ${
         visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >

@@ -37,8 +37,8 @@ export default function CustomCursor() {
         hovering = hov;
         r.style.width = hov ? "52px" : "32px";
         r.style.height = hov ? "52px" : "32px";
-        r.style.borderColor = hov ? "rgba(16,185,129,0.9)" : "rgba(16,185,129,0.45)";
-        r.style.background = hov ? "rgba(16,185,129,0.08)" : "transparent";
+        r.style.borderColor = hov ? "rgba(64,192,224,0.9)" : "rgba(64,192,224,0.45)";
+        r.style.background = hov ? "rgba(64,192,224,0.08)" : "transparent";
       }
       if (!raf) tick();
     };
@@ -80,7 +80,7 @@ export default function CustomCursor() {
         className="pointer-events-none fixed left-0 top-0 z-[200] hidden opacity-0 [@media(pointer:fine)]:block"
         style={{ width: 6, height: 6, marginLeft: -3, marginTop: -3 }}
       >
-        <div className="h-full w-full rounded-full bg-brand-400 shadow-[0_0_12px_2px_rgba(16,185,129,0.8)]" />
+        <div className="h-full w-full rounded-full bg-brand-400 shadow-[0_0_12px_2px_rgba(64,192,224,0.8)]" />
       </div>
       <div
         ref={ring}
@@ -91,7 +91,7 @@ export default function CustomCursor() {
           height: 32,
           marginLeft: -16,
           marginTop: -16,
-          border: "1.5px solid rgba(16,185,129,0.45)",
+          border: "1.5px solid rgba(64,192,224,0.45)",
           borderRadius: 9999,
         }}
       />
