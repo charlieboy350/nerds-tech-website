@@ -20,7 +20,7 @@ interface MouseGlowProps {
 export default function MouseGlow({
   className = "",
   size = 560,
-  color = "0, 194, 255",
+  color = "16, 185, 129",
   opacity = 0.14,
 }: MouseGlowProps) {
   const ref = useRef<HTMLDivElement>(null);

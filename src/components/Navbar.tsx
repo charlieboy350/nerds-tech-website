@@ -23,7 +23,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
         aria-current={isActive ? "page" : undefined}
         className={`${linkBase} flex items-center gap-1.5 ${
           isActive
-            ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(73,198,231,0.7)]"
+            ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(52,211,153,0.7)]"
             : "text-slate-400 hover:bg-white/10 hover:text-white"
         }`}
       >
@@ -109,7 +109,7 @@ export default function Navbar() {
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(0,194,255,0.55)] lg:h-9"
+            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(16,185,129,0.55)] lg:h-9"
             priority
           />
         </Link>
@@ -120,7 +120,7 @@ export default function Navbar() {
             const isActive = pathname === link.href;
             const cls = `${linkBase} ${
               isActive
-                ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(73,198,231,0.7)]"
+                ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(52,211,153,0.7)]"
                 : "text-slate-400 hover:bg-white/10 hover:text-white"
             }`;
             return (
@@ -139,7 +139,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <ContactButton
-            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-brand-400 btn-gradient-rev px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(73,198,231,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(73,198,231,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
+            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-brand-400 btn-gradient-rev px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(52,211,153,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(52,211,153,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
           >
             Start a project
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -243,7 +243,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <ContactButton
                   onClick={() => setOpen(false)}
-                  className="whitespace-nowrap flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-400 btn-gradient-rev px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(73,198,231,0.5)] transition-all duration-300 hover:brightness-110"
+                  className="whitespace-nowrap flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-400 btn-gradient-rev px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(52,211,153,0.5)] transition-all duration-300 hover:brightness-110"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </ContactButton>

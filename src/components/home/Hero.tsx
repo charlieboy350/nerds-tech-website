@@ -85,7 +85,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div data-hero="badge" className="flex justify-center">
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-400/40 bg-brand-500/[0.08] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300 shadow-[0_0_32px_-6px_rgba(0,194,255,0.6)] backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-brand-400/40 bg-brand-500/[0.08] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300 shadow-[0_0_32px_-6px_rgba(16,185,129,0.6)] backdrop-blur-sm">
             <span className="relative flex size-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
               <span className="relative inline-flex size-2 rounded-full bg-brand-400" />
@@ -96,7 +96,7 @@ export default function Hero() {
 
         <h1 className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[5.25rem]">
           <span className="block overflow-hidden pb-1">
-            <span data-hero="line" className="block drop-shadow-[0_2px_24px_rgba(0,194,255,0.25)]">Your business on autopilot.</span>
+            <span data-hero="line" className="block drop-shadow-[0_2px_24px_rgba(16,185,129,0.25)]">Your business on autopilot.</span>
           </span>
           <span className="block overflow-hidden pb-3">
             <span data-hero="line" className="text-gradient block">Your brand impossible to ignore.</span>
@@ -124,7 +124,7 @@ export default function Hero() {
             <Magnetic>
               <Link
                 href="/work"
-                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_0_40px_-10px_rgba(0,194,255,0.5)] active:scale-[0.98] sm:w-auto"
+                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] active:scale-[0.98] sm:w-auto"
               >
                 <PlayCircle className="size-5 text-brand-400 transition-transform duration-300 group-hover:scale-110" />
                 View case studies
@@ -142,7 +142,7 @@ export default function Hero() {
             ].map(([value, label]) => (
               <div key={label} data-hero="stat" className="flex flex-col items-center">
                 <dt className="sr-only">{label}</dt>
-                <dd className="font-display text-4xl font-bold text-white sm:text-5xl drop-shadow-[0_0_20px_rgba(0,194,255,0.35)]">{value}</dd>
+                <dd className="font-display text-4xl font-bold text-white sm:text-5xl drop-shadow-[0_0_20px_rgba(16,185,129,0.35)]">{value}</dd>
                 <dd className="mt-2 text-xs uppercase tracking-[0.24em] text-slate-500">{label}</dd>
               </div>
             ))}

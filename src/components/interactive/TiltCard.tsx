@@ -32,7 +32,7 @@ export default function TiltCard({ children, className = "", max = 7, scale = 1.
     el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${scale})`;
     if (glow.current) {
       glow.current.style.opacity = "1";
-      glow.current.style.background = `radial-gradient(circle at ${px * 100}% ${py * 100}%, rgba(0,194,255,0.16), transparent 60%)`;
+      glow.current.style.background = `radial-gradient(circle at ${px * 100}% ${py * 100}%, rgba(16,185,129,0.16), transparent 60%)`;
     }
   };
 
