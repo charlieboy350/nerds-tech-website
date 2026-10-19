@@ -56,20 +56,20 @@ export default function ContactModal() {
           />
 
           {/* Scroll container — clicks on the empty area close the modal */}
-          <div className="absolute inset-0 overflow-y-auto" onClick={closeContact}>
-            <div className="flex min-h-full w-full p-4 sm:p-6">
+          <div className="absolute inset-0 overflow-y-auto overflow-x-hidden" onClick={closeContact}>
+            <div className="flex min-h-full w-full items-center justify-center p-4 sm:p-6">
               <motion.div
                 initial={{ opacity: 0, y: 24, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 24, scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 320, damping: 28 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative m-auto w-full max-w-xl rounded-3xl border border-brand-400/25 bg-ink-800 shadow-[0_0_90px_-18px_rgba(73,198,231,0.45)]"
+                className="relative m-auto w-full max-w-xl max-w-[calc(100vw-2rem)] rounded-3xl border border-brand-400/25 bg-ink-800 shadow-[0_0_90px_-18px_rgba(64,128,192,0.45)]"
               >
-                {/* Glow accents */}
+                {/* Glow accents — contained within card bounds */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -top-24 left-1/2 h-48 w-[130%] -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl"
+                  className="pointer-events-none absolute -top-24 left-1/2 h-48 w-full max-w-full -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl"
                 />
                 <div
                   aria-hidden="true"
