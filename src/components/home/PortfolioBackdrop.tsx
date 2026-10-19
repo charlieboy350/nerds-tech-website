@@ -2,81 +2,85 @@
 
 import Image from "next/image";
 
-const LEFT_IMAGES = [
+const TOP_IMAGES = [
   "/projects/harbor-realty.jpg",
+  "/projects/vertex-support.jpg",
   "/projects/bloom-retail.jpg",
+  "/projects/table-tap.jpg",
   "/projects/pulse-fit.jpg",
 ];
 
-const RIGHT_IMAGES = [
-  "/projects/vertex-support.jpg",
-  "/projects/table-tap.jpg",
+const BOTTOM_IMAGES = [
   "/projects/atelier-north.jpg",
+  "/projects/cornerstone.jpg",
+  "/projects/ironpulse.jpg",
+  "/projects/swift-bite.jpg",
+  "/projects/pulseboard.jpg",
 ];
 
 /**
- * 3D portfolio backdrop for the hero — project images float behind
- * the headline on the left and right, tilted in 3D perspective
- * with blur for depth. Pure CSS, solid and smooth.
+ * Curved 3D portfolio carousel (Athlon-style) — project images arc
+ * around the hero headline like the inside of a cylinder:
+ * center card faces forward, edge cards rotate away and sink back.
  */
+function ArcRow({ images }: { images: string[] }) {
+  const n = images.length;
+  return (
+    <div
+      className="flex items-center justify-center"
+      style={{ perspective: "1600px" }}
+    >
+      {images.map((src, i) => {
+        const t = (i / (n - 1)) * 2 - 1; // -1 (far left) → +1 (far right)
+        const edge = Math.abs(t);
+        return (
+          <div
+            key={src}
+            className="shrink-0"
+            style={{
+              transform: `rotateY(${-t * 34}deg) translateZ(${-edge * 260}px)`,
+              transformStyle: "preserve-3d",
+              margin: "0 -16px",
+              zIndex: n - Math.round(edge * n),
+            }}
+          >
+            <div
+              className="animate-float-slow overflow-hidden rounded-xl border border-white/10"
+              style={{
+                animationDelay: `${i * 0.8}s`,
+                width: 300,
+                height: 190,
+                opacity: 1 - edge * 0.25,
+              }}
+            >
+              <Image
+                src={src}
+                alt=""
+                width={300}
+                height={190}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function PortfolioBackdrop() {
   return (
     <div
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 overflow-hidden"
-      style={{ perspective: "1200px" }}
     >
-      {/* Left stack */}
-      <div className="absolute left-0 top-1/2 hidden -translate-y-1/2 lg:block">
-        <div className="flex flex-col gap-6 pl-4" style={{ transformStyle: "preserve-3d" }}>
-          {LEFT_IMAGES.map((src, i) => (
-            <div
-              key={src}
-              className="animate-float-slow overflow-hidden rounded-2xl border border-white/10 opacity-40 blur-[2px]"
-              style={{
-                transform: `rotateY(24deg) translateZ(${-i * 60}px)`,
-                animationDelay: `${i * 1.8}s`,
-                width: 260 - i * 30,
-                height: 160,
-              }}
-            >
-              <Image
-                src={src}
-                alt=""
-                width={260}
-                height={160}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Top arc */}
+      <div className="absolute inset-x-0 top-14 hidden lg:block">
+        <ArcRow images={TOP_IMAGES} />
       </div>
-
-      {/* Right stack */}
-      <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 lg:block">
-        <div className="flex flex-col gap-6 pr-4" style={{ transformStyle: "preserve-3d" }}>
-          {RIGHT_IMAGES.map((src, i) => (
-            <div
-              key={src}
-              className="animate-float-slow overflow-hidden rounded-2xl border border-white/10 opacity-40 blur-[2px]"
-              style={{
-                transform: `rotateY(-24deg) translateZ(${-i * 60}px)`,
-                animationDelay: `${i * 1.8 + 0.9}s`,
-                width: 260 - i * 30,
-                height: 160,
-                marginLeft: "auto",
-              }}
-            >
-              <Image
-                src={src}
-                alt=""
-                width={260}
-                height={160}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Bottom arc */}
+      <div className="absolute inset-x-0 bottom-14 hidden lg:block">
+        <ArcRow images={BOTTOM_IMAGES} />
       </div>
     </div>
   );

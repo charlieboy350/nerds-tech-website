@@ -62,7 +62,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32" aria-label="Introduction">
+    <section ref={root} className="relative overflow-hidden pt-72 pb-72 sm:pt-80 sm:pb-80" aria-label="Introduction">
       {/* Clean backdrop — subtle, flat */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
       {/* 3D portfolio images drifting behind, left and right */}
