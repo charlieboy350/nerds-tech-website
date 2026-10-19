@@ -98,9 +98,10 @@ export default async function ServicePage({
       </nav>
 
       {/* Hero */}
-      <header className="relative overflow-hidden pt-10 pb-14 sm:pt-14 sm:pb-20">
-        <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,black,transparent)]" aria-hidden="true" />
-        <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-[130px]" aria-hidden="true" />
+      <header className="relative overflow-hidden bg-ink-950 pt-10 pb-14 sm:pt-14 sm:pb-20">
+        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+        <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
+        <div className="grain absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <GsapReveal>
             <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">

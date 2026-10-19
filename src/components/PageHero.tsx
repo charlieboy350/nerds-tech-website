@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import MouseGlow from "@/components/interactive/MouseGlow";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -9,12 +10,22 @@ interface PageHeroProps {
   sub?: string;
 }
 
-/** Animated hero used at the top of every inner page (SEO: single h1 per page). */
+/** Cinematic hero used at the top of every inner page (SEO: single h1 per page). */
 export default function PageHero({ eyebrow, title, sub }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden pt-36 pb-14 sm:pt-44 sm:pb-20" aria-label="Page introduction">
-      <div className="net-nodes absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,black,transparent)]" aria-hidden="true" />
-      <div className="absolute -top-32 left-1/2 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-brand-500/15 blur-[130px]" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-ink-950 pt-36 pb-16 sm:pt-44 sm:pb-24" aria-label="Page introduction">
+      {/* Cinematic backdrop */}
+      <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+      <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
+      <div className="grain absolute inset-0 opacity-60" aria-hidden="true" />
+      {/* Cursor-following light */}
+      <MouseGlow size={560} opacity={0.14} />
+      {/* Horizon glow */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-400/60 to-transparent"
+      />
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,11 +35,11 @@ export default function PageHero({ eyebrow, title, sub }: PageHeroProps) {
         <Reveal>
           <p className="eyebrow">{eyebrow}</p>
         </Reveal>
-        <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
           {title}
         </h1>
         {sub && (
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">{sub}</p>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg lg:text-xl">{sub}</p>
         )}
       </motion.div>
     </section>

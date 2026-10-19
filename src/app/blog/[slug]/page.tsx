@@ -108,7 +108,11 @@ export default async function BlogPostPage({
         </ol>
       </nav>
 
-      <header className="mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-14">
+      <header className="relative overflow-hidden bg-ink-950">
+        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+        <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
+        <div className="grain absolute inset-0 opacity-60" aria-hidden="true" />
+        <div className="relative mx-auto max-w-4xl px-5 pt-10 sm:px-8 sm:pt-14">
         <GsapReveal>
           <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
             {post.category}
@@ -141,6 +145,7 @@ export default async function BlogPostPage({
             </span>
           </div>
         </GsapReveal>
+        </div>
       </header>
 
       <article className="mx-auto max-w-4xl px-5 py-12 sm:px-8">
