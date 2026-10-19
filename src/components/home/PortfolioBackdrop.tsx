@@ -28,7 +28,7 @@ function ArcRow({ images }: { images: string[] }) {
   return (
     <div
       className="flex items-center justify-center"
-      style={{ perspective: "1600px" }}
+      style={{ perspective: "1300px" }}
     >
       {images.map((src, i) => {
         const t = (i / (n - 1)) * 2 - 1; // -1 (far left) → +1 (far right)
@@ -38,9 +38,9 @@ function ArcRow({ images }: { images: string[] }) {
             key={src}
             className="shrink-0"
             style={{
-              transform: `rotateY(${-t * 34}deg) translateZ(${-edge * 260}px)`,
+              transform: `rotateY(${-t * 58}deg) translateZ(${-edge * 430}px) translateY(${-edge * 46}px)`,
               transformStyle: "preserve-3d",
-              margin: "0 -16px",
+              margin: "0 -52px",
               zIndex: n - Math.round(edge * n),
             }}
           >
@@ -48,16 +48,16 @@ function ArcRow({ images }: { images: string[] }) {
               className="animate-float-slow overflow-hidden rounded-xl border border-white/10"
               style={{
                 animationDelay: `${i * 0.8}s`,
-                width: 300,
-                height: 190,
-                opacity: 1 - edge * 0.25,
+                width: 380,
+                height: 240,
+                opacity: 1 - edge * 0.15,
               }}
             >
               <Image
                 src={src}
                 alt=""
-                width={300}
-                height={190}
+                width={380}
+                height={240}
                 className="h-full w-full object-cover"
               />
             </div>
