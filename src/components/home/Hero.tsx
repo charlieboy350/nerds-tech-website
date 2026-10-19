@@ -65,7 +65,7 @@ export default function Hero() {
     <section ref={root} className="relative overflow-hidden pt-72 pb-72 sm:pt-80 sm:pb-80" aria-label="Introduction">
       {/* Clean backdrop — subtle, flat */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-      {/* 3D portfolio images drifting behind, left and right */}
+      {/* Blurred 3D portfolio carousel behind the headline */}
       <PortfolioBackdrop />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">

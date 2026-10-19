@@ -19,9 +19,9 @@ const BOTTOM_IMAGES = [
 ];
 
 /**
- * Curved 3D portfolio carousel (Athlon-style) — project images arc
- * around the hero headline like the inside of a cylinder:
- * center card faces forward, edge cards rotate away and sink back.
+ * Curved 3D portfolio carousel — blurred depth-of-field backdrop.
+ * Project images arc around the hero headline, soft and out of focus
+ * so they read as background, not foreground.
  */
 function ArcRow({ images }: { images: string[] }) {
   const n = images.length;
@@ -45,12 +45,12 @@ function ArcRow({ images }: { images: string[] }) {
             }}
           >
             <div
-              className="animate-float-slow overflow-hidden rounded-xl border border-white/10"
+              className="animate-float-slow overflow-hidden rounded-xl border border-white/10 blur-[3px]"
               style={{
                 animationDelay: `${i * 0.8}s`,
                 width: 380,
                 height: 240,
-                opacity: 1 - edge * 0.15,
+                opacity: 0.55 - edge * 0.1,
               }}
             >
               <Image
