@@ -125,13 +125,9 @@ export default function Navbar() {
             }`;
             return (
               <li key={link.href}>
-                {link.href === "/contact" ? (
-                  <ContactButton className={cls}>{link.label}</ContactButton>
-                ) : (
-                  <Link href={link.href} aria-current={isActive ? "page" : undefined} className={cls}>
-                    {link.label}
-                  </Link>
-                )}
+                <Link href={link.href} aria-current={isActive ? "page" : undefined} className={cls}>
+                  {link.label}
+                </Link>
               </li>
             );
           })}
@@ -219,14 +215,6 @@ export default function Navbar() {
               </li>
               {NAV_LINKS.filter((link) => link.href !== "/services").map((link) => (
                 <li key={link.href}>
-                  {link.href === "/contact" ? (
-                    <ContactButton
-                      onClick={() => setOpen(false)}
-                      className="block w-full rounded-lg px-3 py-3 text-left text-base font-medium text-slate-300 transition-all duration-300 hover:bg-white/5 hover:pl-5 hover:text-white active:scale-[0.98]"
-                    >
-                      {link.label}
-                    </ContactButton>
-                  ) : (
                     <Link
                       href={link.href}
                       className={`block rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
@@ -237,7 +225,6 @@ export default function Navbar() {
                     >
                       {link.label}
                     </Link>
-                  )}
                 </li>
               ))}
               <li className="pt-2">
