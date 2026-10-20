@@ -8,7 +8,6 @@ import { SITE } from "@/site";
 import Magnetic from "@/components/gsap/Magnetic";
 import Parallax from "@/components/gsap/Parallax";
 import ContactButton from "@/components/contact/ContactButton";
-import PortfolioBackdrop from "@/components/home/PortfolioBackdrop";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -62,11 +61,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden pt-72 pb-72 sm:pt-80 sm:pb-80" aria-label="Introduction">
+    <section ref={root} className="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32" aria-label="Introduction">
       {/* Clean backdrop — subtle, flat */}
       <div className="aurora-bg absolute inset-0" aria-hidden="true" />
-      {/* Blurred 3D portfolio carousel behind the headline */}
-      <PortfolioBackdrop />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div data-hero="badge" className="flex justify-center">
