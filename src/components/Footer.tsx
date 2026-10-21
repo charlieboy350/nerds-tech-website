@@ -14,25 +14,22 @@ const SOCIAL_ICONS = [
   { label: "Dribbble", href: SITE.socials.dribbble, Icon: DribbbleIcon },
 ];
 
+/** Footer — black block, giant wordmark, flat columns. */
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-900/60">
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t-2 border-white/15 bg-black">
+      <div className="mx-auto max-w-[1440px] px-5 pt-16 sm:px-8">
+        <p className="font-display text-[13.5vw] font-black uppercase leading-[0.85] tracking-tight text-cream lg:text-[11rem]" aria-hidden="true">
+          Nerds<span className="text-brand-500">Tech</span>
+        </p>
+
+        <div className="mt-14 grid gap-10 border-t border-white/15 pt-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
-              <Image
-                src="/logo.png"
-                alt={`${SITE.name} logo`}
-                width={200}
-                height={52}
-                className="h-11 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:drop-shadow-[0_0_16px_rgba(64,192,224,0.55)]"
-              />
+            <Link href="/" className="flex items-center" aria-label={`${SITE.name} home`}>
+              <Image src="/logo.png" alt={`${SITE.name} logo`} width={200} height={52} className="h-10 w-auto" />
             </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
-              {SITE.description}
-            </p>
-            <div className="mt-5 flex gap-3">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-zinc-400">{SITE.description}</p>
+            <div className="mt-5 flex gap-2">
               {SOCIAL_ICONS.map(({ label, href, Icon }) => (
                 <a
                   key={label}
@@ -40,7 +37,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid size-9 place-items-center rounded-full border border-white/10 text-slate-400 transition-all hover:border-steel-500/60 hover:text-white"
+                  className="grid size-10 place-items-center border border-white/20 text-zinc-300 hover:bg-white hover:text-black"
                 >
                   <Icon className="size-4" />
                 </a>
@@ -49,16 +46,14 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Footer pages">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Pages</h3>
+            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-cream">Pages</h3>
             <ul className="mt-4 space-y-2.5">
               {[{ label: "Home", href: "/" }, ...NAV_LINKS].map((link) => (
                 <li key={link.href + link.label}>
                   {link.href === "/contact" ? (
-                    <ContactButton className="text-sm text-slate-400 transition-colors hover:text-white">
-                      {link.label}
-                    </ContactButton>
+                    <ContactButton className="text-sm text-zinc-400 hover:text-white">{link.label}</ContactButton>
                   ) : (
-                    <Link href={link.href} className="text-sm text-slate-400 transition-colors hover:text-white">
+                    <Link href={link.href} className="text-sm text-zinc-400 hover:text-white">
                       {link.label}
                     </Link>
                   )}
@@ -68,11 +63,11 @@ export default function Footer() {
           </nav>
 
           <nav aria-label="Footer services">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Services</h3>
+            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-cream">Services</h3>
             <ul className="mt-4 space-y-2.5">
               {SERVICES.slice(0, 6).map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services#${s.slug}`} className="text-sm text-slate-400 transition-colors hover:text-white">
+                  <Link href={`/services#${s.slug}`} className="text-sm text-zinc-400 hover:text-white">
                     {s.title}
                   </Link>
                 </li>
@@ -81,25 +76,25 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Get in touch</h3>
-            <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <h3 className="text-sm font-black uppercase tracking-[0.2em] text-cream">Get in touch</h3>
+            <ul className="mt-4 space-y-3 text-sm text-zinc-400">
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 size-4 shrink-0 text-steel-400" />
+                <Mail className="mt-0.5 size-4 shrink-0 text-brand-400" />
                 <a href={`mailto:${SITE.email}`} className="hover:text-white">{SITE.email}</a>
               </li>
               <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 size-4 shrink-0 text-steel-400" />
+                <Phone className="mt-0.5 size-4 shrink-0 text-brand-400" />
                 <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="hover:text-white">{SITE.phone}</a>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-steel-400" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-brand-400" />
                 <span>{SITE.address}</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/15 py-6 text-xs uppercase tracking-wider text-zinc-500 sm:flex-row sm:items-center">
           <p>© <CopyrightYear /> {SITE.name}. All rights reserved.</p>
           <p>{SITE.tagline}</p>
         </div>

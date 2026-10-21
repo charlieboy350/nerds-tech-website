@@ -11,7 +11,7 @@ import { SERVICES } from "@/data/content";
 import ContactButton from "@/components/contact/ContactButton";
 
 const linkBase =
-  "block whitespace-nowrap rounded-full px-3.5 py-2 text-[13px] font-semibold transition-all duration-300 lg:px-5 lg:text-sm";
+  "block whitespace-nowrap px-4 py-2 text-[13px] font-bold uppercase tracking-[0.14em]";
 
 function ServicesDropdown({ pathname }: { pathname: string }) {
   const isActive = pathname === "/services";
@@ -22,18 +22,16 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
         aria-haspopup="true"
         aria-current={isActive ? "page" : undefined}
         className={`${linkBase} flex items-center gap-1.5 ${
-          isActive
-            ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(64,128,192,0.7)]"
-            : "text-slate-400 hover:bg-white/10 hover:text-white"
+          isActive ? "bg-cobalt text-white" : "text-zinc-400 hover:bg-white hover:text-black"
         }`}
       >
         Services
         <ChevronDown className="size-3.5 opacity-70 transition-transform duration-300 group-hover:rotate-180" />
       </Link>
 
-      {/* Dropdown panel */}
-      <div className="invisible absolute left-0 top-full z-50 translate-y-2 pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-        <div className="w-[560px] max-w-[calc(100vw-2.5rem)] rounded-2xl border border-white/10 bg-ink-900/95 p-3 shadow-2xl shadow-black/60 backdrop-blur-xl">
+      {/* Dropdown panel — solid block, no glass, no shadow */}
+      <div className="invisible absolute left-0 top-full z-50 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+        <div className="w-[560px] max-w-[calc(100vw-2.5rem)] border border-white/15 bg-ink-800 p-3">
           <div className="grid grid-cols-2 gap-1">
             {SERVICES.map((service) => {
               const Icon = service.icon;
@@ -41,16 +39,16 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="group/item flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-white/5"
+                  className="group/item flex items-start gap-3 px-3 py-2.5 hover:bg-cobalt"
                 >
-                  <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-brand-500/10 text-brand-300 ring-1 ring-brand-400/20 transition-colors duration-200 group-hover/item:bg-brand-500/20 group-hover/item:text-brand-200">
+                  <span className="grid size-9 shrink-0 place-items-center bg-white/10 text-white">
                     <Icon className="size-4" />
                   </span>
                   <span className="min-w-0">
                     <span className="block text-sm font-semibold text-white">
                       {service.title}
                     </span>
-                    <span className="mt-0.5 block truncate text-xs text-slate-400">
+                    <span className="mt-0.5 block truncate text-xs text-zinc-400 group-hover/item:text-zinc-200">
                       {service.short}
                     </span>
                   </span>
@@ -58,10 +56,10 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
               );
             })}
           </div>
-          <div className="mt-2 border-t border-white/10 pt-2">
+          <div className="mt-2 border-t border-white/15 pt-2">
             <Link
               href="/services"
-              className="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-semibold text-brand-300 transition-colors duration-200 hover:bg-brand-500/10 hover:text-brand-200"
+              className="flex items-center justify-between px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-black"
             >
               View all {SERVICES.length} services
               <ArrowUpRight className="size-4" />
@@ -74,17 +72,9 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
 }
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -92,40 +82,32 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <motion.header
-      initial={{ y: -70, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "border-b border-white/10 bg-ink-950/85 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)] backdrop-blur-xl"
-          : "bg-transparent"
-      }`}
-    >
-      <nav aria-label="Main navigation" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="group flex items-center" aria-label={`${SITE.name} home`}>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-black">
+      <nav aria-label="Main navigation" className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:px-8">
+        <Link href="/" className="flex items-center" aria-label={`${SITE.name} home`}>
           <Image
             src="/logo.png"
             alt={`${SITE.name} logo`}
             width={168}
             height={44}
-            className="h-8 w-auto transition-all duration-300 group-hover:brightness-110 group-hover:brightness-110 lg:h-9"
+            className="h-8 w-auto lg:h-9"
             priority
           />
         </Link>
 
-        <ul className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 backdrop-blur-md md:flex">
+        <ul className="hidden items-center gap-1 md:flex">
           <ServicesDropdown pathname={pathname} />
           {NAV_LINKS.filter((link) => link.href !== "/services").map((link) => {
             const isActive = pathname === link.href;
-            const cls = `${linkBase} ${
-              isActive
-                ? "bg-brand-400 btn-gradient-rev text-white shadow-[0_6px_20px_-6px_rgba(64,128,192,0.7)]"
-                : "text-slate-400 hover:bg-white/10 hover:text-white"
-            }`;
             return (
               <li key={link.href}>
-                <Link href={link.href} aria-current={isActive ? "page" : undefined} className={cls}>
+                <Link
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`${linkBase} ${
+                    isActive ? "bg-cobalt text-white" : "text-zinc-400 hover:bg-white hover:text-black"
+                  }`}
+                >
                   {link.label}
                 </Link>
               </li>
@@ -134,16 +116,14 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <ContactButton
-            className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-brand-400 btn-gradient-rev px-4 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-8px_rgba(64,128,192,0.5)] transition-all duration-300 hover:shadow-[0_10px_36px_-6px_rgba(64,128,192,0.85)] hover:brightness-110 lg:px-5 lg:py-2.5 lg:text-sm"
-          >
+          <ContactButton className="inline-flex items-center gap-1.5 whitespace-nowrap bg-cobalt px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.14em] text-white hover:bg-cream hover:text-black">
             Start a project
-            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="size-4" />
           </ContactButton>
         </div>
 
         <button
-          className="grid size-10 place-items-center rounded-lg text-slate-300 hover:bg-white/5 md:hidden"
+          className="grid size-10 place-items-center text-zinc-200 hover:bg-white hover:text-black md:hidden"
           onClick={() => {
             setOpen((v) => !v);
             setServicesOpen(false);
@@ -161,26 +141,20 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden border-b border-white/10 bg-ink-950/95 backdrop-blur-xl md:hidden"
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden border-t border-white/15 bg-black md:hidden"
           >
             <ul className="space-y-1 px-5 py-4">
               <li>
                 <button
                   onClick={() => setServicesOpen((v) => !v)}
                   aria-expanded={servicesOpen}
-                  className={`flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
-                    pathname === "/services"
-                      ? "bg-brand-500/10 text-white ring-1 ring-brand-400/30"
-                      : "text-slate-300 hover:bg-white/5 hover:text-white"
+                  className={`flex w-full items-center justify-between px-3 py-3 text-base font-bold uppercase tracking-wider ${
+                    pathname === "/services" ? "bg-cobalt text-white" : "text-zinc-200 hover:bg-white hover:text-black"
                   }`}
                 >
                   Services
-                  <ChevronDown
-                    className={`size-5 transition-transform duration-300 ${
-                      servicesOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <ChevronDown className={`size-5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence initial={false}>
                   {servicesOpen && (
@@ -195,7 +169,7 @@ export default function Navbar() {
                         <li key={service.slug}>
                           <Link
                             href={`/services/${service.slug}`}
-                            className="block rounded-lg px-6 py-2.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
+                            className="block px-6 py-2.5 text-sm text-zinc-400 hover:bg-white hover:text-black"
                           >
                             {service.title}
                           </Link>
@@ -204,7 +178,7 @@ export default function Navbar() {
                       <li>
                         <Link
                           href="/services"
-                          className="block rounded-lg px-6 py-2.5 text-sm font-semibold text-brand-300 transition-colors hover:bg-brand-500/10 hover:text-brand-200"
+                          className="block px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-black"
                         >
                           View all {SERVICES.length} services
                         </Link>
@@ -215,22 +189,20 @@ export default function Navbar() {
               </li>
               {NAV_LINKS.filter((link) => link.href !== "/services").map((link) => (
                 <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={`block rounded-lg px-3 py-3 text-base font-medium transition-all duration-300 active:scale-[0.98] ${
-                        pathname === link.href
-                          ? "bg-brand-500/10 text-white ring-1 ring-brand-400/30"
-                          : "text-slate-300 hover:bg-white/5 hover:pl-5 hover:text-white"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                  <Link
+                    href={link.href}
+                    className={`block px-3 py-3 text-base font-bold uppercase tracking-wider ${
+                      pathname === link.href ? "bg-cobalt text-white" : "text-zinc-200 hover:bg-white hover:text-black"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
               <li className="pt-2">
                 <ContactButton
                   onClick={() => setOpen(false)}
-                  className="whitespace-nowrap flex w-full items-center justify-center gap-1.5 rounded-full bg-brand-400 btn-gradient-rev px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(64,128,192,0.5)] transition-all duration-300 hover:brightness-110"
+                  className="flex w-full items-center justify-center gap-1.5 whitespace-nowrap bg-cobalt px-5 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-white hover:bg-cream hover:text-black"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </ContactButton>
@@ -239,6 +211,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }

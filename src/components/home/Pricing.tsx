@@ -1,80 +1,77 @@
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { PRICING } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
+import BlockReveal from "@/components/BlockReveal";
+import Reveal from "@/components/Reveal";
 import ContactButton from "@/components/contact/ContactButton";
 
+/** Pricing — cream block, flat bordered tiers, cobalt featured tier. */
 export default function Pricing() {
   return (
-    <section className="relative py-20 sm:py-28" aria-label="Pricing">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Honest pricing, no mystery quotes."
-          sub="Starting points, not ceilings. Every project gets a fixed quote before we begin, the number we agree on is the number you pay."
-        />
+    <section aria-label="Pricing">
+      <BlockReveal className="bg-cream text-black">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 sm:py-32">
+          <SectionHeading
+            dark
+            eyebrow="Pricing"
+            title="Honest pricing, no mystery quotes."
+            sub="Starting points, not ceilings. Every project gets a fixed quote before we begin, the number we agree on is the number you pay."
+          />
 
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
-          className="mt-14 grid gap-6 lg:grid-cols-3"
-        >
-          {PRICING.map((tier) => (
-            <motion.article
-              key={tier.name}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-              }}
-              className={`relative flex flex-col rounded-3xl border p-8 ${
-                tier.featured
-                  ? "border-steel-500/60 bg-gradient-to-b from-steel-500/15 to-ink-800 shadow-2xl shadow-steel-500/20 lg:-my-4 lg:py-12"
-                  : "border-white/10 bg-ink-800/60"
-              }`}
-            >
-              {tier.featured && (
-                <span className="absolute -top-3.5 left-1/2 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-steel-500 btn-gradient px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
-                  <Sparkles className="size-3.5" /> Most popular
-                </span>
-              )}
-              <h3 className="font-display text-xl font-semibold text-white">{tier.name}</h3>
-              <p className="mt-1.5 text-sm text-slate-400">{tier.blurb}</p>
-              <p className="mt-6">
-                <span className="font-display text-4xl font-bold text-white">{tier.price}</span>
-                <span className="ml-2 text-sm text-slate-500">{tier.period}</span>
-              </p>
-              <ul className="mt-7 flex-1 space-y-3.5">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-slate-300">
-                    <span className={`mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ${tier.featured ? "bg-steel-500/25 text-steel-300" : "bg-white/5 text-brand-300"}`}>
-                      <Check className="size-3" strokeWidth={3} />
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <ContactButton
-                className={`mt-8 inline-flex whitespace-nowrap items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
-                  tier.featured
-                    ? "bg-steel-500 btn-gradient text-white shadow-lg shadow-steel-500/30 hover:scale-[1.02]"
-                    : "border border-white/15 bg-white/[0.03] text-white backdrop-blur-sm hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)]"
-                }`}
-              >
-                {tier.cta}
-              </ContactButton>
-            </motion.article>
-          ))}
-        </motion.div>
+          <div className="mt-16 grid gap-6 lg:grid-cols-3">
+            {PRICING.map((tier, i) => (
+              <Reveal key={tier.name} delay={i * 0.08}>
+                <article
+                  className={`flex h-full flex-col border-2 p-8 ${
+                    tier.featured ? "border-cobalt bg-cobalt text-white" : "border-black bg-cream"
+                  }`}
+                >
+                  {tier.featured && (
+                    <p className="mb-5 inline-block self-start bg-black px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+                      Most popular
+                    </p>
+                  )}
+                  <h3 className="font-display text-xl font-black uppercase tracking-tight">{tier.name}</h3>
+                  <p className={`mt-2 text-sm ${tier.featured ? "text-white/80" : "text-zinc-600"}`}>{tier.blurb}</p>
+                  <p className="mt-7">
+                    <span className="font-display text-5xl font-black">{tier.price}</span>
+                    <span className={`ml-2 text-sm ${tier.featured ? "text-white/70" : "text-zinc-500"}`}>{tier.period}</span>
+                  </p>
+                  <ul className="mt-8 flex-1 space-y-3.5">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm font-medium">
+                        <span
+                          className={`mt-0.5 grid size-5 shrink-0 place-items-center ${
+                            tier.featured ? "bg-white text-cobalt" : "bg-black text-cream"
+                          }`}
+                        >
+                          <Check className="size-3" strokeWidth={3.5} />
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <ContactButton
+                    className={`mt-9 inline-flex items-center justify-center whitespace-nowrap px-6 py-4 text-sm font-bold uppercase tracking-wider ${
+                      tier.featured
+                        ? "bg-black text-white hover:bg-cream hover:text-black"
+                        : "bg-black text-cream hover:bg-cobalt hover:text-white"
+                    }`}
+                  >
+                    {tier.cta}
+                  </ContactButton>
+                </article>
+              </Reveal>
+            ))}
+          </div>
 
-        <p className="mt-8 text-center text-xs text-slate-400">
-          Placeholder pricing, final quotes are fixed and tailored to your scope.
-        </p>
-      </div>
+          <Reveal>
+            <p className="mt-8 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              Placeholder pricing, final quotes are fixed and tailored to your scope.
+            </p>
+          </Reveal>
+        </div>
+      </BlockReveal>
     </section>
   );
 }

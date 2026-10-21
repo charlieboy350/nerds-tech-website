@@ -66,25 +66,25 @@ export default function BlogPage() {
         sub="Playbooks for turning manual SaaS operations into self-running systems: finance, onboarding, support, and retention."
       />
 
-      <div className="mx-auto max-w-7xl px-5 pb-24 sm:px-8">
+      <div className="mx-auto max-w-[1440px] px-5 pb-24 sm:px-8">
         {featured && (
           <GsapReveal>
             <Link
               href={`/blog/${featured.slug}`}
-              className="group mb-10 block overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)] sm:p-12"
+              className="group mb-10 block border-2 border-white/15 bg-ink-800 p-8 hover:border-cobalt sm:p-12"
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold text-brand-300 ring-1 ring-brand-400/30">
+              <span className="inline-flex items-center gap-2 bg-cobalt px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
                 {featured.category}
               </span>
-              <h2 className="mt-5 max-w-3xl font-display text-2xl font-bold tracking-tight text-white transition-colors group-hover:text-brand-200 sm:text-4xl">
+              <h2 className="mt-5 max-w-3xl font-display text-2xl font-black uppercase leading-tight tracking-tight text-cream group-hover:text-brand-400 sm:text-4xl">
                 {featured.title}
               </h2>
-              <p className="mt-4 max-w-2xl leading-relaxed text-slate-400">{featured.excerpt}</p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
+              <p className="mt-4 max-w-2xl leading-relaxed text-zinc-400">{featured.excerpt}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-400">
                 Read the guide
                 <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
-              <span className="mt-4 flex items-center gap-3 text-xs text-slate-500">
+              <span className="mt-4 flex items-center gap-3 text-xs text-zinc-500">
                 {formatDate(featured.date)} · <Clock className="size-3.5" /> {featured.readTime} min read
               </span>
             </Link>
@@ -96,20 +96,20 @@ export default function BlogPage() {
             <GsapReveal key={post.slug} delay={Math.min(i * 0.06, 0.24)}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(73,198,231,0.4)]"
+                className="group flex h-full flex-col border-2 border-white/15 bg-ink-800 p-7 hover:border-cobalt"
               >
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-300 ring-1 ring-white/10">
+                <span className="inline-flex w-fit items-center gap-2 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-zinc-200">
                   {post.category}
                 </span>
-                <h2 className="mt-4 font-display text-xl font-bold tracking-tight text-white transition-colors group-hover:text-brand-200">
+                <h2 className="mt-4 font-display text-xl font-black uppercase leading-tight tracking-tight text-cream group-hover:text-brand-400">
                   {post.title}
                 </h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">{post.excerpt}</p>
-                <span className="mt-5 flex items-center justify-between text-xs text-slate-500">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{post.excerpt}</p>
+                <span className="mt-5 flex items-center justify-between text-xs text-zinc-500">
                   <span>
                     {formatDate(post.date)} · {post.readTime} min read
                   </span>
-                  <ArrowUpRight className="size-4 text-slate-500 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-300" />
+                  <ArrowUpRight className="size-4 text-zinc-500 group-hover:text-brand-400" />
                 </span>
               </Link>
             </GsapReveal>

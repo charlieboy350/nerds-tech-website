@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     absolute: `${SITE.name} | AI Automation, Web Design & Branding Studio`,
   },
   description:
-    "One studio for AI automation, web design & development, branding, SEO, and mobile apps. 11 services, 1 team, zero hand-offs. Get a free consultation today.",
+    "One studio for AI automation, web design & development, branding, SEO, and mobile apps. 12 services, 1 team, zero hand-offs. Get a free consultation today.",
   alternates: { canonical: SITE.url },
 };
 

@@ -537,6 +537,57 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
       },
     ],
   },
+  {
+    slug: "aeo-integration",
+    problems: [
+      {
+        title: "AI assistants recommend your competitors, not you",
+        description:
+          "Buyers now ask ChatGPT, Perplexity, or Gemini questions like 'best web design studio in Pennsylvania' or 'which tool should I use for invoicing', and the answer names three to five brands. If your business is not one of them, you never enter the conversation, no matter how good your Google ranking is.",
+        solution:
+          "We run an AI-visibility audit first: a fixed set of buyer prompts for your market, run across the major answer engines, recording who gets cited and why. Then we close the gaps, restructuring your key pages, entity data, and citations so your brand becomes one of the named answers.",
+      },
+      {
+        title: "Your content is written for browsers, not for answers",
+        description:
+          "Most websites bury the facts under marketing language: vague claims, clever headlines, and answers scattered across five pages. Answer engines do not guess. They extract clear, self-contained statements, and a page that never plainly says what you do, who it is for, and what it costs gives them nothing to quote.",
+        solution:
+          "We restructure your core pages answer-first: a plain-language definition of each service, direct answers to the questions buyers actually ask, concrete specifics (process, timelines, starting prices), and FAQ blocks written the way people phrase questions to AI. Every key fact becomes extractable in one or two sentences.",
+      },
+      {
+        title: "AI crawlers cannot read your site properly",
+        description:
+          "Many sites accidentally block the very bots that build AI answers, hide key content behind JavaScript those crawlers never run, or provide no machine-readable summary of the business. The result: answer engines know your competitors' sites in detail and yours barely at all.",
+        solution:
+          "We implement the technical layer end-to-end: a curated llms.txt that summarizes your business for AI systems, explicit robots rules welcoming GPTBot, ClaudeBot, PerplexityBot, and Google-Extended, server-rendered key content, and a complete JSON-LD entity graph (organization, services, FAQs, breadcrumbs) so engines understand exactly what you offer.",
+      },
+      {
+        title: "You cannot tell whether AI search sends you business",
+        description:
+          "Google Analytics shows search clicks, but AI citations are invisible in most dashboards. Brands end up guessing whether answer engines mention them at all, and cannot tell if their visibility is improving or quietly disappearing as models update.",
+        solution:
+          "We set up citation monitoring: your buyer prompt set is re-run on a schedule across ChatGPT, Perplexity, and Google AI Overviews, tracking how often you are cited, for which questions, and against which competitors. You get a monthly visibility report, and we iterate the content against what is actually working.",
+      },
+    ],
+    faqs: [
+      {
+        q: "What is AEO (Answer Engine Optimization)?",
+        a: "AEO is the practice of structuring a website so AI answer engines, such as ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude, can find, understand, and cite the business in their answers. It combines machine-readable site files (llms.txt), structured data (schema), AI-crawler access, and answer-first content that states facts clearly enough for an engine to quote.",
+      },
+      {
+        q: "How is AEO different from SEO?",
+        a: "SEO optimizes for a ranked list of links on a search results page; AEO optimizes to be the answer itself inside an AI response. They share foundations (technical health, clear content, authority), but AEO adds entity and schema implementation, llms.txt, crawler access for AI bots, and content written as direct, citable answers. We treat AEO as an integration layer on top of solid SEO, not a replacement for it.",
+      },
+      {
+        q: "How long until AI assistants start citing our business?",
+        a: "Technical implementation lands in two to four weeks. Citation changes follow each engine's crawl and index cycle: most clients see their first measurable citation movement within four to eight weeks, with visibility compounding as content and monitoring iterations build. We give you a baseline report at the start so progress is measured, not vibes.",
+      },
+      {
+        q: "Do we need to rebuild our website for AEO?",
+        a: "No. AEO integration works on your existing site. We add the machine-readable layer (llms.txt, robots rules, JSON-LD), restructure the pages that matter, and add answer-first sections and FAQs. The only exception is a site that hides all of its content behind client-side JavaScript; then we fix rendering for the key pages, which is still far short of a rebuild.",
+      },
+    ],
+  },
 ];
 
 export function getServiceDetail(slug: string): ServiceDetail | undefined {

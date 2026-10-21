@@ -1,7 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, type ReactNode } from "react";
+import { gsap, prefersReducedMotion } from "@/lib/gsap";
+
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 interface RevealProps {
   children: ReactNode;
@@ -11,18 +13,36 @@ interface RevealProps {
   once?: boolean;
 }
 
-/** Fade-and-rise scroll reveal used across all sections. */
-export default function Reveal({ children, delay = 0, y = 28, className, once = true }: RevealProps) {
-  const reduce = useReducedMotion();
+/**
+ * GSAP ScrollTrigger reveal — content rises from y offset and fades in
+ * the first time it scrolls into view. Scroll-initiated only.
+ */
+export default function Reveal({ children, delay = 0, y = 50, className, once = true }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useIsoLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || prefersReducedMotion()) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0, y },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.9,
+          delay,
+          ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 88%", once },
+        }
+      );
+    }, el);
+    return () => ctx.revert();
+  }, [delay, y, once]);
+
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: reduce ? 0 : y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   );
 }

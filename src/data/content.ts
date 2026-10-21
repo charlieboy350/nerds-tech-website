@@ -10,6 +10,7 @@ import {
   Clapperboard,
   Smartphone,
   Puzzle,
+  ScanSearch,
   type LucideIcon,
 } from "lucide-react";
 
@@ -129,6 +130,15 @@ export const SERVICES: Service[] = [
     short: "Get found on Google, and cited in AI answers.",
     long: "Technical fixes, keyword strategy, and structured content engineered for classic search and the new AI-search era: featured snippets, LLM citations, and local packs.",
     deliverables: ["Technical SEO audit", "Keyword & topic strategy", "On-page optimization", "llms.txt & AI-readiness"],
+  },
+  {
+    slug: "aeo-integration",
+    relatedProject: "pulseboard",
+    icon: ScanSearch,
+    title: "AEO Integration",
+    short: "Get your brand cited by ChatGPT, Perplexity, and Google AI Overviews.",
+    long: "Buyers now ask AI assistants before they ever open a search engine. AEO (Answer Engine Optimization) integration restructures your existing website so answer engines can find, understand, and cite your business: llms.txt, entity and schema markup, answer-first content, and AI-crawler access, implemented into your current site without a rebuild.",
+    deliverables: ["AI-visibility audit & citation baseline", "llms.txt & AI-crawler configuration", "Schema & entity markup implementation", "Answer-first content restructuring"],
   },
   {
     slug: "social-media-marketing",
@@ -825,7 +835,7 @@ export const FAQS = [
 /* ---------------------------------- Stats --------------------------------- */
 
 export const STATS = [
-  { value: 11, suffix: "", label: "Services under one roof" },
+  { value: 12, suffix: "", label: "Services under one roof" },
   { value: 120, suffix: "+", label: "Projects shipped" },
   { value: 98, suffix: "%", label: "Client satisfaction" },
   { value: 24, suffix: "h", label: "Max. response time", prefix: "<" },

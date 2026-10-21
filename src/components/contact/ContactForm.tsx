@@ -6,14 +6,22 @@ import { Send, CheckCircle2 } from "lucide-react";
 import { SERVICES } from "@/data/content";
 import { trackEvent } from "@/components/GoogleAnalytics";
 
-const inputCls =
-  "w-full rounded-xl border border-white/10 bg-ink-900/80 px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-steel-500/70 focus:ring-2 focus:ring-steel-500/20";
+const inputClsDark =
+  "w-full border-2 border-white/25 bg-black px-4 py-3.5 text-sm text-cream placeholder:text-zinc-500 outline-none focus:border-brand-400";
+const inputClsLight =
+  "w-full border-2 border-black/60 bg-cream px-4 py-3.5 text-sm text-black placeholder:text-zinc-500 outline-none focus:border-cobalt";
 
 /**
  * Reusable contact form — used in the homepage ContactSection
  * and inside the global ContactModal.
  */
-export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () => void; idPrefix?: string } = {}) {
+export default function ContactForm({
+  onSent,
+  idPrefix = "cf",
+  tone = "dark",
+}: { onSent?: () => void; idPrefix?: string; tone?: "dark" | "light" } = {}) {
+  const inputCls = tone === "light" ? inputClsLight : inputClsDark;
+  const labelCls = tone === "light" ? "mb-2 block text-sm font-bold text-black" : "mb-2 block text-sm font-bold text-cream";
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -56,17 +64,17 @@ export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () =
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 14, delay: 0.1 }}
-          className="grid size-20 place-items-center rounded-full bg-brand-400/15 text-brand-300 ring-1 ring-brand-400/40"
+          className="grid size-20 place-items-center bg-cobalt text-white"
         >
           <CheckCircle2 className="size-10" />
         </motion.span>
-        <h3 className="mt-6 font-display text-2xl font-bold text-white">Message received!</h3>
-        <p className="mt-2 max-w-sm text-sm text-slate-400">
+        <h3 className="mt-6 font-display text-2xl font-black uppercase text-current">Message received!</h3>
+        <p className="mt-2 max-w-sm text-sm opacity-70">
           Thanks for reaching out, we’ll get back to you within 24 hours with next steps.
         </p>
         <button
           onClick={() => setSent(false)}
-          className="mt-6 text-sm font-medium text-steel-300 hover:text-steel-400"
+          className="mt-6 text-sm font-bold uppercase tracking-wider underline underline-offset-4"
         >
           Send another message
         </button>
@@ -86,11 +94,11 @@ export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () =
         className="absolute h-0 w-0 overflow-hidden opacity-0"
       />
       <div>
-        <label htmlFor={`${idPrefix}-name`} className="mb-2 block text-sm font-medium text-slate-300">Name *</label>
+        <label htmlFor={`${idPrefix}-name`} className={labelCls}>Name *</label>
         <input id={`${idPrefix}-name`} name="name" required placeholder="Jane Cooper" autoComplete="off" className={inputCls} />
       </div>
       <div>
-        <label htmlFor={`${idPrefix}-em`} className="mb-2 block text-sm font-medium text-slate-300">Email *</label>
+        <label htmlFor={`${idPrefix}-em`} className={labelCls}>Email *</label>
         <input
           id={`${idPrefix}-em`}
           name="em"
@@ -108,7 +116,7 @@ export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () =
         />
       </div>
       <div>
-        <label htmlFor={`${idPrefix}-service`} className="mb-2 block text-sm font-medium text-slate-300">Service</label>
+        <label htmlFor={`${idPrefix}-service`} className={labelCls}>Service</label>
         <select id={`${idPrefix}-service`} name="service" autoComplete="off" className={inputCls} defaultValue="">
           <option value="" disabled>Select a service</option>
           {SERVICES.map((s) => (
@@ -118,7 +126,7 @@ export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () =
         </select>
       </div>
       <div>
-        <label htmlFor={`${idPrefix}-budget`} className="mb-2 block text-sm font-medium text-slate-300">Budget</label>
+        <label htmlFor={`${idPrefix}-budget`} className={labelCls}>Budget</label>
         <select id={`${idPrefix}-budget`} name="budget" autoComplete="off" className={inputCls} defaultValue="">
           <option value="" disabled>Select a range</option>
           <option>Under $2k</option>
@@ -128,24 +136,24 @@ export default function ContactForm({ onSent, idPrefix = "cf" }: { onSent?: () =
         </select>
       </div>
       <div className="sm:col-span-2">
-        <label htmlFor={`${idPrefix}-message`} className="mb-2 block text-sm font-medium text-slate-300">Project details *</label>
+        <label htmlFor={`${idPrefix}-message`} className={labelCls}>Project details *</label>
         <textarea id={`${idPrefix}-message`} name="message" required rows={5} placeholder="What are you building? What does success look like?" autoComplete="off" className={`${inputCls} resize-none`} />
       </div>
       <div className="sm:col-span-2">
         {error && (
-          <p role="alert" className="mb-4 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+          <p role="alert" className="mb-4 border-2 border-red-600 bg-red-600/10 px-4 py-3 text-sm font-semibold text-red-500">
             {error}
           </p>
         )}
         <button
           type="submit"
           disabled={sending}
-          className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/25 transition-transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 sm:w-auto"
+          className={`inline-flex whitespace-nowrap w-full items-center justify-center gap-2 px-8 py-4 text-base font-bold uppercase tracking-wider disabled:opacity-60 sm:w-auto ${tone === "light" ? "bg-black text-cream hover:bg-cobalt hover:text-white" : "bg-cobalt text-white hover:bg-cream hover:text-black"}`}
         >
           {sending ? "Sending…" : "Send message"}
-          <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
+          <Send className="size-4" />
         </button>
-        <p className="mt-3 text-xs text-slate-500">
+        <p className="mt-3 text-xs opacity-60">
           By submitting, you agree to be contacted about your inquiry. We never share your details.
         </p>
       </div>

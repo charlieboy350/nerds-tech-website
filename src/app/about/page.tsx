@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HeartHandshake, Zap, Eye, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import JsonLd from "@/components/JsonLd";
 import SectionHeading from "@/components/SectionHeading";
 import GsapReveal from "@/components/gsap/GsapReveal";
 import Stats from "@/components/home/Stats";
@@ -42,9 +43,19 @@ const VALUES = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+    { "@type": "ListItem", position: 2, name: "About", item: `${SITE.url}/about` },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="About"
         title="A studio built for how business runs today."
@@ -54,7 +65,7 @@ export default function AboutPage() {
       <section className="py-10 sm:py-14" aria-label="Our story">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <GsapReveal>
-            <div className="space-y-5 text-base leading-relaxed text-slate-400 sm:text-lg">
+            <div className="space-y-5 text-base leading-relaxed text-zinc-400 sm:text-lg">
               <p>
                 Most agencies sell you a slice: a logo here, a website there, an ad campaign
                 somewhere else. Then you become the project manager stitching it all together,
@@ -70,7 +81,7 @@ export default function AboutPage() {
                 Today we work with startups finding their footing and established businesses
                 modernizing theirs, across retail, fitness, healthcare, real estate, and
                 hospitality. Different industries, same promise:{" "}
-                <span className="font-semibold text-white">
+                <span className="font-semibold text-cream">
                   one team, zero hand-offs, outcomes you can measure.
                 </span>
               </p>
@@ -82,7 +93,7 @@ export default function AboutPage() {
       <Stats />
 
       <section className="py-20 sm:py-24" aria-label="Our values">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
           <SectionHeading
             eyebrow="Values"
             title="What we refuse to compromise on."
@@ -90,12 +101,12 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {VALUES.map((v, i) => (
               <GsapReveal key={v.title} delay={i * 0.08}>
-                <article className="card-glow h-full rounded-2xl border border-white/10 bg-ink-800/60 p-8">
-                  <span className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
+                <article className="h-full border-2 border-white/15 bg-ink-800 p-8">
+                  <span className="grid size-12 place-items-center bg-cobalt text-white">
                     <v.icon className="size-6" />
                   </span>
-                  <h3 className="mt-5 font-display text-xl font-semibold text-white">{v.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-slate-400 sm:text-[15px]">{v.text}</p>
+                  <h3 className="mt-5 font-display text-xl font-black uppercase tracking-tight text-cream">{v.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-zinc-400 sm:text-[15px]">{v.text}</p>
                 </article>
               </GsapReveal>
             ))}

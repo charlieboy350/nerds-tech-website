@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { ArrowRight, ArrowUpRight, Zap, PlayCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { SITE } from "@/site";
-import Magnetic from "@/components/gsap/Magnetic";
-import Parallax from "@/components/gsap/Parallax";
 import ContactButton from "@/components/contact/ContactButton";
+import SplitWords from "@/components/SplitWords";
 
 const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
@@ -17,133 +16,77 @@ export default function Hero() {
   useIsoLayoutEffect(() => {
     if (!root.current || prefersReducedMotion()) return;
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.fromTo(
-        "[data-hero='badge']",
-        { autoAlpha: 0, y: 24, scale: 0.94 },
-        { autoAlpha: 1, y: 0, scale: 1, duration: 0.7 },
-        0.15
-      )
-        .fromTo(
-          "[data-hero='line']",
-          { yPercent: 110 },
-          { yPercent: 0, duration: 1.05, stagger: 0.12, ease: "power4.out" },
-          0.3
-        )
-        .fromTo(
-          "[data-hero='sub']",
-          { autoAlpha: 0, y: 26 },
-          { autoAlpha: 1, y: 0, duration: 0.9 },
-          0.75
-        )
-        .fromTo(
-          "[data-hero='cta']",
-          { autoAlpha: 0, y: 26, scale: 0.96 },
-          { autoAlpha: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.1 },
-          0.9
-        )
-        .fromTo(
-          "[data-hero='stat']",
-          { autoAlpha: 0, y: 22 },
-          { autoAlpha: 1, y: 0, duration: 0.7, stagger: 0.09 },
-          1.05
-        )
-        .fromTo(
-          "[data-hero='more']",
-          { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 0.8 },
-          1.25
-        );
-
-
+      gsap.fromTo(
+        "[data-hero]",
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 0.9, stagger: 0.1, delay: 0.35, ease: "power3.out" }
+      );
     }, root);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={root} className="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32" aria-label="Introduction">
-      {/* Clean backdrop — subtle, flat */}
-      <div className="aurora-bg absolute inset-0" aria-hidden="true" />
+    <section ref={root} className="bg-black pt-36 pb-20 sm:pt-44 sm:pb-28" aria-label="Introduction">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
+        <p data-hero className="eyebrow">
+          {SITE.tagline}
+        </p>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
-        <div data-hero="badge" className="flex justify-center">
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-300">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-brand-400" />
-            </span>
-            {SITE.tagline}
-          </span>
-        </div>
-
-        <h1 className="mx-auto mt-8 max-w-5xl text-center font-display text-5xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
-          <span className="block overflow-hidden pb-1">
-            <span data-hero="line" className="block">Put your business on autopilot.</span>
-          </span>
-          <span className="block overflow-hidden pb-3">
-            <span data-hero="line" className="block text-brand-400">Make your brand impossible to ignore.</span>
-          </span>
+        <h1 className="mt-10 font-display font-black uppercase leading-[0.98] tracking-tight">
+          <SplitWords immediate as="span" className="block text-[13.5vw] text-cream sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+            Put your business on autopilot.
+          </SplitWords>
+          <SplitWords immediate delay={0.25} as="span" className="block text-[13.5vw] text-brand-500 sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+            Make your brand impossible to ignore.
+          </SplitWords>
         </h1>
 
-        <p data-hero="sub" className="mx-auto mt-7 max-w-2xl text-center text-base leading-relaxed text-slate-400 sm:text-lg">
+        <p data-hero className="mt-10 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
           {SITE.name} blends AI automation, standout design, and clean engineering into one
           connected studio. One team takes you from first sketch to launched product,
           and keeps it growing long after.
         </p>
 
-        <div className="mt-11 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <div data-hero="cta">
-            <Magnetic>
-              <ContactButton
-                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full btn-gradient px-9 py-4 text-base font-semibold text-white transition-transform hover:scale-[1.04] active:scale-[0.98] sm:w-auto"
-              >
-                Start your project
-                <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
-              </ContactButton>
-            </Magnetic>
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <div data-hero>
+            <ContactButton className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap bg-cobalt px-10 py-4 text-base font-bold uppercase tracking-wider text-white hover:bg-cream hover:text-black sm:w-auto">
+              Start your project
+              <ArrowRight className="size-5" />
+            </ContactButton>
           </div>
-          <div data-hero="cta">
-            <Magnetic>
-              <Link
-                href="/work"
-                className="group inline-flex whitespace-nowrap w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-9 py-4 text-base font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-lg active:scale-[0.98] sm:w-auto"
-              >
-                <PlayCircle className="size-5 text-brand-400 transition-transform duration-300 group-hover:scale-110" />
-                View case studies
-              </Link>
-            </Magnetic>
+          <div data-hero>
+            <Link
+              href="/work"
+              className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap border border-white/30 px-10 py-4 text-base font-bold uppercase tracking-wider text-white hover:bg-white hover:text-black sm:w-auto"
+            >
+              View case studies
+            </Link>
           </div>
         </div>
 
-        <Parallax speed={-8}>
-          <dl className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-10 text-center sm:gap-14">
-            {[
-              ["11", "services"],
-              ["1", "team"],
-              ["0", "hand-offs"],
-            ].map(([value, label]) => (
-              <div key={label} data-hero="stat" className="flex flex-col items-center">
-                <dt className="sr-only">{label}</dt>
-                <dd className="font-display text-4xl font-bold text-white sm:text-5xl ">{value}</dd>
-                <dd className="mt-2 text-xs uppercase tracking-[0.24em] text-slate-500">{label}</dd>
-              </div>
-            ))}
-          </dl>
-        </Parallax>
-
-        <div data-hero="more" className="mt-12 flex justify-center">
-          <Link
-            href="/services"
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-slate-400 transition-colors hover:text-brand-300"
-          >
-            Explore all services
-            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
+        <dl data-hero className="mt-20 flex flex-wrap gap-x-16 gap-y-8 border-t border-white/15 pt-10">
+          {[
+            ["12", "services"],
+            ["1", "team"],
+            ["0", "hand-offs"],
+          ].map(([value, label]) => (
+            <div key={label}>
+              <dt className="sr-only">{label}</dt>
+              <dd className="font-display text-5xl font-black text-cream sm:text-6xl">{value}</dd>
+              <dd className="mt-2 text-xs font-bold uppercase tracking-[0.24em] text-zinc-500">{label}</dd>
+            </div>
+          ))}
+          <div className="ml-auto hidden items-end lg:flex">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-zinc-400 hover:text-white"
+            >
+              Explore all services
+              <ArrowUpRight className="size-4" />
+            </Link>
+          </div>
+        </dl>
       </div>
-
-      {/* Bottom fade into next section */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950 to-transparent" aria-hidden="true" />
     </section>
   );
 }

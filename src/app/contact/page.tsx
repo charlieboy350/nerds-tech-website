@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, Phone, MapPin } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import JsonLd from "@/components/JsonLd";
 import ContactForm from "@/components/contact/ContactForm";
 import GsapReveal from "@/components/gsap/GsapReveal";
 import { SITE } from "@/site";
@@ -23,9 +24,19 @@ const INFO = [
   { icon: MapPin, label: "Office", value: SITE.address },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+    { "@type": "ListItem", position: 2, name: "Contact", item: `${SITE.url}/contact` },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Contact"
         title="Let's build something worth talking about."
@@ -33,33 +44,33 @@ export default function ContactPage() {
       />
 
       <section className="relative py-14 sm:py-20" aria-label="Contact form and details">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-8 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
           {/* Contact details */}
           <GsapReveal>
             <div className="space-y-6">
-              <h2 className="font-display text-2xl font-bold text-white">Reach us directly</h2>
-              <p className="leading-relaxed text-slate-400">
+              <h2 className="font-display text-2xl font-black uppercase tracking-tight text-cream">Reach us directly</h2>
+              <p className="leading-relaxed text-zinc-400">
                 Prefer email or a quick call? We reply within one business day, usually faster.
               </p>
               <ul className="space-y-4">
                 {INFO.map((item) => (
                   <li
                     key={item.label}
-                    className="card-glow flex items-start gap-4 rounded-2xl border border-white/10 bg-ink-800/60 p-5"
+                    className="flex items-start gap-4 border-2 border-white/15 bg-ink-800 p-5"
                   >
-                    <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-brand-300 ring-1 ring-brand-400/30">
+                    <span className="grid size-11 shrink-0 place-items-center bg-cobalt text-white">
                       <item.icon className="size-5" />
                     </span>
                     <span>
-                      <span className="block text-xs font-semibold uppercase tracking-wider text-slate-500">
+                      <span className="block text-xs font-bold uppercase tracking-wider text-zinc-500">
                         {item.label}
                       </span>
                       {item.href ? (
-                        <a href={item.href} className="mt-1 block font-medium text-white transition-colors hover:text-brand-300">
+                        <a href={item.href} className="mt-1 block font-semibold text-cream hover:text-brand-400">
                           {item.value}
                         </a>
                       ) : (
-                        <span className="mt-1 block font-medium text-white">{item.value}</span>
+                        <span className="mt-1 block font-semibold text-cream">{item.value}</span>
                       )}
                     </span>
                   </li>
@@ -70,9 +81,9 @@ export default function ContactPage() {
 
           {/* Form */}
           <GsapReveal delay={0.1}>
-            <div className="card-glow rounded-2xl border border-white/10 bg-ink-800/60 p-6 sm:p-8">
-              <h2 className="font-display text-2xl font-bold text-white">Start your project</h2>
-              <p className="mt-2 text-sm text-slate-400">
+            <div className="border-2 border-white/15 bg-ink-800 p-6 sm:p-8">
+              <h2 className="font-display text-2xl font-black uppercase tracking-tight text-cream">Start your project</h2>
+              <p className="mt-2 text-sm text-zinc-400">
                 Fill this in and we'll respond within one business day.
               </p>
               <div className="mt-6">

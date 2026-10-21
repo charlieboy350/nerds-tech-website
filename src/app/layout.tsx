@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Archivo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,12 +7,11 @@ import JsonLd from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ContactModalProvider } from "@/components/contact/ContactModalContext";
 import ContactModal from "@/components/contact/ContactModal";
-import CustomCursor from "@/components/interactive/CustomCursor";
 import BackToTop from "@/components/BackToTop";
 import { SITE } from "@/site";
 
 const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
-const spaceGrotesk = Space_Grotesk({ variable: "--font-display", subsets: ["latin"] });
+const archivo = Archivo({ variable: "--font-display", subsets: ["latin"], weight: ["500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE.url },
   category: "technology",
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
     apple: "/apple-touch-icon.png",
   },
 };
@@ -78,8 +77,24 @@ const organizationSchema = {
   name: SITE.name,
   url: SITE.url,
   description: SITE.description,
+  slogan: SITE.tagline,
   email: SITE.email,
   telephone: SITE.phone,
+  areaServed: "Worldwide",
+  knowsAbout: [
+    "AI Automation",
+    "AI Chat Support",
+    "AI Codebase Integration",
+    "Web Design & Development",
+    "Logo Design",
+    "Brand Identity",
+    "Content Writing",
+    "SEO",
+    "AEO (Answer Engine Optimization)",
+    "Social Media Marketing",
+    "Motion Graphics",
+    "Mobile App Development",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "5010 Prides Ct",
@@ -103,8 +118,8 @@ const websiteSchema = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-ink-950 font-sans text-slate-100">
+    <html lang="en" className={`${inter.variable} ${archivo.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-black font-sans text-cream">
         <ContactModalProvider>
         <JsonLd data={[organizationSchema, websiteSchema]} />
         <GoogleAnalytics />
@@ -120,7 +135,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <ContactModal />
-        <CustomCursor />
         <BackToTop />
         </ContactModalProvider>
       </body>

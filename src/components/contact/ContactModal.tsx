@@ -52,7 +52,7 @@ export default function ContactModal() {
             transition={{ duration: 0.2 }}
             onClick={closeContact}
             aria-hidden="true"
-            className="absolute inset-0 bg-black/75 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/85"
           />
 
           {/* Scroll container — clicks on the empty area close the modal */}
@@ -64,29 +64,16 @@ export default function ContactModal() {
                 exit={{ opacity: 0, y: 24, scale: 0.96 }}
                 transition={{ type: "spring", stiffness: 320, damping: 28 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative m-auto w-full max-w-xl max-w-[calc(100vw-2rem)] rounded-3xl border border-brand-400/25 bg-ink-800 shadow-2xl"
+                className="relative m-auto w-full max-w-xl max-w-[calc(100vw-2rem)] border-2 border-white/20 bg-ink-800"
               >
-                {/* Glow accents — contained within card bounds */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -top-24 left-1/2 h-48 w-full max-w-full -translate-x-1/2 rounded-full bg-brand-500/20 blur-3xl"
-                />
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute -bottom-28 -right-16 h-56 w-72 rounded-full bg-aurora-400/15 blur-3xl"
-                />
-
                 <div className="relative p-6 sm:p-8">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-300">
+                      <p className="eyebrow">
                         Contact
                       </p>
-                      <h2 className="mt-2 font-display text-3xl font-bold text-white">
-                        Start your{" "}
-                        <span className="text-gradient">project</span>
-                      </h2>
-                      <p className="mt-2 text-sm text-slate-400">
+                      <h2 className="mt-3 font-display text-3xl font-black uppercase tracking-tight text-cream">Start your <span className="text-brand-500">project</span></h2>
+                      <p className="mt-2 text-sm text-zinc-400">
                         Tell us what you&apos;re building. Replies within 24 hours,
                         usually much faster.
                       </p>
@@ -95,7 +82,7 @@ export default function ContactModal() {
                       type="button"
                       onClick={closeContact}
                       aria-label="Close contact form"
-                      className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:border-brand-400/40 hover:text-white"
+                      className="border border-white/25 p-2 text-zinc-200 hover:bg-white hover:text-black"
                     >
                       <X className="h-5 w-5" />
                     </button>

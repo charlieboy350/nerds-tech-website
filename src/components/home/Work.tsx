@@ -3,12 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
 import { PROJECTS } from "@/data/content";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
-import TiltCard from "@/components/interactive/TiltCard";
 
 const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
 
@@ -19,8 +17,8 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
   const countFor = (cat: string) => (cat === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.category === cat).length);
 
   return (
-    <section className={`relative ${tight ? "pt-10 pb-20 sm:pt-14 sm:pb-28" : "py-20 sm:py-28"}`} aria-label="Selected work">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section className={`bg-black ${tight ? "pt-10 pb-24 sm:pt-14 sm:pb-32" : "py-24 sm:py-32"}`} aria-label="Selected work">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
         <SectionHeading
           eyebrow="Recent work"
           title="A few things we've shipped."
@@ -28,8 +26,8 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
         />
 
         {filterable && (
-          <Reveal className="mt-8">
-            <div className="flex flex-wrap justify-center gap-2.5" role="tablist" aria-label="Filter projects by category">
+          <Reveal className="mt-10">
+            <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by category">
               {CATEGORIES.map((cat) => {
                 const isActive = active === cat;
                 return (
@@ -38,14 +36,14 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setActive(cat)}
-                    className={`whitespace-nowrap rounded-full border px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                    className={`whitespace-nowrap border px-5 py-2.5 text-sm font-bold uppercase tracking-wider ${
                       isActive
-                        ? "border-brand-400/60 bg-brand-500/15 text-brand-200 shadow-[0_8px_24px_-10px_rgba(64,128,192,0.6)]"
-                        : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/30 hover:text-white"
+                        ? "border-cobalt bg-cobalt text-white"
+                        : "border-white/25 text-zinc-400 hover:bg-white hover:text-black"
                     }`}
                   >
                     {cat}
-                    <span className={`ml-2 text-xs ${isActive ? "text-brand-300" : "text-slate-500"}`}>
+                    <span className={`ml-2 text-xs ${isActive ? "text-white/70" : "text-zinc-500"}`}>
                       {countFor(cat)}
                     </span>
                   </button>
@@ -55,72 +53,47 @@ export default function Work({ limit = 6, filterable = false, tight = false }: {
           </Reveal>
         )}
 
-        <motion.div
-          key={active}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
-          className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => (
-            <motion.article
-              key={project.slug}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-              }}
-              className="group relative"
-            >
-              <TiltCard className="card-glow relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-ink-800/60">
-              {/* Project photo */}
-              <div className="relative h-44 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={`${project.client} | ${project.title}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" aria-hidden="true" />
-                <span className="absolute left-5 top-5 rounded-full bg-black/45 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
-                  {project.category}
-                </span>
-                <span className="absolute bottom-4 left-5 font-display text-2xl font-bold text-white drop-shadow-lg">
-                  {project.client}
-                </span>
-                <span className="absolute bottom-4 right-5 inline-flex size-9 items-center justify-center rounded-full bg-brand-500/90 text-white opacity-0 transition-all duration-300 group-hover:opacity-100" aria-hidden="true">
-                  <ArrowUpRight className="size-4" />
-                </span>
-              </div>
-
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-lg font-semibold text-white">
-                  <Link href={`/work/${project.slug}`} className="transition-colors group-hover:text-brand-300 before:absolute before:inset-0">
-                    {project.title}
-                  </Link>
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{project.description}</p>
-                <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
-                  <TrendingUp className="size-4" />
-                  {project.result}
-                </p>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-slate-500 transition-colors group-hover:text-brand-300">
-                  Read the case study
-                </p>
-              </div>
-              </TiltCard>
-            </motion.article>
+        <div className="mt-14 grid gap-x-8 gap-y-14 md:grid-cols-2">
+          {projects.map((project, i) => (
+            <Reveal key={project.slug} delay={(i % 2) * 0.1}>
+              <article className="group relative">
+                <div className="relative h-64 overflow-hidden bg-ink-800 sm:h-80">
+                  <Image
+                    src={project.image}
+                    alt={`${project.client} | ${project.title}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <span className="absolute left-0 top-0 bg-cobalt px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
+                    {project.category}
+                  </span>
+                </div>
+                <div className="border-b-2 border-white/15 pb-8 pt-6 group-hover:border-cobalt">
+                  <p className="font-display text-sm font-black uppercase tracking-[0.2em] text-zinc-500">{project.client}</p>
+                  <h3 className="mt-2 font-display text-2xl font-black uppercase leading-tight tracking-tight text-cream sm:text-3xl">
+                    <Link href={`/work/${project.slug}`} className="before:absolute before:inset-0 hover:text-brand-400">
+                      {project.title}
+                    </Link>
+                  </h3>
+                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-400 sm:text-base">{project.description}</p>
+                  <p className="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-400">
+                    <TrendingUp className="size-4" />
+                    {project.result}
+                  </p>
+                </div>
+              </article>
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
 
         {limit < PROJECTS.length && (
-          <Reveal className="mt-10 text-center">
+          <Reveal className="mt-14">
             <Link
               href="/work"
-              className="group inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)]"
+              className="inline-flex items-center gap-2 whitespace-nowrap bg-cream px-8 py-4 text-sm font-bold uppercase tracking-wider text-black hover:bg-cobalt hover:text-white"
             >
-              View all case studies <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              View all case studies <ArrowUpRight className="size-4" />
             </Link>
           </Reveal>
         )}

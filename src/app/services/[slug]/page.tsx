@@ -87,48 +87,47 @@ export default async function ServicePage({
     <>
       <JsonLd data={[serviceSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])]} />
 
-      <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-5 pt-28 sm:px-8 sm:pt-36">
-        <ol className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
-          <li><Link href="/" className="transition-colors hover:text-brand-300">Home</Link></li>
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-[1440px] px-5 pt-28 sm:px-8 sm:pt-36">
+        <ol className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+          <li><Link href="/" className="transition-colors hover:text-brand-400">Home</Link></li>
           <li aria-hidden="true"><ChevronRight className="size-4" /></li>
-          <li><Link href="/services" className="transition-colors hover:text-brand-300">Services</Link></li>
+          <li><Link href="/services" className="transition-colors hover:text-brand-400">Services</Link></li>
           <li aria-hidden="true"><ChevronRight className="size-4" /></li>
-          <li className="text-slate-300">{service.title}</li>
+          <li className="text-zinc-300">{service.title}</li>
         </ol>
       </nav>
 
       {/* Hero */}
       <header className="relative overflow-hidden bg-ink-950 pt-10 pb-14 sm:pt-14 sm:pb-20">
-        <div className="aurora-bg absolute inset-0" aria-hidden="true" />
         <div data-beam="1" className="light-beam absolute inset-0" aria-hidden="true" />
         <div className="grain absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8">
           <GsapReveal>
-            <span className="grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-steel-500/20 to-brand-400/10 text-steel-300 ring-1 ring-steel-500/30">
+            <span className="grid size-16 place-items-center bg-cobalt text-white">
               <Icon className="size-8" />
             </span>
           </GsapReveal>
           <GsapReveal delay={0.08}>
-            <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 max-w-4xl font-display text-4xl font-black uppercase tracking-tight text-cream sm:text-5xl lg:text-6xl">
               {service.title}
             </h1>
           </GsapReveal>
           <GsapReveal delay={0.16}>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
+            <p className="mt-5 max-w-3xl text-base leading-relaxed text-zinc-400 sm:text-lg">
               {service.long}
             </p>
           </GsapReveal>
           <GsapReveal delay={0.24}>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <ContactButton
-                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full bg-steel-500 btn-gradient px-8 py-4 text-base font-semibold text-white shadow-xl shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
+                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 btn-gradient px-8 py-4 text-base font-bold uppercase tracking-wider text-white hover:bg-cream hover:text-black shadow-steel-500/30 transition-transform hover:scale-[1.03] active:scale-[0.98] sm:w-auto"
               >
                 Start your project
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </ContactButton>
               <Link
                 href="/services"
-                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/10 hover:shadow-[0_12px_32px_-12px_rgba(64,128,192,0.6)] sm:w-auto"
+                className="group inline-flex whitespace-nowrap items-center justify-center gap-2 border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 sm:w-auto"
               >
                 All services
               </Link>
@@ -139,33 +138,33 @@ export default async function ServicePage({
 
       {/* Problems & solutions */}
       {detail && detail.problems.length > 0 && (
-        <section aria-label="Problems this service solves" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+        <section aria-label="Problems this service solves" className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20">
           <GsapReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">
               Real-world problems
             </p>
-            <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 max-w-3xl font-display text-3xl font-black uppercase tracking-tight text-cream sm:text-4xl">
               Sound familiar? Here&apos;s how we fix it.
             </h2>
           </GsapReveal>
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {detail.problems.map((problem, i) => (
               <GsapReveal key={problem.title} delay={Math.min(i * 0.06, 0.24)}>
-                <article className="group flex h-full flex-col rounded-3xl border border-white/10 bg-ink-800/60 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_20px_50px_-20px_rgba(64,128,192,0.4)]">
+                <article className="group flex h-full flex-col border border-white/10 bg-ink-800/60 p-8 transition-all duration-300 hover:border-brand-400/40 hover:bg-ink-800">
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-red-400/90">
                     The problem
                   </span>
-                  <h3 className="mt-3 font-display text-xl font-bold text-white">
+                  <h3 className="mt-3 font-display text-xl font-black uppercase tracking-tight text-cream">
                     {problem.title}
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-slate-400">
+                  <p className="mt-3 text-[15px] leading-relaxed text-zinc-400">
                     {problem.description}
                   </p>
-                  <div className="my-6 h-px bg-gradient-to-r from-brand-400/40 to-transparent" aria-hidden="true" />
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-300">
+                  <div className="my-6 h-px bg-cobalt" aria-hidden="true" />
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-400">
                     Our solution
                   </span>
-                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-slate-300">
+                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-300">
                     {problem.solution}
                   </p>
                 </article>
@@ -177,23 +176,23 @@ export default async function ServicePage({
 
       {/* Deliverables */}
       <section aria-label="What you get" className="border-t border-white/5 bg-ink-900/40">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20">
           <GsapReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">
               Deliverables
             </p>
-            <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 max-w-3xl font-display text-3xl font-black uppercase tracking-tight text-cream sm:text-4xl">
               What&apos;s included
             </h2>
           </GsapReveal>
           <ul className="mt-10 grid gap-4 sm:grid-cols-2">
             {service.deliverables.map((d, i) => (
               <GsapReveal key={d} delay={Math.min(i * 0.05, 0.2)}>
-                <li className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:bg-ink-800 hover:shadow-[0_16px_40px_-20px_rgba(64,128,192,0.45)]">
-                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-500/15 text-brand-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 ">
+                <li className="group flex items-start gap-3 border border-white/10 bg-ink-800/50 p-5 transition-all duration-300 hover:border-brand-400/40 hover:bg-ink-800">
+                  <span className="grid size-6 shrink-0 place-items-center bg-brand-500/15 text-brand-400 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500/25 ">
                     <Check className="size-3.5" />
                   </span>
-                  <span className="text-[15px] text-slate-200">{d}</span>
+                  <span className="text-[15px] text-zinc-200">{d}</span>
                 </li>
               </GsapReveal>
             ))}
@@ -203,19 +202,19 @@ export default async function ServicePage({
 
       {/* Related case study */}
       {related && (
-        <section aria-label="Related work" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+        <section aria-label="Related work" className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20">
           <GsapReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">
               Proof, not promises
             </p>
-            <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 max-w-3xl font-display text-3xl font-black uppercase tracking-tight text-cream sm:text-4xl">
               See it in action
             </h2>
           </GsapReveal>
           <GsapReveal delay={0.1}>
             <Link
               href={`/work/${related.slug}`}
-              className="group mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_20px_50px_-20px_rgba(64,128,192,0.4)] lg:grid-cols-2"
+              className="group mt-10 grid overflow-hidden border border-white/10 bg-ink-800/60 transition-all duration-300 hover:border-brand-400/40 lg:grid-cols-2"
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -227,14 +226,14 @@ export default async function ServicePage({
                 />
               </div>
               <div className="flex flex-col justify-center p-8 sm:p-12">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-400">
                   {related.category}
                 </span>
-                <h3 className="mt-3 font-display text-2xl font-bold text-white transition-colors group-hover:text-brand-200 sm:text-3xl">
+                <h3 className="mt-3 font-display text-2xl font-black uppercase tracking-tight text-cream transition-colors group-hover:text-brand-300 sm:text-3xl">
                   {related.client}: {related.title}
                 </h3>
-                <p className="mt-4 leading-relaxed text-slate-400">{related.description}</p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-300">
+                <p className="mt-4 leading-relaxed text-zinc-400">{related.description}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-400">
                   Read the case study
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </span>
@@ -249,10 +248,10 @@ export default async function ServicePage({
         <section aria-label="Frequently asked questions" className="border-t border-white/5 bg-ink-900/40">
           <div className="mx-auto max-w-4xl px-5 py-16 sm:px-8 sm:py-20">
             <GsapReveal>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-black uppercase tracking-tight text-cream sm:text-4xl">
                 Questions, answered
               </h2>
-              <p className="mt-3 text-sm text-slate-500">Hover a card to reveal the answer.</p>
+              <p className="mt-3 text-sm text-zinc-500">Select a question to reveal the answer.</p>
             </GsapReveal>
             <div className="mt-10">
               <HoverFaq faqs={detail.faqs} />

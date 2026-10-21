@@ -1,56 +1,57 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { STATS } from "@/data/content";
 import Reveal from "@/components/Reveal";
 
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
 function Counter({ value, prefix = "", suffix = "" }: { value: number; prefix?: string; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  const reduce = useReducedMotion();
-  const [display, setDisplay] = useState(0);
 
-  useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setDisplay(value);
+  useIsoLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (prefersReducedMotion()) {
+      el.textContent = `${prefix}${value}${suffix}`;
       return;
     }
-    const duration = 1600;
-    const start = performance.now();
-    let raf: number;
-    const tick = (now: number) => {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setDisplay(Math.round(eased * value));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, value, reduce]);
+    const obj = { n: 0 };
+    const ctx = gsap.context(() => {
+      gsap.to(obj, {
+        n: value,
+        duration: 1.6,
+        ease: "power3.out",
+        scrollTrigger: { trigger: el, start: "top 90%", once: true },
+        onUpdate: () => {
+          el.textContent = `${prefix}${Math.round(obj.n)}${suffix}`;
+        },
+      });
+    }, el);
+    return () => ctx.revert();
+  }, [value, prefix, suffix]);
 
   return (
-    <span ref={ref} className="font-display text-4xl font-bold text-white sm:text-5xl">
-      {prefix}
-      {display}
-      <span className="text-gradient">{suffix}</span>
+    <span ref={ref} className="font-display text-6xl font-black text-cream sm:text-7xl">
+      {prefix}0{suffix}
     </span>
   );
 }
 
+/** Stats — black block, oversized numbers, hairline dividers. */
 export default function Stats() {
   return (
-    <section className="relative py-16 sm:py-20" aria-label="Studio statistics">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section className="bg-black" aria-label="Studio statistics">
+      <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 sm:py-28">
         <Reveal>
-          <dl className="grid grid-cols-2 gap-8 rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800 to-ink-900 p-8 sm:p-12 lg:grid-cols-4">
+          <dl className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
             {STATS.map((stat) => (
-              <div key={stat.label} className="text-center">
+              <div key={stat.label} className="border-l-2 border-cobalt pl-6 sm:pl-8">
                 <dd>
                   <Counter value={stat.value} prefix={stat.prefix ?? ""} suffix={stat.suffix} />
                 </dd>
-                <dt className="mt-2 text-sm text-slate-400">{stat.label}</dt>
+                <dt className="mt-3 text-xs font-bold uppercase tracking-[0.22em] text-zinc-500">{stat.label}</dt>
               </div>
             ))}
           </dl>
@@ -59,3 +60,4 @@ export default function Stats() {
     </section>
   );
 }
+
