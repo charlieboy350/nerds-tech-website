@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Send, CheckCircle2 } from "lucide-react";
 import { SERVICES } from "@/data/content";
 import { trackEvent } from "@/components/GoogleAnalytics";
+import FlatSelect from "./FlatSelect";
 
 const inputClsDark =
   "w-full border-2 border-white/25 bg-black px-4 py-3.5 text-sm text-cream placeholder:text-zinc-500 outline-none focus:border-brand-400";
@@ -117,23 +118,23 @@ export default function ContactForm({
       </div>
       <div>
         <label htmlFor={`${idPrefix}-service`} className={labelCls}>Service</label>
-        <select id={`${idPrefix}-service`} name="service" autoComplete="off" className={inputCls} defaultValue="">
-          <option value="" disabled>Select a service</option>
-          {SERVICES.map((s) => (
-            <option key={s.slug} value={s.title}>{s.title}</option>
-          ))}
-          <option value="not-sure">Not sure yet</option>
-        </select>
+        <FlatSelect
+          id={`${idPrefix}-service`}
+          name="service"
+          tone={tone}
+          placeholder="Select a service"
+          options={[...SERVICES.map((s) => s.title), "Not sure yet"]}
+        />
       </div>
       <div>
         <label htmlFor={`${idPrefix}-budget`} className={labelCls}>Budget</label>
-        <select id={`${idPrefix}-budget`} name="budget" autoComplete="off" className={inputCls} defaultValue="">
-          <option value="" disabled>Select a range</option>
-          <option>Under $2k</option>
-          <option>$2k – $5k</option>
-          <option>$5k – $10k</option>
-          <option>$10k+</option>
-        </select>
+        <FlatSelect
+          id={`${idPrefix}-budget`}
+          name="budget"
+          tone={tone}
+          placeholder="Select a range"
+          options={["Under $2k", "$2k – $5k", "$5k – $10k", "$10k+"]}
+        />
       </div>
       <div className="sm:col-span-2">
         <label htmlFor={`${idPrefix}-message`} className={labelCls}>Project details *</label>
