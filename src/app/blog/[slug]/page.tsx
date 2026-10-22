@@ -185,12 +185,23 @@ export default async function BlogPostPage({
                 <p key={j}>{para}</p>
               ))}
             </div>
-            <ContactButton
-              className="group mt-6 inline-flex whitespace-nowrap items-center gap-2 bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
-            >
-              Talk to us about automation
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </ContactButton>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <ContactButton
+                className="group inline-flex whitespace-nowrap items-center gap-2 bg-brand-400 btn-gradient-rev px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
+              >
+                Talk to us about automation
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+              </ContactButton>
+              {post.serviceLink && (
+                <Link
+                  href={`/services/${post.serviceLink.slug}`}
+                  className="group inline-flex whitespace-nowrap items-center gap-2 border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10"
+                >
+                  Explore {post.serviceLink.label}
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
+            </div>
           </section>
         </GsapReveal>
 

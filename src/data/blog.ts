@@ -13,6 +13,11 @@ export interface BlogFaq {
   a: string;
 }
 
+export interface BlogServiceLink {
+  label: string;
+  slug: string; // /services/<slug>
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -25,6 +30,7 @@ export interface BlogPost {
   faqs: BlogFaq[];
   closingHeading: string;
   closingParagraphs: string[];
+  serviceLink?: BlogServiceLink; // optional internal link rendered in the closing panel
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -1064,6 +1070,114 @@ export const BLOG_POSTS: BlogPost[] = [
       "Every touchpoint either builds the brand or spends it. An identity system makes the building automatic: each ad, proposal, and support email deposits a little more recognition and trust, and that balance pays interest in conversion rates, pricing power, and hiring.",
       "NerdsTech designs identity systems, not just logos, strategy, visual core, voice, guidelines, and the template library your team actually uses. If your brand looks smaller than your ambitions, let's fix the gap.",
     ],
+  },
+  {
+    slug: "answer-engine-optimization-aeo-guide",
+    title: "Answer Engine Optimization (AEO): How to Get AI Search Recommending Your Business",
+    excerpt:
+      "Customers now ask ChatGPT, Gemini, and AI Overviews for recommendations instead of Googling. Here is how answer engine optimization gets your business cited as the answer.",
+    category: "AEO",
+    date: "2026-10-22",
+    readTime: 8,
+    keywords: [
+      "answer engine optimization",
+      "aeo",
+      "ai search optimization",
+      "chatgpt business recommendations",
+      "generative engine optimization",
+      "get cited by ai search",
+      "ai seo for business",
+    ],
+    sections: [
+      {
+        heading: "The Short Answer: What Makes an AI Engine Recommend Your Business",
+        paragraphs: [
+          "AI answer engines recommend businesses they can verify and summarize with confidence. That is the whole game: when someone asks ChatGPT, Gemini, or Perplexity for a recommendation, the engine assembles an answer from sources it trusts, and it names the businesses those sources agree on. If your business is easy to verify, clearly described, and independently vouched for, you get named. If any of that is missing, you do not.",
+          "So the direct answer to how you win AI citations is fourfold. First, publish clear, factual content that answers your buyers' real questions, with the answer up front. Second, keep your business facts identical everywhere they appear: name, services, location, contact details. Third, earn mentions and reviews on third-party sites the models treat as trustworthy. Fourth, mark your pages with structured data so machines parse them without guessing. Do these four consistently and you become the kind of source an answer engine reaches for. Everything else in this guide is how to execute each one.",
+        ],
+      },
+      {
+        heading: "Why AI Search Changed How Customers Find You",
+        paragraphs: [
+          "Search behavior is shifting from lists to answers. A buyer used to type a keyword, scan ten blue links, and do their own research. Now they ask a full question, something like 'who can automate invoicing for a 20-person accounting firm in London,' and the engine answers directly. The research that used to happen across five open tabs now happens inside one response.",
+          "That compresses the funnel. The businesses named in the answer get the inquiry; everyone else is invisible, even if they ranked well in classic search. Ranking first on Google meant you were seen. Being cited in an AI answer means you are recommended, which is a warmer position entirely, and being absent means you were never in the room.",
+          "This is why 'being findable' now means 'being citable.' The engine has to understand who you are, what you do, and whom you serve, and it has to trust the sources saying so. None of that happens by accident. It happens because a business structured its public information so that machines can verify it.",
+        ],
+      },
+      {
+        heading: "What AI Engines Actually Read Before Recommending a Business",
+        paragraphs: [
+          "Modern answer engines combine training data with live retrieval: they fetch fresh pages and synthesize an answer on the spot. That means your current website, your reviews, your directory listings, press mentions, and even forum threads all feed the response. Stale or contradictory information anywhere in that mix weakens you.",
+          "Engines think in entities. Your business is an entity with attributes: services, location, pricing model, reviews, history. When the same facts appear consistently across your site, your Google Business Profile, directories, and social profiles, the engine's confidence in your entity rises. When facts conflict, an old phone number here, a different service list there, confidence drops, and low-confidence entities do not get named.",
+          "There is also a trust hierarchy. Your own site states what you claim; third-party sources state whether anyone agrees. Review platforms, industry directories, press coverage, 'best of' roundups, and client case studies on other sites are the independent votes. Engines weight agreement across sources heavily. One glowing self-description is a claim; five consistent third-party mentions are evidence.",
+        ],
+      },
+      {
+        heading: "The Six AEO Building Blocks",
+        paragraphs: [
+          "AEO work breaks down into six building blocks. They are not exotic, but they are rarely all done well at once, which is exactly why doing them all is a competitive advantage.",
+          "Block one is answer-first content. Write pages that answer one specific buyer question completely, with the direct answer in the opening paragraph and the detail below. This mirrors how engines summarize: they look for clear, extractable answers. A page titled 'How much does it cost to automate a dental practice's appointment reminders' that opens with a straight answer will be cited far more often than a generic services page that buries the point.",
+          "Block two is FAQ content with FAQPage schema. Add genuine frequently asked questions to your service pages and your blog, the questions buyers actually ask on sales calls, and mark them up so engines can extract them reliably. Write for the question once, well; repetitive thin FAQs read as spam to engines just as they did to Google.",
+          "Block three is entity consistency. Audit every place your business facts appear and make them identical: legal and trading names, address, phone, hours, service descriptions. Start with your website and Google Business Profile, then directories, then social profiles. This is unglamorous and it matters enormously.",
+          "Block four is reviews and third-party mentions. Encourage honest reviews on the platforms your buyers actually check, and pursue listings in industry directories and 'best of' roundups. You cannot buy this credibility at scale, but you can earn it steadily, and engines notice the pattern.",
+          "Block five is structured data. Add JSON-LD for Organization, LocalBusiness, Service, FAQPage, and BreadcrumbList so machines parse your facts without guessing. Structured data does not guarantee a citation, but it removes the friction between your content and the engine's understanding.",
+          "Block six is digital PR and citations. Guest posts, podcast appearances, partner case studies, anything that places your business name in trusted third-party content. Each quality mention is another independent vote, and votes compound.",
+        ],
+        list: [
+          "Answer-first content: one buyer question per page, direct answer up front",
+          "FAQ content with FAQPage schema on service pages and the blog",
+          "Entity consistency: identical name, address, phone, hours, services everywhere",
+          "Reviews and third-party mentions on platforms your buyers check",
+          "Structured data: Organization, LocalBusiness, Service, FAQPage, BreadcrumbList",
+          "Digital PR: guest posts, podcasts, partner case studies, industry roundups",
+        ],
+      },
+      {
+        heading: "How to Measure Whether AEO Is Working",
+        paragraphs: [
+          "AEO is measurable, but not with the old dashboard. Rankings do not capture citations, so you need a different scoreboard.",
+          "The core method is prompt testing. Once a week, ask the major engines the exact questions your buyers ask, for example 'who should I hire to automate onboarding for my SaaS company,' and record whether your business is cited, and which sources the engine references. Keep a simple log. Trends over eight to twelve weeks tell you what is working.",
+          "Watch referral traffic too. Analytics platforms increasingly break out ChatGPT, Perplexity, and Gemini as referrers. A rising line there is direct evidence of AI-driven discovery. Also track branded search volume: when engines name you, people search your brand name next, so a lift in branded queries is a downstream signal. Finally, add a 'how did you hear about us' field to your contact form. AI recommendations show up in that field before they show up anywhere else, because buyers remember being recommended even when they do not remember the exact link.",
+        ],
+      },
+      {
+        heading: "Mistakes That Burn an AEO Budget",
+        paragraphs: [
+          "The most common mistake is keyword-stuffed FAQ spam: dozens of thin question pages written for machines. Engines reward the same thing Google eventually rewarded, genuine answers to real questions. One page that truly answers beats ten that pretend to.",
+          "The second is the single thin 'AI page': a lone page declaring 'we do AI' with no substance behind it. Depth beats declarations. Engines cite specifics, not slogans.",
+          "The third is ignoring reviews. A business with no recent reviews looks dormant to both engines and humans. Recency matters: a steady stream of current reviews beats a pile from three years ago.",
+          "The fourth is skipping the boring consistency work. Teams invest in clever content while their listings disagree about the phone number. Fix the facts first; engines trust consistent entities.",
+          "And the last is expecting overnight results. Entity building compounds over months, like reputation. Treat it as reputation work with a measurement loop, not a switch you flip.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How is AEO different from SEO?",
+        a: "SEO optimizes for ranked links; AEO optimizes for being the cited answer inside synthesized responses. They overlap heavily: content quality, structured data, and authority help both. But AEO adds entity consistency, answer-first formatting, and citation tracking across AI engines instead of just rankings. Most businesses need both: classic search still drives significant volume while AI answers increasingly shape the shortlist.",
+      },
+      {
+        q: "How long before AI engines start citing our business?",
+        a: "With consistent work across the six building blocks, many businesses see their first citations within two to four months; heavily contested queries take longer. It compounds: each citation, review, and consistent listing raises confidence in your entity, which makes the next citation easier. Treat the early months as foundation work and measure with weekly prompt testing.",
+      },
+      {
+        q: "Do we need to be listed on every directory?",
+        a: "No. A handful of relevant, high-trust directories and review platforms in your industry beats dozens of thin listings nobody maintains. Consistency matters more than count: five accurate, active profiles outperform fifty outdated ones.",
+      },
+      {
+        q: "Can a small business beat big brands in AI answers?",
+        a: "Often, yes, and more often than in classic SEO. Engines answer the specific question asked, and a small specialist with deep, precise content about that exact question frequently gets cited over a big brand with generic pages. Specificity is the small business's structural advantage: answer narrowly and completely, and the engine will prefer you for those questions.",
+      },
+    ],
+    closingHeading: "Become the Obvious Answer",
+    closingParagraphs: [
+      "AI search is not replacing the need for a great business; it is changing how great businesses get found. The companies winning recommendations right now are not the ones with the biggest ad budgets. They are the ones whose answers are clearest, whose facts check out everywhere, and whose customers vouch for them in public.",
+      "That is exactly what NerdsTech builds with our AEO integration service: entity cleanup, answer-first content, structured data, and the measurement loop that proves the citations are landing. If you want AI engines recommending you the next time a buyer asks, start with a conversation.",
+    ],
+    serviceLink: {
+      label: "AEO Integration",
+      slug: "aeo-integration",
+    },
   },
 ];
 
