@@ -33,7 +33,7 @@ function Counter({ value, prefix = "", suffix = "" }: { value: number; prefix?: 
   }, [value, prefix, suffix]);
 
   return (
-    <span ref={ref} className="font-display text-6xl font-black text-cream sm:text-7xl">
+    <span ref={ref} className="font-display whitespace-nowrap text-5xl font-black leading-none text-cream min-[420px]:text-6xl sm:text-7xl">
       {prefix}0{suffix}
     </span>
   );
@@ -47,7 +47,7 @@ export default function Stats() {
         <Reveal>
           <dl className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
             {STATS.map((stat) => (
-              <div key={stat.label} className="border-l-2 border-cobalt pl-6 sm:pl-8">
+              <div key={stat.label} className="min-w-0 border-l-2 border-cobalt pl-4 sm:pl-8">
                 <dd>
                   <Counter value={stat.value} prefix={stat.prefix ?? ""} suffix={stat.suffix} />
                 </dd>

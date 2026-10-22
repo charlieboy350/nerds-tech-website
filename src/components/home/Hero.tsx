@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <dl data-hero className="mt-20 flex flex-wrap gap-x-16 gap-y-8 border-t border-white/15 pt-10">
+        <dl data-hero className="mt-20 flex gap-x-8 border-t border-white/15 pt-10 sm:gap-x-16">
           {[
             ["12", "services"],
             ["1", "team"],
@@ -72,8 +72,8 @@ export default function Hero() {
           ].map(([value, label]) => (
             <div key={label}>
               <dt className="sr-only">{label}</dt>
-              <dd className="font-display text-5xl font-black text-cream sm:text-6xl">{value}</dd>
-              <dd className="mt-2 text-xs font-bold uppercase tracking-[0.24em] text-zinc-500">{label}</dd>
+              <dd className="font-display text-4xl font-black text-cream sm:text-6xl">{value}</dd>
+              <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-xs sm:tracking-[0.24em]">{label}</dd>
             </div>
           ))}
           <div className="ml-auto hidden items-end lg:flex">
