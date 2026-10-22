@@ -64,19 +64,21 @@ export default function Hero() {
           </div>
         </div>
 
-        <dl data-hero className="mt-20 flex gap-x-8 border-t border-white/15 pt-10 sm:gap-x-16">
-          {[
-            ["12", "services"],
-            ["1", "team"],
-            ["0", "hand-offs"],
-          ].map(([value, label]) => (
-            <div key={label}>
-              <dt className="sr-only">{label}</dt>
-              <dd className="font-display text-4xl font-black text-cream sm:text-6xl">{value}</dd>
-              <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-xs sm:tracking-[0.24em]">{label}</dd>
-            </div>
-          ))}
-          <div className="ml-auto hidden items-end lg:flex">
+        <dl data-hero className="mt-20 border-t border-white/15 pt-10">
+          <div className="flex justify-center gap-x-8 sm:gap-x-16">
+            {[
+              ["12", "services"],
+              ["1", "team"],
+              ["0", "hand-offs"],
+            ].map(([value, label]) => (
+              <div key={label} className="text-center">
+                <dt className="sr-only">{label}</dt>
+                <dd className="font-display text-6xl font-black text-cream sm:text-8xl">{value}</dd>
+                <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-xs sm:tracking-[0.24em]">{label}</dd>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 hidden justify-center lg:flex">
             <Link
               href="/services"
               className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-zinc-400 hover:text-white"
