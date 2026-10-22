@@ -318,7 +318,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <ArrowLeft className="size-5 shrink-0 text-zinc-500 transition-colors group-hover:text-brand-400" />
             <span>
               <span className="block text-xs uppercase tracking-wider text-zinc-500">Previous case study</span>
-              <span className="mt-1 block font-display font-semibold text-white">{prev.client} | {prev.title}</span>
+              <span className="mt-1 block font-display font-semibold text-white text-balance">{prev.client} | {prev.title}</span>
             </span>
           </Link>
           <Link
@@ -327,7 +327,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           >
             <span>
               <span className="block text-xs uppercase tracking-wider text-zinc-500">Next case study</span>
-              <span className="mt-1 block font-display font-semibold text-white">{next.client} | {next.title}</span>
+              <span className="mt-1 block font-display font-semibold text-white text-balance">{next.client} | {next.title}</span>
             </span>
             <ArrowRight className="size-5 shrink-0 text-zinc-500 transition-colors group-hover:text-brand-400" />
           </Link>
