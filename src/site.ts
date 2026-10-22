@@ -16,7 +16,7 @@ export const SITE = {
     x: "https://x.com/nerdstech",
     instagram: "https://instagram.com/nerdstech",
     linkedin: "https://linkedin.com/company/nerdstech",
-    dribbble: "https://dribbble.com/nerdstech",
+    dribbble: "https://dribbble.com/supporte494",
   },
 } as const;
 
