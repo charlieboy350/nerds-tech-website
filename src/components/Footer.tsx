@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="border-t-2 border-white/15 bg-black">
       <div className="mx-auto max-w-[1440px] px-5 pt-16 sm:px-8">
-        <p className="font-display text-[13.5vw] font-black uppercase leading-[0.85] tracking-tight text-cream lg:text-[11rem]" aria-hidden="true">
+        <p className="font-display text-[12.5vw] font-black uppercase leading-[0.85] tracking-tight text-cream lg:text-[11rem]" aria-hidden="true">
           Nerds<span className="text-brand-500">Tech</span>
         </p>
 

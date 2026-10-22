@@ -33,10 +33,10 @@ export default function Hero() {
         </p>
 
         <h1 className="mt-10 font-display font-black uppercase leading-[0.98] tracking-tight">
-          <SplitWords immediate as="span" className="block text-[13.5vw] text-cream sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+          <SplitWords immediate as="span" className="block text-[12vw] text-cream sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
             Put your business on autopilot.
           </SplitWords>
-          <SplitWords immediate delay={0.25} as="span" className="block text-[13.5vw] text-brand-500 sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
+          <SplitWords immediate delay={0.25} as="span" className="block text-[12vw] text-brand-500 sm:text-7xl lg:text-8xl xl:text-[7.5rem]">
             Make your brand impossible to ignore.
           </SplitWords>
         </h1>

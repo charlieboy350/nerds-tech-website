@@ -17,7 +17,7 @@ export default function PageHero({ eyebrow, title, sub }: PageHeroProps) {
         </Reveal>
         <SplitWords
           as="h1"
-          className="mt-8 max-w-5xl font-display text-5xl font-black uppercase leading-[1.0] tracking-tight text-cream sm:text-6xl lg:text-7xl"
+          className="mt-8 max-w-5xl font-display text-4xl font-black uppercase leading-[1.0] tracking-tight text-cream sm:text-6xl lg:text-7xl"
         >
           {title}
         </SplitWords>

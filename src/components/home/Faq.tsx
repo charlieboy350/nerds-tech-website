@@ -16,14 +16,14 @@ function FaqItem({ q, a, open, onToggle, index }: { q: string; a: string; open: 
         aria-controls={`faq-panel-${index}`}
         className="flex w-full items-center justify-between gap-4 py-6 text-left"
       >
-        <span className="font-display text-lg font-black uppercase tracking-tight text-cream sm:text-xl">{q}</span>
-        <motion.span
-          animate={{ rotate: open ? 45 : 0 }}
-          transition={{ duration: 0.25 }}
+        <span className="min-w-0 font-display text-base font-black uppercase tracking-tight text-cream sm:text-xl">{q}</span>
+        <span
           className={`grid size-9 shrink-0 place-items-center ${open ? "bg-cobalt text-white" : "bg-white/10 text-zinc-300"}`}
         >
-          <Plus className="size-4" />
-        </motion.span>
+          <motion.span animate={{ rotate: open ? 45 : 0 }} transition={{ duration: 0.25 }} className="grid place-items-center">
+            <Plus className="size-4" />
+          </motion.span>
+        </span>
       </button>
       <AnimatePresence initial={false}>
         {open && (

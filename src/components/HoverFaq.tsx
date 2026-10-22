@@ -30,14 +30,14 @@ function FaqItem({
         aria-controls={`hover-faq-panel-${index}`}
         className="flex w-full items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-display text-base font-black uppercase tracking-tight text-cream sm:text-lg">{q}</span>
-        <motion.span
-          animate={{ rotate: open ? 45 : 0 }}
-          transition={{ duration: 0.25 }}
+        <span className="min-w-0 font-display text-[15px] font-black uppercase tracking-tight text-cream sm:text-lg">{q}</span>
+        <span
           className={`grid size-8 shrink-0 place-items-center ${open ? "bg-cobalt text-white" : "bg-white/10 text-zinc-300"}`}
         >
-          <Plus className="size-4" />
-        </motion.span>
+          <motion.span animate={{ rotate: open ? 45 : 0 }} transition={{ duration: 0.25 }} className="grid place-items-center">
+            <Plus className="size-4" />
+          </motion.span>
+        </span>
       </button>
       <AnimatePresence initial={false}>
         {open && (

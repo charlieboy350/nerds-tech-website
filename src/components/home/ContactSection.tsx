@@ -30,16 +30,16 @@ export default function ContactSection() {
                     <span className="grid size-11 shrink-0 place-items-center bg-black text-cream">
                       <Mail className="size-5" />
                     </span>
-                    <span>
+                    <span className="min-w-0">
                       <span className="block text-xs font-bold uppercase tracking-wider text-zinc-500">Email</span>
-                      <a href={`mailto:${SITE.email}`} className="mt-1 block font-semibold hover:text-brand-600">{SITE.email}</a>
+                      <a href={`mailto:${SITE.email}`} className="mt-1 block break-all font-semibold hover:text-brand-600">{SITE.email}</a>
                     </span>
                   </li>
                   <li className="flex items-start gap-4">
                     <span className="grid size-11 shrink-0 place-items-center bg-black text-cream">
                       <Phone className="size-5" />
                     </span>
-                    <span>
+                    <span className="min-w-0">
                       <span className="block text-xs font-bold uppercase tracking-wider text-zinc-500">Phone</span>
                       <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-semibold hover:text-brand-600">{SITE.phone}</a>
                     </span>
@@ -48,7 +48,7 @@ export default function ContactSection() {
                     <span className="grid size-11 shrink-0 place-items-center bg-black text-cream">
                       <MapPin className="size-5" />
                     </span>
-                    <span>
+                    <span className="min-w-0">
                       <span className="block text-xs font-bold uppercase tracking-wider text-zinc-500">Location</span>
                       <span className="mt-1 block font-semibold">{SITE.address}</span>
                     </span>
