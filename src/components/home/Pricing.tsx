@@ -37,7 +37,7 @@ export default function Pricing() {
                     <span className="font-display text-5xl font-black">{tier.price}</span>
                     <span className={`ml-2 text-sm ${tier.featured ? "text-white/70" : "text-zinc-500"}`}>{tier.period}</span>
                   </p>
-                  <ul className="mt-8 flex flex-1 flex-col items-center space-y-3.5 lg:items-stretch">
+                  <ul className="mt-8 flex flex-1 flex-col items-start space-y-3.5 text-left lg:items-stretch">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 text-sm font-medium">
                         <span
