@@ -22,12 +22,12 @@ export default function Pricing() {
             {PRICING.map((tier, i) => (
               <Reveal key={tier.name} delay={i * 0.08}>
                 <article
-                  className={`flex h-full flex-col border-2 p-8 ${
+                  className={`flex h-full flex-col items-center border-2 p-8 text-center lg:items-stretch lg:text-left ${
                     tier.featured ? "border-cobalt bg-cobalt text-white" : "border-black bg-cream"
                   }`}
                 >
                   {tier.featured && (
-                    <p className="mb-5 inline-block self-start bg-black px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white">
+                    <p className="mb-5 inline-block self-center bg-black px-3 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white lg:self-start">
                       Most popular
                     </p>
                   )}
@@ -37,7 +37,7 @@ export default function Pricing() {
                     <span className="font-display text-5xl font-black">{tier.price}</span>
                     <span className={`ml-2 text-sm ${tier.featured ? "text-white/70" : "text-zinc-500"}`}>{tier.period}</span>
                   </p>
-                  <ul className="mt-8 flex-1 space-y-3.5">
+                  <ul className="mt-8 flex flex-1 flex-col items-center space-y-3.5 lg:items-stretch">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 text-sm font-medium">
                         <span
