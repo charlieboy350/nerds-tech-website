@@ -69,7 +69,9 @@ Selected work is published at https://www.nerdstech.co/work with the problem, th
 
 ## Blog
 
-The blog at https://www.nerdstech.co/blog publishes practical guides on SaaS automation, AI support, onboarding, churn prevention, and the automation roadmap.
+The blog at https://www.nerdstech.co/blog publishes practical guides on SaaS automation, AI support, onboarding, churn prevention, the automation roadmap, and website security.
+
+- [AI-Secure Websites: How We Build Sites With Multiple Layers of Safety](https://www.nerdstech.co/blog/ai-secure-websites-multiple-layers-safety): A secure website is not one tool or one language. It is multiple independent layers of safety, safe code, data structured for safety, a hardened server, AI as a guard, and process, so if one layer fails, the next one holds. Built in any language, including PHP. Answers: is PHP unsafe after recent vulnerabilities, does AI secure a website automatically, how many layers a small business website needs, and whether an existing website can be made AI-secure.
 
 ## Contact
 

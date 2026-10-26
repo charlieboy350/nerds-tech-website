@@ -1660,12 +1660,15 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 8,
     keywords: [
       "secure website development",
+      "how to build a secure website",
+      "secure website development services",
       "website security layers",
       "AI website security",
       "PHP security",
       "secure web development",
       "website data protection",
       "website security audit",
+      "website security audit services",
     ],
     sections: [
       {
