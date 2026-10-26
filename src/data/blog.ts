@@ -1179,6 +1179,605 @@ export const BLOG_POSTS: BlogPost[] = [
       slug: "aeo-integration",
     },
   },
+  {
+    slug: "custom-ecommerce-vs-shopify",
+    title: "Custom Ecommerce vs Shopify: What Actually Makes Sense for Your Business",
+    excerpt:
+      "Choosing between Shopify and a custom-built store is really a question about who maintains your store for the next five years. Here is the honest breakdown of costs, limits, and when each one wins.",
+    category: "E-commerce",
+    date: "2026-10-23",
+    readTime: 8,
+    keywords: [
+      "custom ecommerce website vs shopify",
+      "shopify store cost",
+      "shopify vs custom website",
+      "migrate to shopify",
+      "ecommerce development cost",
+      "shopify for small business",
+      "headless shopify",
+    ],
+    sections: [
+      {
+        heading: "The Short Answer: Shopify for Most, Custom for the Rest",
+        paragraphs: [
+          "If you sell standard products through a standard checkout, Shopify is almost certainly the right choice. It handles hosting, security, payment compliance, and checkout optimization out of the box, for a monthly fee that is a fraction of what a development team costs. The honest rule of thumb: choose Shopify unless you have a specific, concrete reason it cannot do what you need.",
+          "A custom ecommerce build makes sense when your business breaks the standard mold: complex B2B quoting, unusual subscription logic, a multi-vendor marketplace, or deep integration with an ERP or warehouse system that off-the-shelf apps cannot reach. In those cases the platform becomes the constraint, and owning your code is worth the investment.",
+          "Frame the decision as a maintenance question, not a features question. With Shopify, Shopify's engineers maintain the platform while you run your business. With a custom store, you or your agency maintain everything, forever. That tradeoff decides the answer for most businesses before features even enter the picture.",
+        ],
+      },
+      {
+        heading: "What Shopify Really Gives You (and Quietly Bills You For)",
+        paragraphs: [
+          "Shopify's pitch is simplicity, and it mostly delivers. You get a hosted store with no server to manage, PCI compliance handled for you, a checkout refined across millions of stores, and an app store with thousands of add-ons for reviews, loyalty, subscriptions, and shipping. For a standard retail business, you can be selling within days, not months.",
+          "The costs that surprise owners are the ones nobody puts in the launch quote. First, transaction fees: Shopify takes a cut of every sale when you use an external payment gateway, and the fee schedule depends on your plan. Second, apps: the base platform covers the basics, but review widgets, advanced search, loyalty programs, and subscription billing are usually paid apps at roughly ten to fifty dollars a month each, and a serious store often runs five to ten of them. Third, themes: a good premium theme costs a few hundred dollars one time, and heavy customization means hiring a developer anyway.",
+          "The biggest cost is the one you never see on an invoice: you are renting, not owning. Stop paying and the store stops. If Shopify raises prices or changes a policy, your options are to accept it or rebuild elsewhere. For most small and mid-size businesses that tradeoff is fine, but go in with your eyes open.",
+        ],
+        list: [
+          "Monthly plan: standard plans run roughly $39 to $399 per month at current pricing",
+          "Transaction fees apply when you use an external payment gateway instead of Shopify Payments",
+          "App stack: a typical serious store spends $50 to $300 per month on paid apps",
+          "Setup: DIY costs nothing but your time; agency setups commonly run $2,000 to $10,000",
+          "All figures are estimates, check current pricing before budgeting",
+        ],
+      },
+      {
+        heading: "When a Custom Ecommerce Build Is the Right Call",
+        paragraphs: [
+          "Custom wins when your requirements are genuinely unusual. B2B is the classic case: tiered pricing per customer, quote-based checkout, negotiated contracts, and purchase orders do not fit a consumer checkout without expensive workarounds. Marketplaces are another: multi-vendor payouts, split commissions, and vendor dashboards need purpose-built software.",
+          "Deep systems integration is the third case. If your store must talk to a warehouse management system, an ERP like NetSuite or SAP, or a product configurator with thousands of rules, custom code gives you full control over the data flow. Off-the-shelf apps can bridge simple gaps, but they become fragile at real complexity.",
+          "There is also a middle path worth knowing: headless Shopify. You keep Shopify as the commerce engine for products, checkout, and payments, but build a fully custom storefront with a modern framework like Next.js. You get design freedom and top-tier performance while Shopify handles the boring, critical parts. It costs more than a standard theme build, but far less than a from-scratch platform, and it is how many serious brands get the best of both worlds.",
+        ],
+        list: [
+          "B2B quoting, contracts, and customer-specific pricing",
+          "Multi-vendor marketplaces with split payouts",
+          "Deep ERP, WMS, or configurator integration",
+          "Brands where storefront design and speed are the competitive edge: consider headless Shopify first",
+        ],
+      },
+      {
+        heading: "The Honest Cost Comparison",
+        paragraphs: [
+          "Talk in total cost of ownership, not launch price. A DIY Shopify store can launch for the cost of a monthly plan and a weekend of work. A professionally designed Shopify store from an agency typically lands in the low thousands to low five figures, depending on design scope, data migration, and app configuration. Then comes the ongoing stack: plan, apps, and transaction fees, often a few hundred to a couple thousand dollars a month at real volume.",
+          "A custom ecommerce build starts much higher. A solid custom storefront, built properly with testing, admin tooling, and integrations, realistically starts in the mid five figures and climbs from there, and that is before hosting, monitoring, security updates, and the maintenance retainer that keeps it healthy. As a rough estimate, budget ongoing maintenance at around fifteen to twenty percent of build cost per year, because software rots if nobody tends it.",
+          "The crossover point is volume plus complexity. At modest volume with standard needs, Shopify is cheaper every single year. Custom only wins on cost when the monthly app stack and workarounds for a complex business exceed the amortized cost of owning your platform, which usually means serious scale or genuinely unusual requirements. Be suspicious of any quote that only shows year-one numbers.",
+        ],
+      },
+      {
+        heading: "Migrating to Shopify: What the Move Actually Involves",
+        paragraphs: [
+          "Most migrations come from WooCommerce, from Etsy-only sellers wanting their own storefront, or from aging Magento builds. The product and customer data transfer is the easy part: CSV exports and import tools handle the bulk of it. Order history usually transfers only partially, so plan to keep the old system readable for lookups, refunds, and warranty claims.",
+          "The part that actually matters is URLs. Every product and category URL will change, and every old URL needs a 301 redirect to its new home, or your Google rankings take the hit. This is the number one migration mistake: teams move the catalog perfectly and forget the redirects, then watch organic traffic fall for months. Map every URL before launch, not after.",
+          "Expect a design rebuild rather than a pixel transfer: themes do not port across platforms. App functionality needs re-mapping too; whatever your reviews plugin or subscription tool was, find its Shopify equivalent before cutover day. A realistic timeline for a mid-size catalog is four to eight weeks including testing. Run the new store in parallel, place test orders end to end, and cut over DNS only when checkout, email, and fulfillment all work.",
+        ],
+      },
+      {
+        heading: "Five Questions That Settle the Decision",
+        paragraphs: [
+          "If you are still torn, answer these five questions honestly. They cut through the feature comparisons faster than any demo.",
+        ],
+        list: [
+          "How unusual is your checkout? Standard products, standard prices, standard shipping: Shopify. Quotes, contracts, tiered B2B pricing: custom.",
+          "Who maintains this in year two? If the answer is nobody on staff, hosted wins. A custom store without a maintenance plan is a liability.",
+          "What does year three cost, not year one? Add plan, apps, fees, and agency support. Compare against amortized custom build plus hosting and retainer.",
+          "How much do design and speed matter to your brand? If the storefront is the brand, headless Shopify or custom may justify the premium.",
+          "What happens if the platform changes the rules? With Shopify you adapt or migrate. With custom you own the risk and the roadmap.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much does a professional Shopify store cost to build?",
+        a: "As an estimate: a clean theme-based build with professional design polish, product setup, and basic app configuration typically runs in the low thousands to low five figures in USD, depending on catalog size and customization. Complex builds with custom theme development, migrations, and integrations climb higher. The bigger number is ongoing: plan, apps, and fees often total a few hundred dollars a month at real volume, so budget for that before you commit.",
+      },
+      {
+        q: "Will moving to Shopify hurt our Google rankings?",
+        a: "It will if you skip the redirect map, and it will not if you do it properly. Rankings live at URLs, so every old URL needs a 301 redirect to its new equivalent, plus updated sitemaps and a re-verified Search Console property. Done carefully, most stores recover within weeks and many improve, because Shopify's speed and mobile checkout lift engagement signals. The danger is entirely in rushed migrations with no redirect plan.",
+      },
+      {
+        q: "Can Shopify handle B2B and wholesale?",
+        a: "Up to a point. Shopify Plus includes B2B features like company accounts, price lists, and quantity rules, but at a much higher monthly cost, and truly custom quoting workflows still strain the model. If wholesale is your core business rather than a side channel, a custom build or a B2B-specific platform usually fits better. If wholesale is a small share of revenue, Shopify's B2B features are probably enough.",
+      },
+      {
+        q: "Can we start on Shopify and go custom later?",
+        a: "Yes, and it is a sensible path. Many brands start on standard Shopify to validate the business, then move to headless Shopify or a custom build when volume justifies it. Product data, customer lists, and order history export cleanly, and the main cost of a later move is the redesign, not data loss. Starting simple does not trap you; it defers the bigger investment until the revenue exists to pay for it.",
+      },
+    ],
+    closingHeading: "Pick the Platform, Then Build It Right",
+    closingParagraphs: [
+      "The platform debate is worth an afternoon, not a quarter. For most businesses the answer is Shopify, set up properly with clean data, correct redirects, and apps chosen for need rather than novelty. For complex B2B, marketplaces, and deep integrations, custom is worth every penny, built by a team that will still be there in year three.",
+      "NerdsTech builds both: conversion-focused Shopify stores and custom ecommerce on modern stacks like Next.js, including headless Shopify when you want the best of both. If you are choosing a platform or planning a migration, get in touch and we will map the honest costs and the right architecture before you spend a dollar.",
+    ],
+    serviceLink: {
+      label: "Web Design & Development",
+      slug: "web-design-development",
+    },
+  },
+  {
+    slug: "ai-automation-real-estate-agencies",
+    title: "AI Automation for Real Estate Agencies: Capture Every Lead, Follow Up Automatically",
+    excerpt:
+      "Real estate inquiries arrive after hours, on weekends, and mid-showing. Here is how AI automation gives every lead an instant, helpful response and follow-up that never slips, without hiring extra staff.",
+    category: "AI Automation",
+    date: "2026-10-24",
+    readTime: 8,
+    keywords: [
+      "ai automation for real estate",
+      "real estate lead automation",
+      "ai chatbot for real estate agents",
+      "automated follow up real estate leads",
+      "real estate crm automation",
+      "real estate lead routing",
+      "after hours lead capture real estate",
+    ],
+    sections: [
+      {
+        heading: "The Short Answer: Automate Capture and Follow-Up, Keep Agents Closing",
+        paragraphs: [
+          "For a real estate agency, AI automation means every inquiry gets an instant, helpful response and a consistent follow-up sequence, day or night, without adding staff. The direct answer to whether it is worth the investment: yes, when you start where the money is actually being lost, which is almost always the same two places. Inquiries that arrive after hours or while every agent is in a showing, and follow-ups that never happen because everyone is busy.",
+          "This is not about replacing agents. In practice, the AI handles the parts of the job that are high-volume, time-sensitive, and rule-based: acknowledging inquiries in seconds, answering common questions about listings, asking two or three qualifying questions, routing hot prospects to the right agent, and keeping long-term leads warm with scheduled check-ins. Your agents stay in charge of what humans do best: showings, negotiation, and closing.",
+          "The agencies that get the most from automation start small: one intake channel, one follow-up sequence, one clear owner. Once that runs reliably, expand. This guide covers the practical setup, typical costs, and the mistakes that waste money.",
+        ],
+      },
+      {
+        heading: "The Lead Problem: Speed and Follow-Up Decide Who Wins",
+        paragraphs: [
+          "Real estate is a speed business wearing a relationship disguise. Buyers browse listings at 10 PM on a Tuesday, open-house visitors text questions on Sunday afternoons, and referral calls land while your agents are mid-showing. The uncomfortable truth is that most teams respond in hours, not minutes, and a meaningful share of inquiries never get a response at all.",
+          "Follow-up is the second leak. The agent who answers first and follows up consistently usually controls the relationship. Yet manual follow-up dies under volume. An agent juggling fifteen active buyers and three listings simply does not call back every cold lead five times.",
+          "This is exactly the shape of problem automation solves well. The work is repetitive, time-sensitive, and rarely requires judgment: respond instantly, log the details, qualify, book the viewing or hand off. Every hour a hot lead waits is an hour a competitor might use.",
+        ],
+      },
+      {
+        heading: "What AI Automation Actually Looks Like in an Agency",
+        paragraphs: [
+          "Concretely, an AI assistant sits on your website, your listing pages, and your messaging channels, trained on your actual inventory and FAQs. When a buyer asks about a specific listing, it answers from your data: price, beds and baths, square footage, features, and viewing availability. It answers only from data it has; anything it cannot answer goes to an agent with the full conversation attached.",
+          "Behind the scenes, the automation routes and records. New inquiries flow into your CRM automatically, tagged by source and interest. Hot signals, a buyer asking for a private viewing this week, a seller requesting a valuation, reach the right agent immediately: by area, by availability, or by round-robin. Every interaction is logged, so the agent sees the whole conversation before calling back, never a bare phone number with no context.",
+          "The third piece is follow-up sequences that run themselves. New inquiries get a structured check-in cadence. Cold leads from six months ago get revived with a market update. Nothing depends on an agent remembering to call on a Tuesday morning; the system remembers, and the agent steps in where the human touch matters.",
+        ],
+        list: [
+          "Instant inquiry response on your website, listings, and messaging channels, 24/7",
+          "Listing Q&A trained on your real inventory, with honest hand-off when it does not know",
+          "Smart routing: hot buyers and valuation requests reach the right agent in seconds",
+          "Scheduled follow-up sequences for new, cold, and past-client leads",
+        ],
+      },
+      {
+        heading: "The Three Automations to Start With",
+        paragraphs: [
+          "Start with after-hours and overflow capture. Connect the assistant to your website and listing channels so no inquiry waits. Even during business hours this pays: when every agent is in a showing or on a call, the assistant acknowledges the lead, answers the easy questions, and books or routes the rest. This is the highest-return automation in the stack because it protects revenue you are losing today.",
+          "Second, automate qualification and routing. A short conversational exchange establishes whether the lead is a buyer or seller, their timeline, their budget or property details, and their preferred contact method. That record flows into the CRM already qualified, and hot leads trigger an instant alert to the on-duty agent. Every call starts informed.",
+          "Third, put follow-up on rails. Build a sensible sequence for each lead type: new inquiries, viewing attendees, valuation requests, and long-term nurtures. Automation handles the cadence; the agent handles the conversations that matter.",
+        ],
+      },
+      {
+        heading: "What It Costs and What It Takes",
+        paragraphs: [
+          "Treat these as planning ranges, not quotes. A focused pilot, one intake channel plus one follow-up sequence, typically lands in the low four figures as a one-time build, with modest ongoing costs for the AI service and maintenance. A fuller rollout across website, listings, messaging, and CRM integration runs higher, but it is still a fraction of one hire's annual cost, and unlike a hire it works every night, weekend, and holiday.",
+          "On timing, expect a few weeks from kickoff to a live pilot: discovery and listing-data setup, then build, testing, and a soft launch. The part agencies underestimate is not the build, it is the data. Your listing feed, your FAQ answers, your routing rules, and your brand voice need to be written down clearly. Good automation is mostly clear business rules.",
+          "Measure it from day one. The three numbers that matter: response time (inquiry to first helpful reply), capture rate (inquiries answered versus those that used to slip), and agent hours saved on qualification and logging. If response time drops from hours to seconds and nothing falls through the cracks, the investment is paying.",
+        ],
+        list: [
+          "Pilot scope: one intake channel, one follow-up sequence, live in weeks not months",
+          "Budget framing: a fraction of one hire's annual cost, working every night and weekend",
+          "The hidden work: clean listing data, written FAQs, and clear routing rules matter more than the tech",
+          "All figures are estimates; get a fixed quote for your scope before committing",
+        ],
+      },
+      {
+        heading: "What AI Cannot Do, and Why Agents Are Still the Closer",
+        paragraphs: [
+          "Set expectations honestly and the technology works better. AI cannot read a nervous first-time buyer, negotiate a delicate offer, or walk a seller through pricing the family home. It should never pretend to. The best setups are explicit about the hand-off: the assistant introduces itself as the agency's assistant, answers what it knows, and brings in a human for the rest.",
+          "Compliance deserves special care. Housing is a regulated, sensitive domain, so fair housing law in the US (and equivalents elsewhere) must be designed in from the start: the assistant answers factually about listings and availability, never steers buyers toward or away from areas based on protected characteristics, and never offers opinions about neighborhoods. Build these constraints into the system and test them deliberately before launch.",
+          "Data quality is the other honest constraint. An assistant trained on stale listings will confidently quote last month's price. Keep your listing feed current, give the assistant an explicit fallback for unknown details, and have an agent review sample conversations weekly at first. Trust is built by catching small errors early, not by assuming the system is perfect.",
+        ],
+      },
+      {
+        heading: "How to Launch Without Disrupting the Team",
+        paragraphs: [
+          "Failed launches usually share one trait: a big-bang rollout nobody asked for. Do the opposite. Pick the channel where missed leads hurt most, usually the website or your main listing portal, and run the pilot there for a month. Keep the existing process running in parallel so the team can compare results instead of fearing a replacement.",
+          "Involve two or three agents early as co-designers, not test subjects. They know the ten questions buyers actually ask, the edge cases that matter, and the wording that sounds like your agency. An assistant tuned by your best agents sounds like your best agents; one tuned in a vacuum sounds like a call center.",
+          "Then expand one direction at a time: a second channel, another follow-up sequence, a deeper CRM integration. Each step reuses what the pilot proved. Within a quarter, the agency has a lead system that never sleeps, and the agents have their evenings back for the work that actually closes deals.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Will AI replace our agents?",
+        a: "No. It replaces the waiting, the missed calls, and the forgotten follow-ups, not the agents. In successful deployments, agents do more of the work only humans can do: viewings, negotiations, and relationships. Think of it as giving each agent a tireless assistant, not a substitute.",
+      },
+      {
+        q: "How does it connect to our existing CRM?",
+        a: "Through standard integrations or API connections with the major real estate CRMs. New inquiries arrive as qualified, tagged records with the full conversation attached, so agents see context before they call. If your CRM is unusual or heavily customized, that is a discovery question to settle before the build, not after.",
+      },
+      {
+        q: "Can it answer questions about specific listings?",
+        a: "Yes, when it is trained on your real listing data: price, beds, baths, size, features, availability. It answers only from data it has, and hands off gracefully when it does not know. Stale data is the main risk, so the listing feed needs to stay current.",
+      },
+      {
+        q: "What about fair housing and compliance?",
+        a: "Housing is a regulated domain, so compliance has to be designed in, not bolted on. The assistant should answer factually about listings and availability, never steer buyers based on protected characteristics, and never offer opinions about neighborhoods. These constraints belong in the system design and in testing before launch.",
+      },
+      {
+        q: "How long before we see results?",
+        a: "Response-time improvements are immediate: the first night the system is live, after-hours inquiries get answered. Capture-rate and pipeline effects show over four to eight weeks as follow-up sequences run their course. Treat the first month as calibration: review conversations weekly, tune answers and routing, then expand once the pilot beats the manual process.",
+      },
+    ],
+    closingHeading: "Stop Losing Leads to the Clock",
+    closingParagraphs: [
+      "Every agency knows the leaks: the 11 PM inquiry nobody sees until morning, the viewing attendee nobody calls back, the valuation request sitting in an inbox. AI automation does not ask your team to work harder or hire faster. It simply makes sure the basics happen every time, instantly, for every lead.",
+      "NerdsTech builds exactly these systems for service businesses: an AI assistant trained on your real inventory, routed into your CRM, with follow-up sequences that never forget. If after-hours leads are slipping through your fingers, start with a conversation. Consultations are free.",
+    ],
+    serviceLink: {
+      label: "AI Automation",
+      slug: "ai-automation",
+    },
+  },
+  {
+    slug: "wordpress-to-nextjs-rebuild",
+    title: "Should You Rebuild Your WordPress Site in Next.js? A Business Owner's Decision Guide",
+    excerpt:
+      "WordPress is not broken, but for many growing businesses it stops being the cheapest option. Here is how to decide whether a Next.js rebuild will pay for itself, and when to stay put.",
+    category: "Web Development",
+    date: "2026-10-25",
+    readTime: 8,
+    keywords: [
+      "wordpress to nextjs",
+      "rebuild wordpress site",
+      "nextjs vs wordpress",
+      "wordpress migration",
+      "custom website development",
+      "website rebuild cost",
+      "business website performance",
+    ],
+    sections: [
+      {
+        heading: "The Short Answer: Rebuild When WordPress Costs More Than It Saves",
+        paragraphs: [
+          "If your WordPress site is fast, secure, easy to update, and bringing in enquiries, do not rebuild it. A rebuild is worth doing when the site has become a drag on the business: pages load slowly, plugin conflicts break things, security updates feel risky, or every small change needs a developer to untangle a page builder. At that point WordPress is no longer saving you money. It is quietly taxing every visitor, every enquiry, and every hour your team spends fighting it.",
+          "Next.js is a modern framework for building websites with code rather than plugins and page builders. A site built in Next.js is typically faster out of the box, harder to break, and easier to shape exactly around your sales process. The trade-off is real: you give up the do-it-yourself plugin ecosystem and you need developers for changes. This post helps you weigh that trade honestly, so you rebuild for a business reason, not because a new technology sounds appealing.",
+        ],
+      },
+      {
+        heading: "Where WordPress Starts Costing You Money",
+        paragraphs: [
+          "WordPress earned its popularity for good reasons. It is cheap to start, anyone can publish a page, and there is a plugin for almost everything. The costs arrive later, and they rarely appear as one big bill. They show up as a dozen small ones: a premium theme subscription, five plugin subscriptions, a maintenance retainer, and emergency fixes when an update breaks the checkout form or the contact page.",
+          "Performance is usually the first visible problem. Each plugin adds code that every visitor's browser must load, and page builders add layers of markup on top of your content. The result is a site that looks fine on your office connection but loads slowly on a customer's phone. Slow pages lose visitors before they read a word, and they also rank worse in search, since Google treats loading speed as a ranking factor.",
+          "Security is the second hidden cost. WordPress itself is well maintained, but its popularity makes it the most targeted platform on the web, and every plugin is another door into your site. Keeping everything updated is essential, yet updates are exactly what break things on heavily customized sites. Many owners end up in an uncomfortable middle ground: afraid to update, and afraid not to.",
+        ],
+        list: [
+          "Plugin and theme subscriptions that stack up year after year",
+          "Slow mobile load times caused by page builder markup and plugin bloat",
+          "Update anxiety: patching risks breaking the site, not patching risks security",
+          "Design limits: the site starts to look like its theme instead of your brand",
+        ],
+      },
+      {
+        heading: "What Actually Changes With a Next.js Rebuild",
+        paragraphs: [
+          "A Next.js site is built for your business, not assembled from generic parts. There is no theme to fight and no plugin layer between your content and your visitor. Pages are rendered efficiently and served fast, which usually means noticeably quicker load times on mobile, where most of your customers now find you. That speed is not a vanity metric: it affects how long people stay, how many enquire, and how search engines judge the site.",
+          "Security improves for a structural reason. A Next.js marketing site has no public admin login for attackers to hammer and no plugin ecosystem to keep patched. The attack surface is far smaller, and the site does not depend on dozens of third-party codebases staying secure. That does not make it invulnerable, nothing is, but it removes the most common WordPress failure mode entirely.",
+          "Flexibility is the third change, and for growing businesses it is often the deciding one. Want a quote calculator, a booking flow, a customer portal, or a custom integration with your CRM? In WordPress each of these means another plugin, with its own limits and subscription. In a custom build, each feature is designed around your process. The site stops being a brochure that constrains you and becomes a tool that fits how you actually sell.",
+        ],
+      },
+      {
+        heading: "When You Should Keep WordPress",
+        paragraphs: [
+          "Honesty matters here, because a rebuild is not right for everyone. If your site is mainly a simple brochure, your team publishes content weekly without developer help, and performance and security are under control, WordPress remains a sensible, economical choice. Moving to a custom build would add cost and dependence on developers without a matching return.",
+          "The same applies if your budget is tight and your site is not actively losing you business. A rebuild is an investment, and it should wait until the current site's problems are measurable: lost enquiries, slow pages, repeated breakage, or a redesign your theme cannot support. If none of those are true, spend the money on better content and better marketing instead, and revisit the question when the site starts holding you back.",
+          "There is also a middle path worth knowing about. Some businesses keep WordPress as a content hub and rebuild only the public-facing pages in a modern framework, a setup often called headless WordPress. It preserves your team's editing workflow while fixing the speed problem. It adds complexity, so it suits larger sites better than small ones, but it proves the choice is not all or nothing.",
+        ],
+      },
+      {
+        heading: "What a Rebuild Really Involves",
+        paragraphs: [
+          "A typical rebuild runs in four phases. Discovery first: your pages, your content, your search rankings, and the journeys that actually bring enquiries, mapped before anything is designed. Design second: a layout built around your brand and your conversion goals, not a theme's demo content. Build third: the site coded, tested across devices, and checked for speed and accessibility. Migration last: content moved, old URLs redirected to new ones, and search visibility protected through launch.",
+          "Redirects deserve emphasis, because they are where careless rebuilds do real damage. If your site has pages ranking on Google or linked from other sites, every important old URL needs a proper redirect to its new home. Done right, a rebuild preserves and usually improves search visibility. Done carelessly, it can cost months of rankings, so ask any agency you talk to how they handle migration before you ask about design.",
+          "On timing, a small business site rebuild often takes roughly four to eight weeks from discovery to launch, while larger sites with custom features take longer. Treat any estimate as an estimate: scope, content readiness, and feedback speed all move the date. What matters more than the exact week count is that the process includes testing, redirects, and a launch checklist, not just a design handoff.",
+        ],
+        list: [
+          "Discovery: audit pages, rankings, and the journeys that drive enquiries",
+          "Design: built around your brand and conversion goals, not a theme demo",
+          "Build: coded, tested on real devices, checked for speed and accessibility",
+          "Migration: content moved, URLs redirected, search visibility protected",
+        ],
+      },
+      {
+        heading: "Five Questions That Settle the Decision",
+        paragraphs: [
+          "If you are still undecided, work through these five questions with your team. They cut through the technology debate and focus on what the site does for the business. If you answer yes to three or more, a rebuild is probably worth pricing. If you answer yes to none, your money is better spent elsewhere for now.",
+        ],
+        list: [
+          "Do visitors complain the site is slow, or do analytics show high bounce rates on mobile?",
+          "Has a plugin or theme update broken something important in the last year?",
+          "Does the site limit what you want to offer, such as a calculator, portal, or booking flow?",
+          "Are you paying for several plugins or maintenance just to keep the site standing still?",
+          "Would a faster, more credible site plausibly win you enquiries you are currently losing?",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Will we lose our Google rankings if we rebuild?",
+        a: "Not if migration is handled properly. Every important old URL should redirect to its new equivalent, page titles and content should carry over, and the new site should launch fast and technically clean. Many businesses see rankings improve after a rebuild because speed and structure improve. Rankings are lost when redirects are skipped, so confirm migration is included in any quote.",
+      },
+      {
+        q: "Can our team still update the site without developers?",
+        a: "Yes, for content. A custom build can include a simple content system for editing text, images, and pages. What changes is structural work: new page templates, new features, and design changes need a developer. If your team publishes articles and updates pages weekly, that workflow stays easy. If they currently rebuild layouts with a page builder, that specific freedom is the trade you are making.",
+      },
+      {
+        q: "Is Next.js only for large companies?",
+        a: "No. It suits any business whose website is a serious sales tool rather than a simple brochure. Small businesses with high-value enquiries often benefit most, because a faster site and a tailored enquiry flow can pay for the build quickly. The question is not company size, it is how much the website matters to revenue.",
+      },
+      {
+        q: "How much does a WordPress to Next.js rebuild cost?",
+        a: "It depends on pages, features, and migration complexity, so be wary of any fixed number given before discovery. As a guide, a small business rebuild with a reputable studio is a four-figure to low five-figure investment, not a commodity purchase. Ask for a fixed quote after discovery, and compare what migration, testing, and launch support are included, not just the headline price.",
+      },
+      {
+        q: "How long will we be without a website during the rebuild?",
+        a: "You will not be. The new site is built alongside the live one, and the switch happens at launch, usually with minimal downtime. Your current site keeps running and bringing in enquiries throughout the project, which is one more reason to plan migration carefully rather than rushing it.",
+      },
+    ],
+    closingHeading: "Make the Decision on Evidence, Not Fashion",
+    closingParagraphs: [
+      "WordPress built the modern web for small businesses, and it still serves many of them well. But when plugins pile up, pages slow down, and the site starts shaping your business instead of serving it, the cheapest option has quietly become the expensive one. That is the moment a rebuild stops being a technology upgrade and becomes a business decision.",
+      "If the five questions above sound familiar, it is worth a conversation. NerdsTech builds custom Next.js websites for businesses outgrowing WordPress, with migration, redirects, and launch handled as part of the project. Get in touch through the contact form for a straight answer on whether a rebuild would pay for your business, and if it would not, we will tell you that too.",
+    ],
+    serviceLink: {
+      label: "Web Design & Development",
+      slug: "web-design-development",
+    },
+  },
+  {
+    slug: "custom-web-app-cost-guide",
+    title: "How Much Does a Custom Web App Cost? A Business Owner's Pricing Guide",
+    excerpt:
+      "A custom web app typically costs between $5,000 and $100,000 or more, depending on scope, integrations, and who builds it. Here is what drives the price, what to watch out for, and how to get a quote you can trust.",
+    category: "Web Development",
+    date: "2026-10-26",
+    readTime: 8,
+    keywords: [
+      "custom web app cost",
+      "web app development pricing",
+      "how much does a web app cost",
+      "web application development cost",
+      "custom software cost",
+      "web app quote",
+      "hire web app developer",
+    ],
+    sections: [
+      {
+        heading: "The Short Answer: It Depends on Scope, Not on Hours Alone",
+        paragraphs: [
+          "A custom web app typically costs between $5,000 for a simple tool with a few screens and $100,000 or more for a complex platform with multiple user roles, integrations, and compliance requirements. Most small and mid-sized business projects land somewhere in the middle: a customer portal, booking system, or internal dashboard usually falls in the $10,000 to $50,000 range. These are planning estimates, not quotes, and any honest agency will tell you the same: the price follows the scope.",
+          "That wide range frustrates business owners, and understandably so. You would not accept a builder quoting a house at anywhere from $50,000 to $500,000 without asking what is included. The same logic applies here. The way to get a trustworthy number is to understand what actually drives the cost, so you can compare quotes like-for-like and spot the ones that are suspiciously cheap or padded.",
+          "This guide breaks down the five cost drivers, the pricing models agencies use, and the hidden costs that surprise owners after launch. By the end you will know how to scope your project and how to read a quote with confidence.",
+        ],
+      },
+      {
+        heading: "Cost Driver 1: Features and Complexity",
+        paragraphs: [
+          "Features are the single biggest cost driver. Every screen, workflow, and user role adds design, development, and testing time. A simple marketing site with a contact form is a different project from a multi-role platform where admins, staff, and customers each see different dashboards.",
+          "The honest way to think about it is in tiers. A simple app, one user type, a handful of screens, standard login, and a basic admin view, is the smallest build. A mid-complexity app adds several user roles, payments, notifications, file uploads, and a third-party integration or two. A complex app adds real-time features, advanced reporting, multi-tenant architecture, or regulated data handling. Each tier roughly doubles the effort of the one before it, which is why a feature list that grows during a project is the most common cause of budget overruns.",
+          "Before you ask for a quote, write down the three to five things the app must do on day one. Everything else goes on a phase-two list. This is not about cutting ambition, it is about shipping the core value first and funding later features from the revenue the first version creates.",
+        ],
+        list: [
+          "Simple: one user type, a few screens, standard login, basic admin view",
+          "Mid-complexity: multiple user roles, payments, notifications, file uploads, one or two integrations",
+          "Complex: real-time features, advanced reporting, multi-tenant setup, regulated data",
+          "Rule of thumb: every added user role or integration adds a meaningful chunk of cost, so rank features before you quote",
+        ],
+      },
+      {
+        heading: "Cost Driver 2: Design Expectations",
+        paragraphs: [
+          "Design is not decoration, it is how users judge whether your product is trustworthy. But design effort varies enormously. A clean build on a proven layout system costs far less than a fully custom interface with bespoke illustrations, animations, and interactive data visualizations.",
+          "Most business apps do not need award-winning design. They need clear navigation, readable type, consistent components, and a professional look that matches the brand. That level of design is included in most professional quotes. Where budgets balloon is in custom motion design, complex dashboards with custom charts, and pixel-perfect recreations of a reference site that was itself built by a large team.",
+          "Ask any agency what their quote includes for design: wireframes, high-fidelity screens, revisions, and a brand-consistent component system. If design is vague in the quote, expect it to become a change order later.",
+        ],
+      },
+      {
+        heading: "Cost Driver 3: Integrations and Data",
+        paragraphs: [
+          "An app rarely lives alone. It usually needs to talk to something: a payment provider like Stripe, a CRM like HubSpot, an accounting tool, an email service, or an existing internal database. Each integration is a small project of its own, with its own edge cases, error handling, and testing.",
+          "Well-documented APIs with official libraries are the cheap end. Older systems, custom databases, and tools with poor documentation are the expensive end, sometimes several times more, because the developer is reverse-engineering behavior instead of following a guide. If your app must migrate data from an old system, budget for that separately: data cleanup is real work, and dirty data imported into a new system just moves the problem.",
+          "When scoping, list every system the app must connect to and whether it has a modern API. That one list prevents most integration surprises.",
+        ],
+      },
+      {
+        heading: "Cost Driver 4: Who Builds It",
+        paragraphs: [
+          "The same project can be quoted at very different prices depending on who builds it, and the cheapest quote is rarely the cheapest project. Freelancers typically charge less but carry single-person risk: if they get busy or disappear, your project stalls. Offshore teams can look attractive on hourly rate but often cost more in management time, rework, and communication overhead. Agencies cost more upfront and bring a team: design, development, QA, and project management under one roof, with continuity if one person leaves.",
+          "Hourly rates tell only part of the story. A senior developer at a higher rate who ships in four weeks is cheaper than a junior team at a lower rate that takes twelve weeks and needs rework. Ask about team composition, who exactly will work on your project, and how the agency handles QA. A quote with no testing line item is a quote that expects you to find the bugs. Also check ownership: a reputable agency hands over the code, designs, and accounts on final payment, while a quote that locks you into the builder for hosting or access to your own code is a long-term cost disguised as a low upfront price.",
+        ],
+      },
+      {
+        heading: "Cost Driver 5: What Happens After Launch",
+        paragraphs: [
+          "Launch is not the end of the cost curve. Apps need hosting, security updates, dependency upgrades, backups, and small fixes. Budget a monthly care plan, typically a modest fraction of the build cost per year, and treat it as insurance: unmaintained apps accumulate security issues and break when a third-party API changes.",
+          "The other post-launch cost is iteration. The first version of any app teaches you what users actually want, which is rarely exactly what was specced. Plan a phase-two budget, even a small one, so improvements are a planned investment rather than a surprise invoice.",
+        ],
+        list: [
+          "Hosting, monitoring, backups, and security updates: ongoing, usually monthly",
+          "Dependency and framework upgrades: a few times a year",
+          "Phase-two improvements based on real user feedback: budget for it from the start",
+          "Support response time: agree it in writing before launch",
+        ],
+      },
+      {
+        heading: "How Agencies Price: Fixed Quote vs Hourly vs Retainer",
+        paragraphs: [
+          "Fixed quotes are the most common model for defined projects, and the most comfortable for business owners: you agree on scope and price before work starts, and the price does not move unless the scope does. The catch is that the scope must be genuinely defined. A fixed quote on a vague brief just pushes the argument into change orders later.",
+          "Hourly or time-and-materials billing suits projects where scope is genuinely uncertain, such as taking over an undocumented legacy system. It is honest, but it puts the budget risk on you, so insist on weekly reporting and a spending cap. Retainers suit ongoing work: a set number of hours per month for improvements, support, and small features, after the initial build.",
+          "Whichever model you choose, get three things in writing: what is included, what counts as a change, and who owns the code and data. Those three clauses prevent most disputes in this industry.",
+        ],
+      },
+      {
+        heading: "How to Get a Quote You Can Trust",
+        paragraphs: [
+          "A trustworthy quote starts with a trustworthy brief. Write one page covering the problem the app solves, the primary users, the three to five must-have features, the systems it must connect to, and your timeline. Send the same brief to every agency you contact, so the quotes are comparable.",
+          "Then compare the quotes on scope, not just price. A $12,000 quote that includes design, QA, and handover is a better deal than a $7,000 quote that excludes all three. Ask each agency what is explicitly out of scope, and ask for a recent project of similar complexity with a reference you can contact. Finally, be wary of two red flags: a quote delivered within hours of a vague brief (it was guessed, not estimated), and a quote far below the others (something is missing, and you will pay for it later). A good agency will ask hard questions before quoting, about users, edge cases, and failure modes, and that interrogation is a good sign: it means the estimate is built on understanding, not optimism.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the cheapest realistic budget for a custom web app?",
+        a: "For a simple business tool with a few screens and standard features, a realistic starting point is around $5,000 to $10,000 with a professional builder. Below that, you are usually looking at a template, a no-code tool, or a build that skips design and testing, all of which cost more later when they need to be redone.",
+      },
+      {
+        q: "Should I build custom or use a no-code tool?",
+        a: "No-code tools are excellent for validating an idea quickly or for simple internal tools. Choose custom development when you need specific workflows, integrations, performance, or a branded customer experience that no-code cannot deliver, or when the monthly no-code subscription and its limits would cost more over a couple of years than building once.",
+      },
+      {
+        q: "Why do quotes for the same project vary so much?",
+        a: "Because quotes differ in what they include: design depth, testing, integrations, project management, documentation, and handover. Two quotes that look like they describe the same app often describe different scopes. Compare line items, not totals, and ask what each quote excludes.",
+      },
+      {
+        q: "How long does a typical custom web app take to build?",
+        a: "A simple app often takes 4 to 8 weeks, a mid-complexity app 8 to 16 weeks, and a complex platform several months. Timelines stretch most often because of late scope changes, slow feedback on designs, or integration surprises, so a clear brief and fast decisions are the best schedule insurance.",
+      },
+      {
+        q: "Do I own the code after the project?",
+        a: "With a reputable agency, yes, 100 percent, on final payment, including source code, designs, and accounts. Confirm this in the contract before work starts. Avoid any arrangement where the builder retains ownership of your code or charges rent for access to it.",
+      },
+    ],
+    closingHeading: "Get a Fixed Quote for Your App",
+    closingParagraphs: [
+      "You do not need to guess at a budget. Write down the problem, the users, and the three to five features that matter most, and get a fixed quote built on that scope. The number you get will be real, because it will be based on your project, not on a generic price list.",
+      "NerdsTech builds custom web apps for US and UK businesses, with a fixed quote agreed before work begins, full code ownership on final payment, and a post-launch care plan so the app stays secure and current. If you have a project in mind, get in touch through the contact form and tell us what you want to build: we will give you a straight answer on cost and timeline, and an honest opinion on whether custom is even the right call.",
+    ],
+    serviceLink: {
+      label: "Web Design & Development",
+      slug: "web-design-development",
+    },
+  },
+  {
+    slug: "ai-secure-websites-multiple-layers-safety",
+    title: "AI-Secure Websites: How We Build Sites With Multiple Layers of Safety",
+    excerpt:
+      "A secure website is not one tool or one language. It is multiple independent layers of safety, so if one fails, the next one holds, and your data stays safe. Here is how we build them, in any language, with AI as a guard.",
+    category: "Web Security",
+    date: "2026-10-26",
+    readTime: 8,
+    keywords: [
+      "secure website development",
+      "website security layers",
+      "AI website security",
+      "PHP security",
+      "secure web development",
+      "website data protection",
+      "website security audit",
+    ],
+    sections: [
+      {
+        heading: "The Answer First: Security Is Layers, Not a Language",
+        paragraphs: [
+          "A website is secure when it has multiple independent layers of safety. If an attacker gets past one layer, the next layer stops them, and the one after that limits the damage. That is the whole idea, and it matters more than which programming language the site is written in.",
+          "We build safe websites in any language: PHP, JavaScript and TypeScript, Python, and the frameworks on top of them. The language does not make a site safe or unsafe. The layers around the code do. A PHP site built with discipline is far safer than a JavaScript site built carelessly, and the reverse is equally true.",
+          "When we say AI-secure, we mean two things at once. First, the website itself uses AI safely, if it uses AI at all: customer data is protected, AI features cannot be tricked into leaking information, and AI endpoints are guarded like any other door into the system. Second, AI helps defend the site: automated scanning, anomaly detection, and continuous monitoring that catch problems faster than a human watching logs ever could. AI is a guard, not a replacement for good engineering.",
+        ],
+      },
+      {
+        heading: "Why the Recent PHP Flaws Prove the Point",
+        paragraphs: [
+          "Every time a major PHP vulnerability hits the news, the same reaction follows: people declare PHP dead and suggest rewriting everything in another language. That reaction misses the lesson completely.",
+          "Take CVE-2024-4577, a critical PHP flaw disclosed in June 2024. It affected PHP running in CGI mode on Windows servers with Apache, where a character mapping quirk let an attacker smuggle command line options into a request and run code on the server without logging in. It was fixed in PHP 8.1.29, 8.2.20, and 8.3.8. But notice what actually decided whether a site was in danger: not the fact that it used PHP, but the specific setup. Sites that were patched, sites not running PHP in CGI mode on Windows, and sites behind a web application firewall that filtered those requests were not exposed in the same way.",
+          "New flaws in PHP and every other language keep appearing, including ones disclosed as recently as October 2026. There will always be a next vulnerability, in some language, in some library, in some server configuration. You cannot win by picking a language and hoping it never has a flaw. You win by building layers, so that when the next flaw appears, your site is not the easy target, and a single bug cannot become a full breach.",
+        ],
+      },
+      {
+        heading: "Layer 1: Safe Code, Whatever the Language",
+        paragraphs: [
+          "The first layer is the code itself. Every piece of data that arrives from a user, a form, an API, or a URL is treated as untrusted until it is checked. Inputs are validated for type, length, and format before they are used. Database queries are parameterized, never built by gluing user input into SQL strings, which is what makes injection attacks possible in the first place. Output is encoded so that data can never be mistaken for code in a browser.",
+          "Authentication gets the same discipline: passwords are hashed with modern algorithms, never stored in readable form. Sessions expire and are invalidated on logout and password change. Admin areas sit behind multi-factor authentication, and login attempts are rate limited so automated guessing fails quietly.",
+          "Dependencies are part of the code layer too. Modern websites are built on libraries, and a flaw in a library is a flaw in your site. We lock dependency versions, scan them for known vulnerabilities, and update them on a schedule instead of waiting for a crisis. AI-assisted code review helps here: automated scanners flag risky patterns in every change, and a human reviews anything the scanner flags before it ships.",
+        ],
+        list: [
+          "Validate every input: type, length, and format, before it is used",
+          "Parameterize all database queries, never concatenate user input into SQL",
+          "Hash passwords with modern algorithms and require multi-factor authentication for admin access",
+          "Lock dependency versions and scan them for known vulnerabilities on every change",
+          "Rate limit logins and sensitive endpoints to stop automated guessing",
+        ],
+      },
+      {
+        heading: "Layer 2: Data Structured for Safety",
+        paragraphs: [
+          "The second layer is how data is structured. Most breaches are not just about getting in, they are about what the attacker finds once inside. So we structure data so that a break-in yields as little as possible.",
+          "Sensitive information is separated from everyday content. Passwords, tokens, and personal details live in their own stores, encrypted at rest, and are only readable by the parts of the system that genuinely need them. The database account the website uses can only do what the website needs: read and write its own tables, not drop tables, not read other databases, not run server commands. If an attacker ever reaches the database through a flaw, least privilege means they find a locked room, not the whole building.",
+          "Secrets never live in code. API keys and credentials live in environment configuration, outside the repository, and are rotated when staff changes or a leak is suspected. Backups are encrypted, stored separately from the live server, and tested by actually restoring them, because a backup you have never restored is a hope, not a plan. And we collect only the data the business needs: data you do not store cannot be stolen.",
+        ],
+        list: [
+          "Separate sensitive data from everyday content and encrypt it at rest",
+          "Give the website database account the minimum permissions it needs, nothing more",
+          "Keep secrets in environment configuration, never in code or version control",
+          "Encrypt backups, store them off the live server, and test restores regularly",
+          "Collect only the data the business actually needs",
+        ],
+      },
+      {
+        heading: "Layer 3: The Server and the Edge",
+        paragraphs: [
+          "The third layer sits between the internet and your code. All traffic runs over HTTPS, with strict transport security telling browsers never to accept an insecure connection. Security headers tell browsers how to behave: content security policy limits where scripts and resources can load from, which alone blocks whole classes of injection attacks, and other headers stop clickjacking and content sniffing.",
+          "A web application firewall filters known attack patterns before they reach your code, the same kind of filter that protected many sites during the PHP CGI flaw, even before they patched. Rate limiting and bot filtering slow down automated abuse. Server software is patched on a schedule. Admin panels are never left on default addresses, and server users run with the least privilege needed, so a compromised process cannot reach the rest of the machine.",
+          "None of this is exotic. It is configuration, done carefully, and it turns your site from an open door into a series of locked doors an attacker must open one by one, while every attempt is logged.",
+        ],
+      },
+      {
+        heading: "Layer 4: AI as a Guard, Not a Crutch",
+        paragraphs: [
+          "AI earns its place in the security stack in two directions. As a defender, it watches patterns a human would miss: login attempts from unusual places, traffic spikes that look like automated probing, error patterns that suggest someone is testing your forms. It scans code changes for known risky patterns and flags outdated dependencies the moment a new vulnerability is published, not at the next quarterly review.",
+          "As a feature, AI needs guarding too. If your site has an AI chatbot or an AI search, it must never receive raw customer data it does not need, and it must be built so that crafted prompts cannot make it reveal system instructions or other customers data. AI endpoints get the same rate limits, authentication, and logging as every other endpoint, because to an attacker, an AI endpoint is just another door.",
+          "One rule keeps both directions honest: AI-generated code is never trusted blindly. It is scanned, reviewed, and tested like any human code. AI makes security faster, not automatic.",
+        ],
+      },
+      {
+        heading: "Layer 5: Process, the Layer Most Teams Skip",
+        paragraphs: [
+          "The final layer is process, and it is the one most teams skip because it is invisible until it is needed. Code is reviewed before it ships. Patches have a schedule, not a panic. Backups have a restore test. Logs are monitored, and alerts go to someone who will act on them, not to an inbox nobody reads.",
+          "There is also an incident plan, written down before anything goes wrong: who is contacted, how the site is isolated, how customers are told, and how the fix is verified. Teams with a plan recover in hours. Teams without one spend the first hours arguing about what to do.",
+          "Put together, these five layers are why we can say the security problem is handled rather than hoped away. A flaw in one language, one library, or one configuration is no longer a catastrophe, because four other layers are still standing between your data and the attacker.",
+        ],
+        list: [
+          "Review code before it ships and patch on a schedule, not in a panic",
+          "Monitor logs and send alerts to someone who will act on them",
+          "Test backup restores, not just backup creation",
+          "Write the incident plan before you need it: isolate, inform, fix, verify",
+          "Audit the whole stack periodically, including the layers you assume are fine",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is PHP unsafe after the recent vulnerabilities?",
+        a: "No. The risk was never PHP itself, it was specific setups: outdated versions, PHP in CGI mode on Windows, and unpatched servers. Modern PHP, kept current and built with the layers in this post, is as safe a choice as any other language. The same logic applies in reverse: no language is safe when it is outdated and built carelessly.",
+      },
+      {
+        q: "Does AI make a website secure automatically?",
+        a: "No. AI makes security faster: it scans code, watches traffic, and flags problems early. But AI-written code can contain the same flaws as human code, and AI features need their own guards against prompt tricks and data leaks. Security comes from layers plus review, not from AI alone.",
+      },
+      {
+        q: "How many layers does a small business website need?",
+        a: "All of them, scaled to the size of the site. Most layers are configuration rather than cost: HTTPS, security headers, parameterized queries, least-privilege database accounts, encrypted backups, and monitoring. A small site needs the same layers as a large one, just implemented more simply.",
+      },
+      {
+        q: "I already have a website. Can it be made AI-secure?",
+        a: "Yes, and it starts with an audit, not a rebuild. We check the language and framework versions, the forms and login flows, the security headers, the backup situation, and the data structure. Then we fix in order of risk: patch first, close the open doors second, then add monitoring and process. Most existing sites can be hardened without changing what customers see.",
+      },
+      {
+        q: "What happens if one layer fails?",
+        a: "That is exactly what layers are for. If an input flaw is found, parameterized queries and least-privilege database access still limit what an attacker can do. If a credential leaks, multi-factor authentication and rate limiting still block entry. If a server is compromised, encrypted and separated backups still let you recover. One failure becomes an incident, not a catastrophe.",
+      },
+    ],
+    closingHeading: "Want a Website Built This Way?",
+    closingParagraphs: [
+      "Security is not a feature you bolt on at the end. It is a way of building: safe code, data structured for safety, a hardened server, AI watching as a guard, and a process that keeps all of it current. Built that way, in any language, your website stops being a worry and starts being an asset you can trust with your customers data.",
+      "NerdsTech builds secure websites and hardens existing ones for US and UK businesses, with a fixed quote agreed before work begins. If you want a site built with multiple layers of safety, or an audit of the site you already have, get in touch through the contact form and tell us what you run: we will give you a straight assessment and a plan, starting with the highest-risk fixes first.",
+    ],
+    serviceLink: {
+      label: "Web Design & Development",
+      slug: "web-design-development",
+    },
+  },
 ];
 
 export function getPost(slug: string): BlogPost | undefined {
