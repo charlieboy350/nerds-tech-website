@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         <dl data-hero className="mt-20 border-t border-white/15 pt-10">
-          <div className="flex justify-center gap-x-8 sm:gap-x-16">
+          <div className="flex justify-center gap-x-12 sm:gap-x-24">
             {[
               ["12", "services"],
               ["1", "team"],
@@ -74,7 +74,7 @@ export default function Hero() {
               <div key={label} className="text-center">
                 <dt className="sr-only">{label}</dt>
                 <dd className="font-display text-6xl font-black text-cream sm:text-8xl">{value}</dd>
-                <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-xs sm:tracking-[0.24em]">{label}</dd>
+                <dd className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-base sm:tracking-[0.24em]">{label}</dd>
               </div>
             ))}
           </div>
