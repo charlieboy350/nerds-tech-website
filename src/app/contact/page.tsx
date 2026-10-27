@@ -40,7 +40,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let's build something worth talking about."
-        sub="Tell us where you want to go. We'll map the fastest route and give you a fixed quote, no discovery-call maze."
+        sub="Tell us where you want to go. We'll map the fastest route and give you a fixed quote, no discovery call maze."
       />
 
       <section className="relative py-14 sm:py-20" aria-label="Contact form and details">

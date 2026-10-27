@@ -48,7 +48,7 @@ export default function Services({ limit }: { limit?: number }) {
                       {project && (
                         <span className="mt-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-500 group-hover:text-zinc-300">
                           <TrendingUp className="size-3.5" />
-                          {project.client} — {project.result}
+                          {project.client}: {project.result}
                         </span>
                       )}
                     </span>

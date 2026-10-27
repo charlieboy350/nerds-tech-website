@@ -141,7 +141,7 @@ export default async function ServicePage({
         <section aria-label="Problems this service solves" className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20">
           <GsapReveal>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-steel-400">
-              Real-world problems
+              Real world problems
             </p>
             <h2 className="mt-4 max-w-3xl font-display text-3xl font-black uppercase tracking-tight text-cream sm:text-4xl">
               Sound familiar? Here&apos;s how we fix it.

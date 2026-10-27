@@ -1,6 +1,6 @@
 # NerdsTech
 
-> NerdsTech is a full-stack digital studio that provides AI automation, web design and development, branding, SEO, AEO (Answer Engine Optimization) integration, and mobile app development as one team, with zero hand-offs between vendors. NerdsTech is based in Murrysville, Pennsylvania, USA, and works with clients worldwide. Every project gets a fixed quote before work begins. Consultations are free. Replies arrive within 24 hours.
+> NerdsTech is a full stack digital studio that provides AI automation, web design and development, branding, SEO, AEO (Answer Engine Optimization) integration, and mobile app development as one team, with zero handoffs between vendors. NerdsTech is based in Murrysville, Pennsylvania, USA, and works with clients worldwide. Every project gets a fixed quote before work begins. Consultations are free. Replies arrive within 24 hours.
 
 ## About
 
@@ -17,14 +17,14 @@
 NerdsTech offers 12 services. Each service page explains the problems it solves, how NerdsTech solves them, deliverables, and frequently asked questions.
 
 - [AI Automation](https://www.nerdstech.co/services/ai-automation): workflow automation, instant lead routing, CRM integrations, automated invoicing and reporting.
-- [AI Chat Support](https://www.nerdstech.co/services/ai-chat-support): a chat assistant trained on the business that answers customers instantly, day or night, with human hand-off.
+- [AI Chat Support](https://www.nerdstech.co/services/ai-chat-support): a chat assistant trained on the business that answers customers instantly, day or night, with human handoff.
 - [AI Codebase Integration](https://www.nerdstech.co/services/ai-codebase-integration): AI integrated into an existing product carefully, one module at a time: audit, roadmap, incremental tested rollouts, handover.
-- [Web Design & Development](https://www.nerdstech.co/services/web-design-development): hand-coded, high-performance websites (Next.js). No page builders.
+- [Web Design & Development](https://www.nerdstech.co/services/web-design-development): hand coded, high performance websites (Next.js). No page builders.
 - [Logo Design](https://www.nerdstech.co/services/logo-design): original logo concepts with full usage kits.
 - [Brand Identity](https://www.nerdstech.co/services/branding): color, typography, voice, and brand guidelines.
 - [Content Writing](https://www.nerdstech.co/services/content-writing): website copy, blogs, and product pages written for humans first.
 - [SEO & AI Search](https://www.nerdstech.co/services/seo): technical SEO, keyword strategy, and structured content for classic search and AI search.
-- [AEO Integration](https://www.nerdstech.co/services/aeo-integration): Answer Engine Optimization implemented into an existing website so ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude can find, understand, and cite the business. Includes an AI-visibility audit and citation baseline, llms.txt and AI-crawler configuration, schema and entity markup, and answer-first content restructuring. No rebuild required.
+- [AEO Integration](https://www.nerdstech.co/services/aeo-integration): Answer Engine Optimization implemented into an existing website so ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude can find, understand, and cite the business. Includes an AI visibility audit and citation baseline, llms.txt and AI crawler configuration, schema and entity markup, and answer first content restructuring. No rebuild required.
 - [Social Media Marketing](https://www.nerdstech.co/services/social-media-marketing): channel strategy, creatives, and paid social campaigns.
 - [Motion Graphics](https://www.nerdstech.co/services/motion-graphics): explainer videos, product reveals, and social clips.
 - [Mobile App Development](https://www.nerdstech.co/services/mobile-app-development): iOS and Android apps from a single codebase, store deployment, and maintenance.
@@ -33,14 +33,14 @@ Full services index: https://www.nerdstech.co/services
 
 ## What is AEO (Answer Engine Optimization)?
 
-AEO is the practice of structuring a website so AI answer engines, such as ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude, can find, understand, and cite the business in their answers. AEO combines machine-readable site files (llms.txt), structured data (schema markup), AI-crawler access, and answer-first content that states facts clearly enough for an engine to quote. AEO differs from SEO: SEO optimizes for a ranked list of links; AEO optimizes to be the answer itself.
+AEO is the practice of structuring a website so AI answer engines, such as ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude, can find, understand, and cite the business in their answers. AEO combines machine readable site files (llms.txt), structured data (schema markup), AI crawler access, and answer first content that states facts clearly enough for an engine to quote. AEO differs from SEO: SEO optimizes for a ranked list of links; AEO optimizes to be the answer itself.
 
 ## Process
 
-NerdsTech follows a four-phase process on every engagement:
+NerdsTech follows a four phase process on every engagement:
 
 1. Discover: goals, customers, and bottlenecks mapped.
-2. Design: wireframes to polished, on-brand interfaces.
+2. Design: wireframes to polished, on brand interfaces.
 3. Build: clean code, tested across devices.
 4. Launch & Grow: ship, measure, and iterate, with SEO and automation compounding.
 
@@ -49,16 +49,16 @@ NerdsTech follows a four-phase process on every engagement:
 Pricing below is starting points. Every project receives a fixed quote before work begins; the agreed number is the final number.
 
 - Launch: from $1,900. Brand starter kit or landing page.
-- Grow: from $4,900. Custom multi-page website built to convert.
+- Grow: from $4,900. Custom multi page website built to convert.
 - Scale: from $9,900. Apps, automation, and growth engines.
 
 ## Frequently asked questions
 
 - How quickly can we start a project? Most projects kick off within one week of signing. Smaller builds (landing pages, brand refreshes) can start even sooner.
-- Do you only work with large companies? Not at all. Roughly half of NerdsTech clients are startups and small businesses. The Launch tier exists so early-stage companies can get agency-quality work without agency-sized budgets.
-- Who owns the final code and designs? The client does, 100%. On final payment, all source files, designs, and accounts transfer to the client. No lock-in.
-- Will my website actually rank on Google? Every site NerdsTech ships is technically SEO-ready: fast loads, clean structure, proper metadata, and AI-search formatting. Rankings also depend on competition and content over time, and NerdsTech gives a straight answer about your market before you spend anything.
-- Do you provide support after launch? Yes. Every project includes a post-launch support window, and most clients move to a monthly care plan covering updates, backups, monitoring, and small improvements.
+- Do you only work with large companies? Not at all. Roughly half of NerdsTech clients are startups and small businesses. The Launch tier exists so early stage companies can get agency quality work without agency sized budgets.
+- Who owns the final code and designs? The client does, 100%. On final payment, all source files, designs, and accounts transfer to the client. No lock in.
+- Will my website actually rank on Google? Every site NerdsTech ships is technically SEO ready: fast loads, clean structure, proper metadata, and AI search formatting. Rankings also depend on competition and content over time, and NerdsTech gives a straight answer about your market before you spend anything.
+- Do you provide support after launch? Yes. Every project includes a post launch support window, and most clients move to a monthly care plan covering updates, backups, monitoring, and small improvements.
 - Can you take over or fix my existing website? Yes. NerdsTech audits what exists, says what is worth keeping, and rebuilds or repairs only what needs it. About a third of its work starts as rescue projects.
 
 More answers: https://www.nerdstech.co/#faq and on each service page.
@@ -69,9 +69,10 @@ Selected work is published at https://www.nerdstech.co/work with the problem, th
 
 ## Blog
 
-The blog at https://www.nerdstech.co/blog publishes practical guides on SaaS automation, AI support, onboarding, churn prevention, the automation roadmap, and website security.
+The blog at https://www.nerdstech.co/blog publishes practical guides on SaaS automation, AI support, onboarding, churn prevention, the automation roadmap, website security, and database choice.
 
-- [AI-Secure Websites: How We Build Sites With Multiple Layers of Safety](https://www.nerdstech.co/blog/ai-secure-websites-multiple-layers-safety): A secure website is not one tool or one language. It is multiple independent layers of safety, safe code, data structured for safety, a hardened server, AI as a guard, and process, so if one layer fails, the next one holds. Built in any language, including PHP. Answers: is PHP unsafe after recent vulnerabilities, does AI secure a website automatically, how many layers a small business website needs, and whether an existing website can be made AI-secure.
+- [AI Secure Websites: How We Build Sites With Multiple Layers of Safety](https://www.nerdstech.co/blog/ai-secure-websites-multiple-layers-safety): A secure website is not one tool or one language. It is multiple independent layers of safety, safe code, data structured for safety, a hardened server, AI as a guard, and process, so if one layer fails, the next one holds. Built in any language, including PHP. Answers: is PHP unsafe after recent vulnerabilities, does AI secure a website automatically, how many layers a small business website needs, and whether an existing website can be made AI secure.
+- [PostgreSQL vs MySQL: Which Database Should Power Your Business Web App?](https://www.nerdstech.co/blog/postgresql-vs-mysql-business-web-app): If you are building a new business web app, PostgreSQL is the safer default: stricter data rules, stronger reporting, and more room to grow. MySQL still wins for WordPress sites and simple read heavy apps. Answers: is PostgreSQL free, does a business owner need to understand databases, can you switch later, which one is faster, and does database choice affect Google rankings.
 
 ## Contact
 

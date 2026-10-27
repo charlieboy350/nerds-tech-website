@@ -69,7 +69,7 @@ export default function Hero() {
             {[
               ["12", "services"],
               ["1", "team"],
-              ["0", "hand-offs"],
+              ["0", "handoffs"],
             ].map(([value, label]) => (
               <div key={label} className="text-center">
                 <dt className="sr-only">{label}</dt>

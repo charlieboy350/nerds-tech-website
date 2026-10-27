@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: Map,
     title: "Roadmap",
-    text: "You approve an ordered plan: highest impact, lowest risk first. No surprises, no open-ended billing.",
+    text: "You approve an ordered plan: highest impact, lowest risk first. No surprises, no open ended billing.",
   },
   {
     icon: Puzzle,
@@ -45,7 +45,7 @@ export default function AiIntegration() {
           </SplitWords>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
-              No rip-and-replace. No six-month rewrite. We study your codebase, find where AI
+              No rip and replace. No six month rewrite. We study your codebase, find where AI
               actually pays off, and integrate it module by module, each one shipped, tested,
               and stable before the next begins.
             </p>

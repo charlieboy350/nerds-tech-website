@@ -8,7 +8,7 @@ export const SITE = {
   tagline: "AI · Design · Development, under one roof",
   url: "https://www.nerdstech.co",
   description:
-    "NerdsTech is a full-stack digital studio crafting AI automation, high-converting websites, bold branding, and mobile apps, one team, zero hand-offs.",
+    "NerdsTech is a full stack digital studio crafting AI automation, high converting websites, bold branding, and mobile apps, one team, zero handoffs.",
   email: "support@nerdstech.co",
   phone: "+1 559-315-3648",
   address: "5010 Prides Ct, Murrysville, PA 15668",

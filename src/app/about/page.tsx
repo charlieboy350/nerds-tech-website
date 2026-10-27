@@ -11,11 +11,11 @@ import { SITE } from "@/site";
 export const metadata: Metadata = {
   title: "About | The Studio Behind the Work",
   description:
-    "NerdsTech is a full-stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero hand-offs, outcomes over deliverables.",
+    "NerdsTech is a full stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero handoffs, outcomes over deliverables.",
   openGraph: {
     title: "About | The Studio Behind the Work",
     description:
-      "NerdsTech is a full-stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero hand-offs, outcomes over deliverables.",
+      "NerdsTech is a full stack digital studio uniting AI, design, and engineering under one roof. Meet the team philosophy: one team, zero handoffs, outcomes over deliverables.",
   },
   alternates: { canonical: `${SITE.url}/about` },
 };
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const VALUES = [
   {
     icon: Users,
-    title: "One team, zero hand-offs",
+    title: "One team, zero handoffs",
     text: "Designers, engineers, and AI specialists sit together, literally and figuratively. Nothing gets lost translating between vendors because there are no vendors.",
   },
   {
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 modernizing theirs, across retail, fitness, healthcare, real estate, and
                 hospitality. Different industries, same promise:{" "}
                 <span className="font-semibold text-cream">
-                  one team, zero hand-offs, outcomes you can measure.
+                  one team, zero handoffs, outcomes you can measure.
                 </span>
               </p>
             </div>

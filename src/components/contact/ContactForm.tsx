@@ -133,7 +133,7 @@ export default function ContactForm({
           name="budget"
           tone={tone}
           placeholder="Select a range"
-          options={["Under $2k", "$2k – $5k", "$5k – $10k", "$10k+"]}
+          options={["Under $2k", "$2k to $5k", "$5k to $10k", "$10k+"]}
         />
       </div>
       <div className="sm:col-span-2">

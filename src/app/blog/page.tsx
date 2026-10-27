@@ -63,7 +63,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="SaaS automation, explained properly."
-        sub="Playbooks for turning manual SaaS operations into self-running systems: finance, onboarding, support, and retention."
+        sub="Playbooks for turning manual SaaS operations into self running systems: finance, onboarding, support, and retention."
       />
 
       <div className="mx-auto max-w-[1440px] px-5 pb-24 sm:px-8">
