@@ -49,7 +49,7 @@ export default function Hero() {
 
         <div className="mt-12 flex flex-col gap-4 sm:flex-row">
           <div data-hero>
-            <ContactButton className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap bg-cobalt px-10 py-4 text-base font-bold uppercase tracking-wider text-white hover:bg-cream hover:text-black sm:w-auto">
+            <ContactButton className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap bg-logo-cyan px-10 py-4 text-base font-bold uppercase tracking-wider text-black hover:bg-cream hover:text-black sm:w-auto">
               Start your project
               <ArrowRight className="size-5" />
             </ContactButton>

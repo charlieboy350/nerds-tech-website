@@ -5,7 +5,7 @@ import BlockReveal from "@/components/BlockReveal";
 import Reveal from "@/components/Reveal";
 import ContactButton from "@/components/contact/ContactButton";
 
-/** Pricing — cream block, flat bordered tiers, cobalt featured tier. */
+/** Pricing — cream block, flat bordered tiers, steel-blue featured tier. */
 export default function Pricing() {
   return (
     <section aria-label="Pricing">

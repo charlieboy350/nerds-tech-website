@@ -4,7 +4,9 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Archivo", "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  /* Solid Color system — pure black, cream, deep cobalt. Nothing else. */
+  /* Solid Color system — pure black, cream, and the logo's own colours:
+     steel blue #5C7CBF (main accent) + bright cyan #49C6E7 (highlight).
+     Flat solids only, never gradients. */
   --color-ink-0: #f5f5f7;
   --color-ink-950: #000000;
   --color-ink-900: #050505;
@@ -14,16 +16,20 @@
   --color-cream: #f5f5f7;
   --color-cream-dark: #e6e6ea;
 
-  --color-cobalt: #002fa7;
-  --color-cobalt-deep: #00237a;
+  /* Main accent = logo steel blue (class names kept, values changed) */
+  --color-cobalt: #5c7cbf;
+  --color-cobalt-deep: #46679f;
 
-  /* Brand scale — cobalt family (legacy class names, solid values) */
-  --color-brand-200: #c2d2ff;
-  --color-brand-300: #94afff;
-  --color-brand-400: #5b83ff;
-  --color-brand-500: #2e5bff;
-  --color-brand-600: #002fa7;
-  --color-brand-700: #00237a;
+  /* Highlight = logo bright cyan */
+  --color-logo-cyan: #49c6e7;
+
+  /* Brand scale — steel-blue family (legacy class names, solid values) */
+  --color-brand-200: #dce6f5;
+  --color-brand-300: #b9cbea;
+  --color-brand-400: #8fabdd;
+  --color-brand-500: #6e8fcb;
+  --color-brand-600: #5c7cbf;
+  --color-brand-700: #46679f;
 
   /* Steel scale — neutral greys (legacy class names, solid values) */
   --color-steel-200: #d4d4d8;
@@ -64,12 +70,12 @@ body {
 }
 
 ::selection {
-  background: #002fa7;
-  color: #ffffff;
+  background: #49c6e7;
+  color: #000000;
 }
 
 :focus-visible {
-  outline: 2px solid #5b83ff;
+  outline: 2px solid #49c6e7;
   outline-offset: 3px;
 }
 
@@ -77,7 +83,7 @@ body {
    instant color inversion (no transitions on background). */
 .btn-gradient,
 .btn-gradient-rev {
-  background-color: #002fa7;
+  background-color: #5c7cbf;
 }
 .btn-gradient-white {
   background-color: #f5f5f7;
@@ -97,9 +103,9 @@ body {
   background: #52525b;
 }
 
-/* Accent text — one solid cobalt, never a gradient */
+/* Accent text — one solid logo cyan, never a gradient */
 .text-gradient {
-  color: #2e5bff;
+  color: #49c6e7;
 }
 
 /* Legacy decorative utilities — neutralised for the solid system.
@@ -122,7 +128,7 @@ body {
   position: relative;
 }
 
-/* Eyebrow — Swiss label: small, tracked-out, uppercase, cobalt square */
+/* Eyebrow — Swiss label: small, tracked-out, uppercase, cyan square */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -138,7 +144,7 @@ body {
   width: 0.6rem;
   height: 0.6rem;
   flex: none;
-  background: #2e5bff;
+  background: #49c6e7;
 }
 
 /* Respect users who prefer reduced motion */

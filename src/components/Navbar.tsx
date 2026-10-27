@@ -22,7 +22,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
         aria-haspopup="true"
         aria-current={isActive ? "page" : undefined}
         className={`${linkBase} flex items-center gap-1.5 ${
-          isActive ? "bg-cobalt text-white" : "text-zinc-400 hover:bg-white hover:text-black"
+          isActive ? "bg-logo-cyan text-black" : "text-zinc-400 hover:bg-white hover:text-black"
         }`}
       >
         Services
@@ -39,16 +39,16 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
                 <Link
                   key={service.slug}
                   href={`/services/${service.slug}`}
-                  className="group/item flex items-start gap-3 px-3 py-2.5 hover:bg-cobalt"
+                  className="group/item flex items-start gap-3 px-3 py-2.5 hover:bg-logo-cyan"
                 >
-                  <span className="grid size-9 shrink-0 place-items-center bg-white/10 text-white">
+                  <span className="grid size-9 shrink-0 place-items-center bg-white/10 text-white group-hover/item:bg-black/15 group-hover/item:text-black">
                     <Icon className="size-4" />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-sm font-semibold text-white">
+                    <span className="block text-sm font-semibold text-white group-hover/item:text-black">
                       {service.title}
                     </span>
-                    <span className="mt-0.5 block truncate text-xs text-zinc-400 group-hover/item:text-zinc-200">
+                    <span className="mt-0.5 block truncate text-xs text-zinc-400 group-hover/item:text-zinc-700">
                       {service.short}
                     </span>
                   </span>
@@ -105,7 +105,7 @@ export default function Navbar() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   className={`${linkBase} ${
-                    isActive ? "bg-cobalt text-white" : "text-zinc-400 hover:bg-white hover:text-black"
+                    isActive ? "bg-logo-cyan text-black" : "text-zinc-400 hover:bg-white hover:text-black"
                   }`}
                 >
                   {link.label}
@@ -116,7 +116,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <ContactButton className="inline-flex items-center gap-1.5 whitespace-nowrap bg-cobalt px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.14em] text-white hover:bg-cream hover:text-black">
+          <ContactButton className="inline-flex items-center gap-1.5 whitespace-nowrap bg-logo-cyan px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.14em] text-black hover:bg-cream hover:text-black">
             Start a project
             <ArrowUpRight className="size-4" />
           </ContactButton>
@@ -150,7 +150,7 @@ export default function Navbar() {
                   onClick={() => setServicesOpen((v) => !v)}
                   aria-expanded={servicesOpen}
                   className={`flex w-full items-center justify-between px-3 py-3 text-base font-bold uppercase tracking-wider ${
-                    pathname === "/services" ? "bg-cobalt text-white" : "text-zinc-200 hover:bg-white hover:text-black"
+                    pathname === "/services" ? "bg-logo-cyan text-black" : "text-zinc-200 hover:bg-white hover:text-black"
                   }`}
                 >
                   Services
@@ -192,7 +192,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`block px-3 py-3 text-base font-bold uppercase tracking-wider ${
-                      pathname === link.href ? "bg-cobalt text-white" : "text-zinc-200 hover:bg-white hover:text-black"
+                      pathname === link.href ? "bg-logo-cyan text-black" : "text-zinc-200 hover:bg-white hover:text-black"
                     }`}
                   >
                     {link.label}
@@ -202,7 +202,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <ContactButton
                   onClick={() => setOpen(false)}
-                  className="flex w-full items-center justify-center gap-1.5 whitespace-nowrap bg-cobalt px-5 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-white hover:bg-cream hover:text-black"
+                  className="flex w-full items-center justify-center gap-1.5 whitespace-nowrap bg-logo-cyan px-5 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-black hover:bg-cream hover:text-black"
                 >
                   Start a project <ArrowUpRight className="size-4" />
                 </ContactButton>

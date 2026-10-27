@@ -5,7 +5,7 @@ import SplitWords from "@/components/SplitWords";
 import Reveal from "@/components/Reveal";
 import ContactButton from "@/components/contact/ContactButton";
 
-/** Full-bleed cobalt block CTA — one solid color, oversized type. */
+/** Full-bleed steel-blue block CTA — one solid color, oversized type. */
 export default function CtaBanner() {
   return (
     <section aria-label="Call to action">

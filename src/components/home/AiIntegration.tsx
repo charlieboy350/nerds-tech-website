@@ -28,7 +28,7 @@ const STEPS = [
   },
 ];
 
-/** AI integration — full-bleed cobalt block. */
+/** AI integration — full-bleed steel-blue block. */
 export default function AiIntegration() {
   return (
     <section aria-label="AI codebase integration">
